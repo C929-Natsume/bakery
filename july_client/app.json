@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/topic/index",
+    "pages/hole/index",
+    "pages/profile/index",
+    "pages/topic-detail/index",
+    "pages/topic-edit/index",
+    "pages/hole-detail/index",
+    "pages/chat-room/index",
+    "pages/user-edit/index",
+    "pages/visiting-card/index",
+    "pages/message/index",
+    "pages/following/index",
+    "pages/follower/index",
+    "pages/auth/index",
+    "pages/setting/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "七月",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f7f7"
+  },
+  "tabBar": {
+    "backgroundColor": "#f7f7f7",
+    "color": "#8a8a8a",
+    "selectedColor": "#337559",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/topic/index",
+        "text": "主页",
+        "iconPath": "images/icon_tab/topic.png",
+        "selectedIconPath": "images/icon_tab/topic_hl.png"
+      },
+      {
+        "pagePath": "pages/hole/index",
+        "text": "树洞",
+        "iconPath": "images/icon_tab/hole.png",
+        "selectedIconPath": "images/icon_tab/hole_hl.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "images/icon_tab/profile.png",
+        "selectedIconPath": "images/icon_tab/profile_hl.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "l-tag": "./miniprogram_npm/lin-ui/tag/index",
+    "l-icon": "./miniprogram_npm/lin-ui/icon/index",
+    "l-button": "./miniprogram_npm/lin-ui/button/index",
+    "l-radio": "./miniprogram_npm/lin-ui/radio/index",
+    "l-radio-group": "./miniprogram_npm/lin-ui/radio-group/index",
+    "l-popup": "./miniprogram_npm/lin-ui/popup/index",
+    "l-message": "./miniprogram_npm/lin-ui/message/index",
+    "l-dialog": "./miniprogram_npm/lin-ui/dialog/index",
+    "l-action-sheet": "./miniprogram_npm/lin-ui/action-sheet/index",
+    "l-loadmore": "./miniprogram_npm/lin-ui/loadmore/index",
+    "l-image-picker": "./miniprogram_npm/lin-ui/image-picker/index",
+    "l-status-show": "./miniprogram_npm/lin-ui/status-show/index",
+    "l-tabs": "./miniprogram_npm/lin-ui/tabs/index",
+    "l-tabpanel": "./miniprogram_npm/lin-ui/tabpanel/index",
+    "l-list": "./miniprogram_npm/lin-ui/list/index",
+    "l-input": "./miniprogram_npm/lin-ui/input/index",
+    "l-textarea": "./miniprogram_npm/lin-ui/textarea/index",
+    "l-image-clipper": "./miniprogram_npm/lin-ui/image-clipper/index",
+    "nothing": "./components/nothing/index",
+    "avatar": "./components/avatar/index",
+    "nickname": "./components/nickname/index",
+    "tags-pannel": "./components/tags-pannel/index",
+    "star-list": "./components/star-list/index",
+    "comment-item": "./components/comment-item/index",
+    "hole-item": "./components/hole-item/index",
+    "chat-item": "./components/chat-item/index",
+    "follow-item": "./components/follow-item/index",
+    "message-item": "./components/message-item/index",
+    "topic-item": "./components/topic-item/index",
+    "favor-bar": "./components/favor-bar/index",
+    "profile-card": "./components/profile-card/index",
+    "profile-topic": "./components/profile-topic/index",
+    "profile-comment": "./components/profile-comment/index",
+    "profile-star": "./components/profile-star/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

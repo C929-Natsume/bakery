@@ -1,0 +1,27 @@
+/* pages/topic/index.wxss */
+
+.topic-list {
+  margin-top: 90rpx;
+}
+
+.topic-item {
+  margin-bottom: 20rpx;
+}
+
+.loading {
+  padding-bottom: 20rpx;
+}
+
+.btn-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 40rpx;
+  right: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  opacity: 0.9;
+  border-radius: 50%;
+  background: #337559;
+}

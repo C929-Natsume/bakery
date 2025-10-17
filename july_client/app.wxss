@@ -1,0 +1,27 @@
+/**app.wxss**/
+
+page {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-size: 28rpx;
+  letter-spacing: 1rpx;
+  color: #333;
+  background: #f7f7f7;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+}
+
+image {
+  display: block;
+  height: auto;
+  width: auto;
+}
+
+button::after {
+  border: none;
+}

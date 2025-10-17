@@ -1,0 +1,23 @@
+{
+  "name": "july_client",
+  "version": "2.0.1",
+  "description": "A WeChat Mini-Program for Social Platform - 七月社交小程序，可快速搭建社区论坛、校园、美食、摄影微信小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YYJeffrey/july_client.git"
+  },
+  "author": "Jeffrey",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/YYJeffrey/july_client/issues"
+  },
+  "homepage": "https://github.com/YYJeffrey/july_client#readme",
+  "dependencies": {
+    "@yyjeffrey/wxutil": "1.2.0",
+    "lin-ui": "0.9.13"
+  }
+}
