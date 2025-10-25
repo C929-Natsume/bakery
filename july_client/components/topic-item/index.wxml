@@ -10,6 +10,11 @@
         <view class="info-top">
           <nickname nickname="{{topic.user.nickname || ''}}" user-id="{{topic.user.id || ''}}" />
           <l-tag wx:if="{{topic.user.is_admin}}" l-class="admin-tag" size="mini" type="reading">管理员</l-tag>
+          <!-- 新增：情绪标签 -->
+          <view wx:if="{{topic.emotion_label}}" class="emotion-tag" style="background-color: {{topic.emotion_label.color}}15; border-color: {{topic.emotion_label.color}};">
+            <text class="emotion-icon">{{topic.emotion_label.icon}}</text>
+            <text class="emotion-name" style="color: {{topic.emotion_label.color}};">{{topic.emotion_label.name}}</text>
+          </view>
         </view>
         <text class="time">{{topic.push_time}} {{topic.ip_belong || ''}}</text>
       </view>
@@ -46,5 +51,13 @@
   </view>
 
   <!-- 话题底部 -->
-  <favor-bar comment-count="{{topic.comment_count}}" star-count="{{topic.star_count}}" view-count="{{topic.click_count}}" has-comment="{{topic.commented}}" has-star="{{topic.starred}}" />
+  <favor-bar 
+    topic-id="{{topic.id}}"
+    comment-count="{{topic.comment_count}}" 
+    view-count="{{topic.click_count}}" 
+    has-comment="{{topic.commented}}" 
+    bind:commentIconTap="onCommentIconTap"
+    bind:viewIconTap="onViewIconTap"
+    bind:interactionChange="onInteractionChange"
+  />
 </view>

@@ -5,6 +5,12 @@
   <text class="title">内容（必填）</text>
   <l-textarea l-class="input-textarea" l-inner-class="inner-textarea" placeholder="分享这一刻的想法" focus border="{{false}}" indicator="{{false}}" maxlength="300" bind:lininput="setContent" />
 
+  <!-- 新增：情绪标签选择 -->
+  <emotion-picker 
+    selectedId="{{selectedEmotionId}}"
+    bind:select="onEmotionSelect"
+  />
+
   <text class="title">图片</text>
   <view class="media">
     <l-image-picker wx:if="{{!video}}" custom count="9" size="3" size-type="original" mode="aspectFill" bind:linchange="onChangeImage" bind:linremove="onChangeImage">

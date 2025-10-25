@@ -27,7 +27,11 @@ def ip2region(ip):
         return None
 
     if res['status'] != 0:
-        current_app.logger.error(f"微信LBS接口调用异常: {res}")
+        # status=121 表示每日调用量已达上限，降级为警告
+        if res.get('status') == 121:
+            current_app.logger.warning(f"微信LBS接口每日配额已用完（开发环境可忽略）: {res.get('message')}")
+        else:
+            current_app.logger.error(f"微信LBS接口调用异常: {res}")
         return None
 
     current_app.logger.info(f"微信LBS接口调用成功: {res}")

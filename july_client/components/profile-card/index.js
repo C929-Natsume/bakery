@@ -11,8 +11,10 @@ Component({
   data: {
     defaultNickname: '微信用户',
     defaultSignature: '这家伙选择躺平，什么都没有留下',
-    defaultAvatar: 'https://img.yejiefeng.com/avatar/default.jpg',
-    defaultPoster: 'https://img.yejiefeng.com/poster/default.jpg'
+    // defaultAvatar: 'https://img.yejiefeng.com/avatar/default.jpg',
+    // defaultPoster: 'https://img.yejiefeng.com/poster/default.jpg'
+    defaultAvatar: '/images/icon_nothing/pic_profile.png',
+    defaultPoster: '/images/icon_nothing/pic_profile.png'
   },
   methods: {
     /**

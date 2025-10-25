@@ -7,9 +7,10 @@ App({
     appId: wx.getAccountInfoSync().miniProgram.appId,
     githubURI: 'YYJeffrey/july_client',
     githubURL: 'https://github.com/YYJeffrey/july_client',
-    likeAuthor: 'https://img.yejiefeng.com/qr/qr_like.png', // 作者的赞赏码
+    likeAuthor: '', // 作者的赞赏码
     userDetail: null, // 用户信息详情
-    tokenExpires: 86400 * 27 // Token过期时间
+    tokenExpires: 86400 * 27, // Token过期时间
+    emotionLabels: null // 情绪标签缓存（Week 2新增）
   },
 
   onLaunch() {

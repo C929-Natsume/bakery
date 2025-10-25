@@ -17,7 +17,10 @@ Page({
     canAnon: false, // 是否可匿名
     isAnon: false,  // 是否为匿名话题
     content: null,
-    video: null
+    video: null,
+    // Week 2新增：情绪标签
+    selectedEmotionId: '',
+    selectedEmotionName: ''
   },
 
   onLoad() {
@@ -81,6 +84,19 @@ Page({
     this.setData({
       isAnon: event.detail.checked
     })
+  },
+
+  /**
+   * Week 2新增：选择情绪标签
+   */
+  onEmotionSelect(e) {
+    const { id, name } = e.detail;
+    console.log('选中情绪标签 ID:', id, '名称:', name);  // 添加这行
+    
+    this.setData({
+      selectedEmotionId: id,
+      selectedEmotionName: name
+    });
   },
 
   /**
@@ -222,13 +238,15 @@ Page({
       tmplIds: [template.messageTemplateId],
       complete: async () => {
         wxutil.showLoading('发布中...')
+        console.log('准备发布，emotion_label_id:', this.data.selectedEmotionId);  // 添加这行
         const data = {
           content: content,
           is_anon: this.data.isAnon,
           images: [],
-          labels: this.data.labelsActive
+          labels: this.data.labelsActive,
+          emotion_label_id: this.data.selectedEmotionId || null  // Week 2新增
         }
-
+        console.log('发布数据:', JSON.stringify(data));  // 添加这行
         // 发布图文
         if (imageFiles.length > 0) {
           await this.initQiniu()
@@ -267,9 +285,20 @@ Page({
    * 上传话题
    */
   async uploadTopic(data) {
+    console.log('=== 开始上传话题 ===');
+    console.log('上传数据:', JSON.stringify(data));
+    
     const res = await Topic.sendTopic(data)
+    
+    console.log('=== 后端响应 ===');
+    console.log('完整响应:', JSON.stringify(res));
+    console.log('res.code:', res.code);
+    console.log('res.msg:', res.msg);
+    console.log('res.data:', res.data);
+    
     wx.hideLoading()
     if (res.code === 1) {
+      console.log('✅ 判断为成功，准备显示成功提示');
       wx.lin.showMessage({
         type: 'success',
         content: '发布成功！',
@@ -279,9 +308,10 @@ Page({
         }
       })
     } else {
+      console.log('❌ 判断为失败，res.code =', res.code);
       wx.lin.showMessage({
         type: 'error',
-        content: '发布失败！'
+        content: `发布失败！错误码: ${res.code}, 消息: ${res.msg}`
       })
     }
   },

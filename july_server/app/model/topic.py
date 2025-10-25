@@ -28,13 +28,15 @@ class Topic(BaseModel):
     user_id = Column(String(32), nullable=False, index=True, comment='用户标识')
     video_id = Column(String(32), index=True, comment='视频标识')
     ip_belong = Column(String(128), comment='IP归属地')
+    emotion_label_id = Column(String(32), index=True, comment='情绪标签标识')  # Week 2新增
 
     def __str__(self):
         return self.content
 
     def _set_fields(self):
         self.append('push_time')
-        self._exclude.extend(['user_id'])
+        self.append('emotion_label')  # Week 2新增
+        self._exclude.extend(['user_id', 'emotion_label_id'])
 
     @property
     def push_time(self):
@@ -62,6 +64,17 @@ class Topic(BaseModel):
         if g.user is None:
             return False
         return Comment.get_commented(user_id=g.user.id, topic_id=self.id)
+
+    @property
+    def emotion_label(self):
+        """
+        情绪标签（Week 2新增）
+        """
+        if self.emotion_label_id is None:
+            return None
+        from .emotion_label import EmotionLabel
+        label = EmotionLabel.get_one(id=self.emotion_label_id)
+        return label
 
 
 class TopicLabelRel(BaseModel):

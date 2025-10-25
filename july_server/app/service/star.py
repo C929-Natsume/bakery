@@ -17,9 +17,9 @@ from app.model.video import Video
 from app.validator.forms import PaginateValidator
 
 
-def get_star_list(topic_id=None, user_id=None):
+def get_star_list(topic_id=None, user_id=None, interaction_type=None):
     """
-    获取收藏列表
+    获取收藏/互动列表
     """
     validator = PaginateValidator().dt_data
     page = validator.get('page')
@@ -38,6 +38,9 @@ def get_star_list(topic_id=None, user_id=None):
 
     if user_id is not None:
         query = query.filter(Star.user_id == user_id)
+    
+    if interaction_type is not None:
+        query = query.filter(Star.interaction_type == interaction_type)
 
     data = query.order_by(Star.create_time.desc()).paginate(page=page, size=size)
 
@@ -57,42 +60,51 @@ def get_star_list(topic_id=None, user_id=None):
     return data
 
 
-def star_or_cancel_verify(topic_id):
+def star_or_cancel_verify(topic_id, interaction_type='STAR'):
     """
-    收藏或取消收藏验证
+    互动或取消互动验证
+    支持三种类型：STAR(收藏)、HUG(拥抱)、PAT(拍拍)
     """
     topic = Topic.get_one(id=topic_id)
     if topic is None:
         raise NotFound(msg='话题不存在')
 
-    exist_star = Star.get_one(user_id=g.user.id, topic_id=topic.id)
+    # 获取互动类型的中文名称
+    interaction_names = {
+        'STAR': '收藏',
+        'HUG': '拥抱',
+        'PAT': '拍拍'
+    }
+    action_name = interaction_names.get(interaction_type, '互动')
+
+    exist_star = Star.get_one(user_id=g.user.id, topic_id=topic.id, interaction_type=interaction_type)
     exist_msg = Message.get_one(category=MessageCategory.STAR, user_id=topic.user_id, action_user_id=g.user.id,
                                 topic_id=topic.id, is_read=False)
 
-    # 收藏
+    # 创建互动
     if exist_star is None:
         with db.auto_commit():
-            Star.create(commit=False, user_id=g.user.id, topic_id=topic.id)
+            Star.create(commit=False, user_id=g.user.id, topic_id=topic.id, interaction_type=interaction_type)
             if exist_msg is None and topic.user_id != g.user.id:
                 Message.create(
                     commit=False,
-                    content=MessageCategory.STAR.value + '了你的话题',
+                    content=action_name + '了你的话题',
                     category=MessageCategory.STAR,
                     user_id=topic.user_id,
                     action_user_id=g.user.id,
                     topic_id=topic.id
                 )
 
-        # 更新话题收藏数
-        topic.update(star_count=Star.get_star_count(topic_id=topic.id))
-        return Success(msg='收藏成功')
+        # 更新话题收藏数（只统计STAR类型）
+        topic.update(star_count=Star.get_star_count(topic_id=topic.id, interaction_type='STAR'))
+        return Success(msg=action_name + '成功')
 
-    # 取消收藏
+    # 取消互动
     with db.auto_commit():
         exist_star.delete(commit=False)
         if exist_msg is not None:
             exist_msg.delete(commit=False)
 
-    # 更新话题收藏数
-    topic.update(star_count=Star.get_star_count(topic_id=topic.id))
-    return Success(msg='取消收藏成功')
+    # 更新话题收藏数（只统计STAR类型）
+    topic.update(star_count=Star.get_star_count(topic_id=topic.id, interaction_type='STAR'))
+    return Success(msg='取消' + action_name + '成功')

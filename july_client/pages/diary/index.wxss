@@ -1,0 +1,195 @@
+/* pages/diary/index.wxss */
+.diary-page {
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding-bottom: 20rpx;
+}
+
+/* 日历头部 */
+.calendar-header {
+  background-color: #fff;
+  padding: 30rpx;
+}
+
+.month-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.month-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 星期标题 */
+.week-header {
+  display: flex;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  border-top: 1rpx solid #f0f0f0;
+}
+
+.week-day {
+  flex: 1;
+  text-align: center;
+  font-size: 28rpx;
+  color: #999;
+}
+
+/* 日历主体 */
+.calendar-body {
+  background-color: #fff;
+  padding: 0 30rpx 30rpx;
+}
+
+.calendar-week {
+  display: flex;
+}
+
+.calendar-day {
+  flex: 1;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 5rpx;
+  border-radius: 10rpx;
+  transition: all 0.3s;
+}
+
+.calendar-day.empty {
+  background-color: transparent;
+}
+
+.calendar-day.today {
+  background-color: #e8f5e9;
+  border: 2rpx solid #337559;
+}
+
+.day-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.day-number {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 5rpx;
+}
+
+.day-indicator {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rpx;
+}
+
+.day-emoji {
+  font-size: 24rpx;
+}
+
+/* 今日日记 */
+.today-diary {
+  background-color: #fff;
+  margin: 20rpx 30rpx;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.section-title text:first-child {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.date-text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+/* 日记预览 */
+.diary-preview {
+  padding: 20rpx 0;
+}
+
+.diary-emotion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+
+.emotion-icon {
+  font-size: 40rpx;
+  margin-right: 10rpx;
+}
+
+.emotion-name {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.diary-content {
+  font-size: 30rpx;
+  color: #666;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin-bottom: 15rpx;
+}
+
+.diary-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.diary-privacy {
+  color: #337559;
+}
+
+/* 无日记状态 */
+.no-diary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60rpx 0;
+}
+
+.no-diary-text {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+
+/* 加载状态 */
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

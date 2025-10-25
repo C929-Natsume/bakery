@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents": {
+    "emotion-picker": "/components/emotion-picker/index"
+  },
+  "navigationBarTitleText": "发布话题"
+}

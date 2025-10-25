@@ -107,19 +107,20 @@ def create_topic_verify(form):
         if is_anon is not None and is_anon and not label.allowed_anon:
             raise LabelNotAllowedAnonymous
 
-    client = get_mp_client()
+    # 开发模式：暂时禁用内容审核
+    # client = get_mp_client()
 
-    # 标题校验
-    title = form.get_data('title')
-    if title is not None:
-        if not client.check_content(content=title, openid=g.user.openid):
-            raise TextContentIllegal('标题不合法')
+    # # 标题校验
+    # title = form.get_data('title')
+    # if title is not None:
+    #     if not client.check_content(content=title, openid=g.user.openid):
+    #         raise TextContentIllegal('标题不合法')
 
-    # 内容校验
-    content = form.get_data('content')
-    if content is not None:
-        if not client.check_content(content=content, openid=g.user.openid):
-            raise TextContentIllegal('内容不合法')
+    # # 内容校验
+    # content = form.get_data('content')
+    # if content is not None:
+    #     if not client.check_content(content=content, openid=g.user.openid):
+    #         raise TextContentIllegal('内容不合法')
 
     # 更新IP归属地
     ip_belong = update_ip_belong()

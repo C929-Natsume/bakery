@@ -54,6 +54,7 @@ class CreateTopicValidator(Form):
     images = FieldList(StringField(), '图片')
     labels = FieldList(StringField(), '标签')
     video_id = StringField('视频标识')
+    emotion_label_id = StringField('情绪标签标识')  # Week 2新增
 
 
 class CreateVideoValidator(Form):

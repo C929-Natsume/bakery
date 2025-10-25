@@ -5,10 +5,14 @@
 """
 import atexit
 import datetime
-import fcntl
 import logging
 import os
+import platform
 from logging.handlers import TimedRotatingFileHandler
+
+# Windows系统不支持fcntl模块
+if platform.system() != 'Windows':
+    import fcntl
 
 from dotenv import load_dotenv
 from flask import Flask, request, g
@@ -112,19 +116,24 @@ def register_scheduler(app):
     if app.debug and not scheduler.running:
         scheduler.start()
 
-    f = open('scheduler.lock', 'wb')
-    # noinspection PyBroadException
-    try:
-        fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    # Windows系统不支持文件锁，直接启动scheduler
+    if platform.system() == 'Windows':
         scheduler.start()
-    except:
-        pass
+    else:
+        # Unix/Linux系统使用文件锁
+        f = open('scheduler.lock', 'wb')
+        # noinspection PyBroadException
+        try:
+            fcntl.flock(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            scheduler.start()
+        except:
+            pass
 
-    def unlock():
-        fcntl.flock(f, fcntl.LOCK_UN)
-        f.close()
+        def unlock():
+            fcntl.flock(f, fcntl.LOCK_UN)
+            f.close()
 
-    atexit.register(unlock)
+        atexit.register(unlock)
 
 
 def register_redis(app):

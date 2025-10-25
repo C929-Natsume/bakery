@@ -11,18 +11,36 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 10rpx;
+  transition: all 0.3s;
 }
 
 .item-icon {
-  width: 30rpx;
-  height: 30rpx;
+  width: 32rpx;
+  height: 32rpx;
   margin-right: 10rpx;
+}
+
+/* 新增：emoji图标样式 */
+.item-emoji {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.item-emoji.active {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .item-text {
   color: #777;
+  font-size: 24rpx;
+  transition: color 0.3s;
 }
 
 .item-text-active {
-  color: #eb4d4b;
+  color: #FF6B6B;
+  font-weight: 500;
 }

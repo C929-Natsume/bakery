@@ -6,11 +6,13 @@
 from flask import Blueprint as BluePrint
 
 from . import auth, chat, comment, following, hole, label, message, oss, star, topic, user, video
+from . import emotion, diary, soul  # 新增：心情烘焙坊功能
 
 
 def create_v2():
     bp = BluePrint('v2', __name__)
 
+    # 原有API
     auth.api.register(bp)
     chat.api.register(bp)
     comment.api.register(bp)
@@ -23,5 +25,10 @@ def create_v2():
     topic.api.register(bp)
     user.api.register(bp)
     video.api.register(bp)
+    
+    # 新增API - 心情烘焙坊
+    emotion.api.register(bp)  # 情绪标签API
+    diary.api.register(bp)    # 日记API
+    soul.api.register(bp)      # 心灵鸡汤API
 
     return bp

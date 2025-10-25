@@ -1,0 +1,45 @@
+<!--pages/diary-detail/index.wxml-->
+<view class="diary-detail-page" wx:if="{{diary}}">
+  <!-- 操作按钮 -->
+  <view class="action-bar">
+    <view class="action-btn" bindtap="onEdit">
+      <l-icon name="edit" size="40" color="#337559" />
+      <text>编辑</text>
+    </view>
+    <view class="action-btn" bindtap="onDelete">
+      <l-icon name="delete" size="40" color="#ff4444" />
+      <text>删除</text>
+    </view>
+  </view>
+
+  <!-- 日期和情绪 -->
+  <view class="header-section">
+    <text class="date-text">{{dateDisplay}}</text>
+    <view class="emotion-tag" style="background-color: {{diary.emotion_label.color}}15; border-color: {{diary.emotion_label.color}};">
+      <text class="emotion-icon">{{diary.emotion_label.icon}}</text>
+      <text class="emotion-name" style="color: {{diary.emotion_label.color}};">{{diary.emotion_label.name}}</text>
+    </view>
+  </view>
+
+  <!-- 日记内容 -->
+  <view class="content-section">
+    <text class="content-text">{{diary.content}}</text>
+  </view>
+
+  <!-- 元信息 -->
+  <view class="meta-section">
+    <view class="meta-item">
+      <text class="meta-label">创建时间</text>
+      <text class="meta-value">{{diary.create_time}}</text>
+    </view>
+    <view class="meta-item">
+      <text class="meta-label">隐私设置</text>
+      <text class="meta-value">{{diary.is_public ? '🌍 公开可见' : '🔒 仅自己可见'}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 加载状态 -->
+<view wx:if="{{loading}}" class="loading">
+  <l-icon name="loading" size="60" color="#337559" />
+</view>

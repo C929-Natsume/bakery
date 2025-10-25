@@ -2,9 +2,12 @@
   "pages": [
     "pages/topic/index",
     "pages/hole/index",
+    "pages/diary/index",
     "pages/profile/index",
     "pages/topic-detail/index",
     "pages/topic-edit/index",
+    "pages/diary-edit/index",
+    "pages/diary-detail/index",
     "pages/hole-detail/index",
     "pages/chat-room/index",
     "pages/user-edit/index",
@@ -30,7 +33,7 @@
     "list": [
       {
         "pagePath": "pages/topic/index",
-        "text": "主页",
+        "text": "情绪烘焙屋",
         "iconPath": "images/icon_tab/topic.png",
         "selectedIconPath": "images/icon_tab/topic_hl.png"
       },
@@ -41,8 +44,14 @@
         "selectedIconPath": "images/icon_tab/hole_hl.png"
       },
       {
+        "pagePath": "pages/diary/index",
+        "text": "今日订单",
+        "iconPath": "images/icon_tab/topic.png",
+        "selectedIconPath": "images/icon_tab/topic_hl.png"
+      },
+      {
         "pagePath": "pages/profile/index",
-        "text": "我的",
+        "text": "烘焙后厨",
         "iconPath": "images/icon_tab/profile.png",
         "selectedIconPath": "images/icon_tab/profile_hl.png"
       }

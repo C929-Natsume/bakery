@@ -23,7 +23,8 @@ Component({
     }
   },
   data: {
-    defaultAvatar: 'https://img.yejiefeng.com/avatar/default.jpg'
+    //defaultAvatar: 'https://img.yejiefeng.com/avatar/default.jpg'
+    defaultAvatar: '/images/icon_nothing/pic_profile.png'
   },
   methods: {
     /**

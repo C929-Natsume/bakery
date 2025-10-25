@@ -1,0 +1,31 @@
+<!-- components/emotion-picker/index.wxml -->
+<view class="emotion-picker">
+  <view class="emotion-title">选择心情</view>
+  
+  <view wx:if="{{loading}}" class="emotion-loading">
+    <text>加载中...</text>
+  </view>
+  
+  <scroll-view wx:else scroll-x class="emotion-list">
+    <view 
+      wx:for="{{emotions}}" 
+      wx:key="id"
+      class="emotion-item {{selectedId === item.id ? 'selected' : ''}}"
+      style="border-color: {{selectedId === item.id ? item.color : '#e5e5e5'}}"
+      data-id="{{item.id}}"
+      data-name="{{item.name}}"
+      data-icon="{{item.icon}}"
+      data-color="{{item.color}}"
+      bindtap="onSelectEmotion"
+    >
+      <view class="emotion-icon">{{item.icon}}</view>
+      <view 
+        class="emotion-name"
+        style="color: {{selectedId === item.id ? item.color : '#666'}}"
+      >
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

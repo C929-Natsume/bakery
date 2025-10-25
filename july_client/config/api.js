@@ -1,6 +1,6 @@
 const baseAPI = 'http://127.0.0.1:5000/v2'
-const socketAPI = 'ws://127.0.0.1:5000/socket'
-const ossDomain = 'https://img.yejiefeng.com'
+const socketAPI = 'ws://127.0.0.1:5000/ws'
+const ossDomain = 'https://t4dbz3ztq.hd-bkt.clouddn.com'
 
 export default {
   baseAPI, // 根接口
@@ -18,5 +18,9 @@ export default {
   topicAPI: baseAPI + '/topic', // 话题接口
   userAPI: baseAPI + '/user', // 用户接口
   videoAPI: baseAPI + '/video', // 视频接口
-  chatAPI: socketAPI + '/chat' // 聊天室接口
+  chatAPI: socketAPI + '/chat', // 聊天室接口
+  // Week 2 新增接口
+  emotionAPI: baseAPI + '/emotion', // 情绪标签接口
+  diaryAPI: baseAPI + '/diary', // 日记接口
+  soulAPI: baseAPI + '/soul' // 心灵鸡汤接口
 }

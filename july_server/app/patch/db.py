@@ -16,8 +16,11 @@ class SQLAlchemy(_SQLAlchemy):
         try:
             yield
             self.session.commit()
-        except Exception:
+        except Exception as e:
             self.session.rollback()
+            # 开发模式：打印详细错误信息
+            from flask import current_app
+            current_app.logger.error(f"数据库提交失败，详细错误: {type(e).__name__}: {str(e)}")
             raise DataStorageException
 
 
