@@ -1,0 +1,30 @@
+/* pages/visiting-card/index.wxss */
+
+.tabs {
+  margin-top: 10rpx;
+}
+
+.tabs-line {
+  width: 30% !important;
+}
+
+.tab-content {
+  height: 100%;
+}
+
+.nothing {
+  margin-top: 335rpx;
+}
+
+.action-title {
+  font-size: 26rpx !important;
+  color: #999 !important;
+}
+
+.tabs-fixed {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 80rpx;
+  z-index: 99;
+}

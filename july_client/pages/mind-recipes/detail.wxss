@@ -1,0 +1,20 @@
+.container{padding:12px}
+.title{font-size:18px;font-weight:700;color:#333;margin-bottom:6px}
+.meta{font-size:12px;color:#888;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tag{background:#f3f6f8;color:#3d7e6a;border-radius:4px;padding:2px 6px}
+.source{margin-left:auto}
+.read{margin-left:8px}
+.content{line-height:1.85;color:#444;background:#fff;padding:12px;border-radius:8px;margin-bottom:16px}
+.actions{display:flex;gap:12px;margin:8px 0}
+.nearby-title{font-weight:600;color:#333;margin:8px 0}
+.nearby-badge{font-size:12px;color:#666;margin-left:8px;background:#f5f7f8;border-radius:10px;padding:2px 6px}
+.radius-chips{white-space:nowrap;margin:6px 0 8px}
+.radius-chips .chip{display:inline-block;border:1px solid #e6e6e6;padding:4px 10px;border-radius:14px;margin-right:8px;background:#fafafa;color:#666}
+.radius-chips .chip.active{background:#3d7e6a;color:#fff;border-color:#3d7e6a}
+.poi{background:#fff;border-radius:8px;padding:10px;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.poi-name{font-weight:600;color:#333}
+.poi-addr,.poi-tel{font-size:12px;color:#666;margin-top:4px}
+.poi-action{color:#337559;margin-left:12rpx}
+/* 空态与重试 */
+.nearby-empty{background:#fff;border-radius:8px;padding:10px;color:#666;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.btn-retry{background:#3d7e6a;color:#fff;border:none}

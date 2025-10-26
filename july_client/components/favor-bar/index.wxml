@@ -1,0 +1,34 @@
+<!--components/favor-bar/index.wxml-->
+
+<!-- 话题底部栏 -->
+<view class="favor-bar">
+  <!-- 浏览 -->
+  <view class="item" bindtap="onViewIconTap">
+    <image class="item-icon" src="../../images/icon_favor/{{hasView ? 'view_hl' : 'view'}}.png" />
+    <text class="{{hasView ? 'item-text-active' : 'item-text'}}">{{viewCount}}</text>
+  </view>
+
+  <!-- 评论 -->
+  <view class="item" bindtap="onCommentIconTap">
+    <image class="item-icon" src="../../images/icon_favor/{{hasComment ? 'comment_hl' : 'comment'}}.png" />
+    <text class="{{hasComment ? 'item-text-active' : 'item-text'}}">{{commentCount}}</text>
+  </view>
+
+  <!-- 拥抱 -->
+  <view class="item" bindtap="onHugIconTap">
+    <text class="item-emoji {{hasHug ? 'active' : ''}}">🤗</text>
+    <text class="{{hasHug ? 'item-text-active' : 'item-text'}}">{{hugCount}}</text>
+  </view>
+
+  <!-- 拍拍 -->
+  <view class="item" bindtap="onPatIconTap">
+    <text class="item-emoji {{hasPat ? 'active' : ''}}">👋</text>
+    <text class="{{hasPat ? 'item-text-active' : 'item-text'}}">{{patCount}}</text>
+  </view>
+
+  <!-- 收藏 -->
+  <view class="item" bindtap="onStarIconTap">
+    <image class="item-icon" src="../../images/icon_favor/{{hasStar ? 'star_hl' : 'star'}}.png" />
+    <text class="{{hasStar ? 'item-text-active' : 'item-text'}}">{{starCount}}</text>
+  </view>
+</view>

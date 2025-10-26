@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="title">{{item.title}}</view>
+  <view class="meta">
+    <text wx:for="{{item.tags}}" wx:key="*this" class="tag">#{{item}}</text>
+    <text class="source">{{item.source}}</text>
+    <text class="read">阅读 {{item.read_count || 0}}</text>
+  </view>
+  <view class="actions">
+    <button size="mini" bindtap="toggleStar">{{item.starred ? '取消收藏' : '收藏'}}</button>
+    <button size="mini" open-type="share">分享</button>
+  </view>
+  <view class="content">{{item.content}}</view>
+
+  <view class="nearby-title">附近心理咨询点</view>
+  <view wx:if="{{nearby.items.length === 0}}" class="nearby-empty">
+    <text>未获取到附近机构，请允许定位或稍后重试</text>
+    <button size="mini" class="btn-retry" bindtap="reloadNearby">重新获取</button>
+  </view>
+  <block wx:for="{{nearby.items}}" wx:key="name">
+    <view class="poi">
+      <view class="poi-name">{{item.name}}</view>
+      <view class="poi-addr">{{item.address}}</view>
+      <view class="poi-tel" wx:if="{{item.tel}}">电话：{{item.tel}}
+        <text class="poi-action" bindtap="callTel" data-tel="{{item.tel}}">拨打</text>
+        <text class="poi-action" bindtap="copyTel" data-tel="{{item.tel}}">复制</text>
+        <text class="poi-action" bindtap="openMap" data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" data-name="{{item.name}}" data-address="{{item.address}}">导航</text>
+      </view>
+      <view class="poi-actions" wx:if="{{!item.tel}}">
+        <text class="poi-action" bindtap="openMap" data-lat="{{item.location.lat}}" data-lng="{{item.location.lng}}" data-name="{{item.name}}" data-address="{{item.address}}">导航</text>
+      </view>
+    </view>
+  </block>
+</view>

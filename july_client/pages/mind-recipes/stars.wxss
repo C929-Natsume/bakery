@@ -1,0 +1,8 @@
+.container{padding:12px}
+.card{background:#fff;border-radius:8px;padding:12px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.title{font-size:16px;font-weight:600;color:#333;margin-bottom:6px}
+.meta{font-size:12px;color:#888;display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:#f3f6f8;color:#3d7e6a;border-radius:4px;padding:2px 6px}
+.source{margin-left:auto}
+.read{margin-left:8px}
+.loading{margin:12px 0}

@@ -1,0 +1,23 @@
+/* pages/auth/index.wxss */
+
+.bg {
+  width: 600rpx;
+  height: 400rpx;
+  margin-top: -250rpx;
+}
+
+.title-text {
+  font-weight: bold;
+  margin-top: 40rpx;
+  color: #333;
+}
+
+.desc-text {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  color: #9c9c9c;
+}
+
+.btn-auth {
+  margin-top: 85rpx;
+}
