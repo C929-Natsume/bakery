@@ -1,10 +1,9 @@
 import { Mind } from '../../models/mind'
 
-// 湖北省武汉市洪山区华中科技大学附近（更精确坐标+更小半径）
+// 湖北省武汉市洪山区华中科技大学附近（备用坐标：定位失败时使用）
 const FALLBACK_COORD = { lat: 30.518, lng: 114.414, radius: 3000 }
-// 固定以华中科技大学为基准进行附近检索（不再取设备定位）
-// 当前按你的期望：固定以华中科技大学为中心
-const FORCE_HUST_AS_BASE = true
+// 是否强制以华科为中心：现在切换为按设备定位
+const FORCE_HUST_AS_BASE = false
 
 Page({
   data:{
@@ -19,20 +18,36 @@ Page({
     const item = await Mind.getKnowledgeDetail(id)
     this.setData({ item })
     if (FORCE_HUST_AS_BASE){
-      // 统一以华中科技大学为中心检索
+      // 统一以华中科技大学为中心检索（仅当强制开关为 true 时）
       this.setData({ lastCoord: { lat: FALLBACK_COORD.lat, lng: FALLBACK_COORD.lng } })
       await this.fetchNearbyByCurrentRadius()
-    } else {
-      // 使用设备定位（保留逻辑，当前默认不走）
-      wx.getLocation({ type: 'gcj02', isHighAccuracy: true, success: async (res)=>{
-        const { latitude, longitude } = res
-        this.setData({ lastCoord: { lat: latitude, lng: longitude } })
-        await this.fetchNearbyByCurrentRadius()
-      }, fail: async ()=>{
-        this.setData({ lastCoord: { lat: FALLBACK_COORD.lat, lng: FALLBACK_COORD.lng } })
-        await this.fetchNearbyByCurrentRadius()
-      } })
+      return
     }
+    // 默认：按设备定位
+    try {
+      const res = await this.requestLocation()
+      const { latitude, longitude } = res
+      this.setData({ lastCoord: { lat: latitude, lng: longitude } })
+    } catch (e){
+      // 用户拒绝或无法获取时，提示打开设置，并使用备用坐标
+      wx.showModal({
+        title: '需要定位权限',
+        content: '用于展示你附近的心理咨询点，可在设置中开启“位置信息”。',
+        confirmText: '去开启',
+        cancelText: '暂不',
+        success: (r)=>{
+          if (r.confirm){ wx.openSetting({}) }
+        }
+      })
+      this.setData({ lastCoord: { lat: FALLBACK_COORD.lat, lng: FALLBACK_COORD.lng } })
+      wx.showToast({ title: '定位不可用，已使用备用位置', icon: 'none' })
+    }
+    await this.fetchNearbyByCurrentRadius()
+  },
+  requestLocation(){
+    return new Promise((resolve, reject)=>{
+      wx.getLocation({ type: 'gcj02', isHighAccuracy: true, success: resolve, fail: reject })
+    })
   },
   getRadius(){
     // 固定华科为中心时，优先使用 FALLBACK_COORD.radius 作为检索半径
@@ -74,9 +89,16 @@ Page({
       this.setData({ lastCoord: { lat: latitude, lng: longitude } })
       await this.fetchNearbyByCurrentRadius()
     }, fail: async ()=>{
+      wx.showModal({
+        title: '需要定位权限',
+        content: '用于展示你附近的心理咨询点，可在设置中开启“位置信息”。',
+        confirmText: '去开启',
+        cancelText: '暂不',
+        success: (r)=>{ if (r.confirm) wx.openSetting({}) }
+      })
       this.setData({ lastCoord: { lat: FALLBACK_COORD.lat, lng: FALLBACK_COORD.lng } })
       await this.fetchNearbyByCurrentRadius()
-      wx.showToast({ title: '已使用备用位置', icon: 'none' })
+      wx.showToast({ title: '定位不可用，已使用备用位置', icon: 'none' })
     } })
   },
   async toggleStar(){

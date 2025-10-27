@@ -99,4 +99,14 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
+  ,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于展示附近的心理咨询点"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation",
+    "chooseLocation"
+  ]
 }
