@@ -30,4 +30,15 @@
       </view>
     </view>
   </block>
+
+  <!-- 导航失败时的地图预览（开发者工具兜底） -->
+  <view wx:if="{{mapPreview}}" class="map-mask">
+    <map class="map-view"
+         latitude="{{mapCenter.lat}}"
+         longitude="{{mapCenter.lng}}"
+         scale="16"
+         markers="{{mapMarkers}}">
+    </map>
+    <button class="map-close" size="mini" bindtap="closeMapPreview">关闭预览</button>
+  </view>
 </view>

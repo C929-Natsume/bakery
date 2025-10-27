@@ -11,7 +11,11 @@ Page({
     nearby:{ items: [] },
     radiusOptions: [3000, 5000, 10000],
     radiusIndex: 1, // 默认 5km
-    lastCoord: null
+    lastCoord: null,
+    // 导航失败时在开发者工具内的地图预览
+    mapPreview: false,
+    mapCenter: null,
+    mapMarkers: []
   },
   async onLoad(options){
     const id = options.id
@@ -144,9 +148,17 @@ Page({
       latitude: Number(lat),
       longitude: Number(lng),
       name: name || '目的地',
-      address: address || ''
+      address: address || '',
+      fail: ()=>{
+        // DevTools 环境可能不支持直接调起地图，提供地图组件预览兜底
+        const center = { lat: Number(lat), lng: Number(lng) }
+        const markers = [{ id: 1, latitude: center.lat, longitude: center.lng, title: name || '目的地' }]
+        this.setData({ mapPreview: true, mapCenter: center, mapMarkers: markers })
+        wx.showToast({ title: '开发者工具不支持导航，已打开地图预览', icon: 'none' })
+      }
     })
   },
+  closeMapPreview(){ this.setData({ mapPreview: false }) },
   onShareAppMessage(){
     const { item } = this.data
     return { title: item.title || '心灵配方', path: `/pages/mind-recipes/detail?id=${item.id}` }
