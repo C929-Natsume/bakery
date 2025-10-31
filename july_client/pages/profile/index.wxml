@@ -45,3 +45,51 @@
 
 <!-- 消息提示 -->
 <l-message />
+
+<!-- cocobegin -->
+<!-- 巧克力罐浮动按钮 -->
+<view class="chocolate-jar-btn" bindtap="openSoulMessage">
+  <image class="chocolate-jar-icon" src="../../images/icon_chocolate.png" mode="aspectFit" />
+</view>
+
+<!-- 心灵鸡汤弹窗 -->
+<l-popup show="{{showSoulPopup}}" bind:linclose="closeSoulPopup" position="center" width="600rpx">
+  <view class="soul-popup">
+    <!-- Tab切换：查看/添加 -->
+    <view class="soul-tabs">
+      <view class="soul-tab {{soulTabIndex === 0 ? 'active' : ''}}" bindtap="switchSoulTab" data-index="0">查看</view>
+      <view class="soul-tab {{soulTabIndex === 1 ? 'active' : ''}}" bindtap="switchSoulTab" data-index="1">添加</view>
+    </view>
+
+    <!-- 查看模式 -->
+    <view wx:if="{{soulTabIndex === 0}}" class="soul-view">
+      <view class="soul-title">🍫 巧克力罐</view>
+      <view class="soul-content">{{soulMessage.content || '点击"添加"来添加你的专属句子'}}</view>
+      <view wx:if="{{soulMessage.push_id}}" class="soul-actions">
+        <button class="soul-btn-collect" size="mini" bindtap="collectSoulMessage">收藏</button>
+      </view>
+      <view class="soul-actions">
+        <button class="soul-btn-random" size="mini" bindtap="getRandomMessage">换一条</button>
+        <button class="soul-btn-view-all" size="mini" bindtap="viewAllMessages">查看全部</button>
+      </view>
+    </view>
+
+    <!-- 添加模式 -->
+    <view wx:if="{{soulTabIndex === 1}}" class="soul-add">
+      <view class="soul-title">✨ 添加句子</view>
+      <textarea 
+        class="soul-input" 
+        placeholder="输入你想要保存的句子..."
+        value="{{customMessage}}"
+        bindinput="onCustomMessageInput"
+        maxlength="200"
+        auto-height
+      />
+      <view class="soul-input-tip">还可以输入 {{200 - customMessage.length}} 字</view>
+      <view class="soul-actions">
+        <button class="soul-btn-save" size="mini" type="primary" bindtap="saveCustomMessage">保存</button>
+        <button class="soul-btn-cancel" size="mini" bindtap="cancelAddMessage">取消</button>
+      </view>
+    </view>
+  </view>
+</l-popup>

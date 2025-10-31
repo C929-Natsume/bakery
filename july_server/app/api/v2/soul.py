@@ -13,6 +13,7 @@ from app.model.soul_push import SoulPush, SoulPushSourceType
 from app.model.diary import Diary
 from app.model.topic import Topic
 from app.model.emotion_label import EmotionLabel
+from app.model.user import User
 from app.service.llm_service import LLMService
 
 api = RedPrint('soul')
@@ -280,3 +281,188 @@ def generate_batch_push():
     
     return Success(data={'pushes': results, 'count': len(results)})
 
+#cocobegin
+@api.route('/custom', methods=['POST'])
+@auth.login_required
+def save_custom_push():
+    """
+    保存用户自定义句子
+    """
+    data = request.get_json()
+    
+    content = data.get('content', '').strip()
+    
+    # 验证内容
+    if not content:
+        raise ParameterError(msg='句子内容不能为空')
+    
+    if len(content) > 500:
+        raise ParameterError(msg='句子内容不能超过500字')
+    
+    # 保存自定义推送记录
+    push = SoulPush.create(
+        user_id=g.user.id,
+        content=content,
+        source_type='CUSTOM',
+        llm_model='user_custom'  # 标识为用户自定义
+    )
+    
+    current_app.logger.info(f"保存自定义句子, 用户ID: {g.user.id}, 推送ID: {push.id}")
+    
+    return Success(data={
+        'push_id': push.id,
+        'content': push.content,
+        'source_type': push.source_type
+    }, msg='保存成功')
+
+
+@api.route('/custom/<push_id>', methods=['DELETE'])
+@auth.login_required
+def delete_custom_push(push_id):
+    """
+    删除用户自定义句子
+    """
+    push = SoulPush.get_or_404(id=push_id, delete_time=None)
+    
+    # 权限检查：只能删除自己的自定义句子
+    if push.user_id != g.user.id:
+        raise Forbidden(msg='无权操作该推送')
+    
+    if push.source_type != 'CUSTOM':
+        raise ParameterError(msg='只能删除自定义句子')
+    
+    # 软删除
+    push.delete()
+    
+    current_app.logger.info(f"删除自定义句子, 用户ID: {g.user.id}, 推送ID: {push_id}")
+    
+    return Success(msg='删除成功')
+
+
+@api.route('/custom/list', methods=['GET'])
+@auth.login_required
+def get_custom_list():
+    """
+    获取用户所有自定义句子
+    """
+    page = request.args.get('page', 1, type=int)
+    size = request.args.get('size', 50, type=int)
+    
+    # 只获取自定义类型的推送
+    pagination = SoulPush.query.filter_by(
+        user_id=g.user.id,
+        source_type='CUSTOM',
+        delete_time=None
+    ).order_by(SoulPush.create_time.desc()).paginate(page=page, size=size)
+    
+    return Success(data={
+        'items': pagination.items,
+        'total_count': pagination.total,
+        'current_page': pagination.page,
+        'total_page': pagination.pages
+    })
+
+
+@api.route('/public/random', methods=['GET'])
+@auth.login_required
+def get_public_random():
+    """
+    从公共句子库获取随机句子
+    可选参数：emotion_label_id - 指定情绪标签
+    """
+    # 查找系统用户
+    system_user = User.get_one(openid='system_soul_bot')
+    if not system_user:
+        # 如果没有系统用户，返回随机推送
+        return get_random_push()
+    
+    # 获取情绪标签ID（可选）
+    emotion_label_id = request.args.get('emotion_label_id', type=str)
+    
+    # 从系统用户的句子库随机选择
+    import random
+    query = SoulPush.query.filter_by(
+        user_id=system_user.id,
+        source_type='RANDOM',
+        delete_time=None
+    )
+    
+    # 如果指定了情绪标签，按情绪标签过滤
+    if emotion_label_id:
+        query = query.filter_by(emotion_label_id=emotion_label_id)
+    
+    pushes = query.all()
+    
+    if not pushes:
+        # 如果没有匹配的句子，尝试不按情绪标签查找
+        if emotion_label_id:
+            pushes = SoulPush.query.filter_by(
+                user_id=system_user.id,
+                source_type='RANDOM',
+                delete_time=None
+            ).all()
+        
+        if not pushes:
+            # 如果没有公共句子，生成随机推送
+            return get_random_push()
+    
+    # 随机选择一条
+    selected = random.choice(pushes)
+    
+    current_app.logger.info(f"获取公共句子库随机句子, 用户ID: {g.user.id}, 情绪标签: {emotion_label_id or '无'}")
+    
+    return Success(data={
+        'push_id': selected.id,
+        'content': selected.content,
+        'source_type': 'PUBLIC',
+        'emotion_label_id': selected.emotion_label_id
+    })
+
+
+@api.route('/public/emotion/<emotion_label_id>', methods=['GET'])
+@auth.login_required
+def get_public_by_emotion(emotion_label_id):
+    """
+    根据情绪标签获取公共句子
+    """
+    # 查找系统用户
+    system_user = User.get_one(openid='system_soul_bot')
+    if not system_user:
+        raise NotFound(msg='公共句子库不存在')
+    
+    # 验证情绪标签是否存在
+    from app.model.emotion_label import EmotionLabel
+    emotion = EmotionLabel.get_one(id=emotion_label_id, delete_time=None)
+    if not emotion:
+        raise NotFound(msg='情绪标签不存在')
+    
+    # 获取该情绪标签下的句子
+    pushes = SoulPush.query.filter_by(
+        user_id=system_user.id,
+        source_type='RANDOM',
+        emotion_label_id=emotion_label_id,
+        delete_time=None
+    ).all()
+    
+    if not pushes:
+        # 如果没有匹配的句子，返回空列表
+        return Success(data={'items': [], 'count': 0})
+    
+    # 随机返回一条
+    import random
+    selected = random.choice(pushes)
+    
+    current_app.logger.info(f"根据情绪标签获取句子, 情绪: {emotion.name}, 用户ID: {g.user.id}")
+    
+    return Success(data={
+        'push_id': selected.id,
+        'content': selected.content,
+        'emotion_label': {
+            'id': emotion.id,
+            'name': emotion.name,
+            'icon': emotion.icon,
+            'color': emotion.color
+        }
+    })
+
+#cocoend

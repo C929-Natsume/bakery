@@ -15,6 +15,7 @@ class SoulPushSourceType:
     TOPIC = 'TOPIC'
     EMOTION = 'EMOTION'
     RANDOM = 'RANDOM'
+    CUSTOM = 'CUSTOM' # 自定义句子
 
 
 class SoulPush(BaseModel):
@@ -25,7 +26,7 @@ class SoulPush(BaseModel):
 
     user_id = Column(String(32), nullable=False, comment='用户ID')
     content = Column(Text, nullable=False, comment='推送内容')
-    source_type = Column(SQLEnum('DIARY', 'TOPIC', 'EMOTION', 'RANDOM'), default='RANDOM', comment='来源类型')
+    source_type = Column(SQLEnum('DIARY', 'TOPIC', 'EMOTION', 'RANDOM', 'CUSTOM'), default='RANDOM', comment='来源类型')
     source_id = Column(String(32), comment='来源ID')
     emotion_label_id = Column(String(32), comment='情绪标签ID')
     is_collected = Column(Boolean, default=False, comment='是否收藏')

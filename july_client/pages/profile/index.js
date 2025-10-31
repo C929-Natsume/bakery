@@ -8,6 +8,9 @@ import { Comment } from '../../models/comment'
 import { Star } from '../../models/star'
 import { Message } from '../../models/message'
 import { OSS } from '../../models/oss'
+
+import { Soul } from '../../models/soul'
+
 const app = getApp()
 
 Page({
@@ -28,7 +31,15 @@ Page({
     hasMoreComment: true, // 是否还有更多评论
     hasMoreStar: true, // 是否还有更多收藏
     tabsFixed: false, // Tabs是否吸顶
-    loading: false
+    loading: false,
+    //cocobegin
+    showSoulPopup: false, // 是否显示心灵鸡汤弹窗
+    soulMessage: {}, // 当前心灵鸡汤内容
+    soulLoading: false, // 是否正在加载
+    soulTabIndex: 0, // Tab索引：0-查看，1-添加
+    customMessage: '', // 自定义句子输入
+    customMessages: [] // 保存的自定义句子列表
+    //cocobegin
   },
 
   onLoad() {
@@ -105,6 +116,333 @@ Page({
     }
     init(options)
   },
+
+  //cocobegin
+    /**
+   * 打开心灵鸡汤弹窗
+   */
+  async openSoulMessage() {
+    // 显示加载状态
+    this.setData({
+      showSoulPopup: true,
+      soulTabIndex: 0 // 默认显示查看模式
+    })
+    
+    // 加载一条消息（优先自定义消息）
+    this.loadRandomOrCustomMessage()
+
+    try {
+      // 调用 API 获取随机心灵鸡汤
+      const data = await Soul.getRandom()
+      
+      if (data) {
+        this.setData({
+          soulMessage: data,
+          soulLoading: false
+        })
+      } else {
+        wx.showToast({
+          title: '获取失败，请重试',
+          icon: 'none'
+        })
+        this.setData({
+          soulLoading: false
+        })
+      }
+    } catch (error) {
+      console.error('获取心灵鸡汤失败:', error)
+      wx.showToast({
+        title: '网络错误',
+        icon: 'none'
+      })
+      this.setData({
+        soulLoading: false
+      })
+    }
+  },
+
+  /**
+   * 关闭心灵鸡汤弹窗
+   */
+  closeSoulPopup() {
+    this.setData({
+      showSoulPopup: false,
+      soulMessage: {}
+    })
+  },
+
+  /**
+   * 阻止冒泡（防止点击内容区域关闭弹窗）
+   */
+  preventClose() {
+    // 空函数，阻止事件冒泡
+  },
+
+  /**
+   * 收藏心灵鸡汤
+   */
+  async collectSoulMessage() {
+    if (!this.data.soulMessage.push_id) {
+      return
+    }
+
+    try {
+      const res = await Soul.toggleCollect(this.data.soulMessage.push_id)
+      if (res.code === 0) {
+        this.setData({
+          'soulMessage.is_collected': res.data.is_collected
+        })
+        wx.showToast({
+          title: res.data.is_collected ? '收藏成功' : '已取消收藏',
+          icon: 'success'
+        })
+      }
+    } catch (error) {
+      console.error('收藏失败:', error)
+      wx.showToast({
+        title: '操作失败',
+        icon: 'none'
+      })
+    }
+  },
+  /**
+ * 切换Tab
+ */
+  switchSoulTab(e) {
+    const index = parseInt(e.currentTarget.dataset.index)
+    this.setData({
+      soulTabIndex: index,
+      customMessage: '' // 切换时清空输入
+    })
+    
+    // 如果切换到查看模式，加载一条消息
+    if (index === 0) {
+      this.loadRandomOrCustomMessage()
+    }
+  },
+
+  /**
+   * 自定义句子输入
+   */
+  onCustomMessageInput(e) {
+    this.setData({
+      customMessage: e.detail.value
+    })
+  },
+
+  /**
+   * 保存自定义句子
+   */
+/**
+ * 保存自定义句子
+ */
+async saveCustomMessage() {
+  const message = this.data.customMessage.trim()
+  
+  if (!message) {
+    wx.showToast({
+      title: '请输入句子',
+      icon: 'none'
+    })
+    return
+  }
+  
+  if (message.length > 500) {
+    wx.showToast({
+      title: '句子太长，最多500字',
+      icon: 'none'
+    })
+    return
+  }
+  
+  wx.showLoading({
+    title: '保存中...'
+  })
+  
+  try {
+    // 调用API保存到后端
+    const res = await Soul.saveCustom(message)
+    
+    if (res.code === 0) {
+      wx.showToast({
+        title: '保存成功',
+        icon: 'success'
+      })
+      
+      // 清空输入，切换到查看模式，显示刚保存的句子
+      this.setData({
+        customMessage: '',
+        soulTabIndex: 0,
+        soulMessage: res.data, // 使用API返回的数据
+        soulLoading: false
+      })
+    } else {
+      wx.showToast({
+        title: res.msg || '保存失败',
+        icon: 'none'
+      })
+    }
+  } catch (error) {
+    console.error('保存自定义句子失败:', error)
+    wx.showToast({
+      title: '网络错误',
+      icon: 'none'
+    })
+  } finally {
+    wx.hideLoading()
+  }
+},
+
+/**
+ * 取消添加
+ */
+cancelAddMessage() {
+  this.setData({
+    customMessage: '',
+    soulTabIndex: 0
+  })
+  // 加载一条消息
+  this.loadRandomOrCustomMessage()
+},
+
+/**
+ * 加载随机或自定义消息
+ */
+async loadRandomOrCustomMessage() {
+  // 1. 先尝试从API获取公共句子库的随机句子
+  try {
+    const res = await Soul.getPublicRandom()
+    if (res && res.code === 0) {
+      this.setData({
+        soulMessage: res.data,
+        soulLoading: false
+      })
+      return
+    }
+  } catch (error) {
+    console.error('获取公共句子失败:', error)
+  }
+  
+  // 2. 然后尝试从用户自定义句子中随机选择
+  try {
+    const customData = await Soul.getCustomList({ page: 1, size: 50 })
+    
+    if (customData && customData.items && customData.items.length > 0) {
+      // 随机选择一条自定义消息
+      const messages = customData.items
+      const randomIndex = Math.floor(Math.random() * messages.length)
+      
+      this.setData({
+        soulMessage: {
+          push_id: messages[randomIndex].id,
+          content: messages[randomIndex].content,
+          is_custom: true
+        },
+        customMessages: messages,
+        soulLoading: false
+      })
+      return
+    }
+  } catch (error) {
+    console.error('获取自定义句子失败:', error)
+  }
+  
+  // 3. 最后获取LLM生成的随机推送
+  this.getRandomMessage()
+},
+
+/**
+ * 获取随机消息
+ */
+async getRandomMessage() {
+  this.setData({
+    soulLoading: true,
+    soulMessage: {}
+  })
+  
+  try {
+    const data = await Soul.getRandom()
+    if (data) {
+      this.setData({
+        soulMessage: data,
+        soulLoading: false
+      })
+    } else {
+      wx.showToast({
+        title: '获取失败，请重试',
+        icon: 'none'
+      })
+      this.setData({
+        soulLoading: false
+      })
+    }
+  } catch (error) {
+    console.error('获取随机消息失败:', error)
+    wx.showToast({
+      title: '网络错误',
+      icon: 'none'
+    })
+    this.setData({
+      soulLoading: false
+    })
+  }
+},
+
+/**
+ * 查看全部自定义消息
+ */
+/**
+ * 查看全部自定义消息
+ */
+async viewAllMessages() {
+  wx.showLoading({
+    title: '加载中...'
+  })
+  
+  try {
+    const data = await Soul.getCustomList({ page: 1, size: 50 })
+    
+    if (!data || !data.items || data.items.length === 0) {
+      wx.showToast({
+        title: '还没有自定义句子',
+        icon: 'none'
+      })
+      wx.hideLoading()
+      return
+    }
+    
+    // 显示列表供选择
+    const itemList = data.items.map((msg, index) => {
+      const content = msg.content.length > 20 
+        ? msg.content.substring(0, 20) + '...' 
+        : msg.content
+      return `${index + 1}. ${content}`
+    })
+    
+    wx.hideLoading()
+    
+    wx.showActionSheet({
+      itemList: itemList,
+      success: (res) => {
+        this.setData({
+          soulMessage: {
+            push_id: data.items[res.tapIndex].id,
+            content: data.items[res.tapIndex].content,
+            is_custom: true
+          }
+        })
+      }
+    })
+  } catch (error) {
+    wx.hideLoading()
+    console.error('获取自定义句子列表失败:', error)
+    wx.showToast({
+      title: '加载失败',
+      icon: 'none'
+    })
+  }
+},
+//cocobegin
 
   /**
    * 媒体文件上传至OSS

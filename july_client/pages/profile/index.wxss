@@ -45,3 +45,163 @@
 .nothing-message {
   margin-top: 415rpx;
 }
+
+/* 巧克力罐浮动按钮 */
+.chocolate-jar-btn {
+  position: fixed;
+  right: 30rpx;
+  bottom: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background:rgb(252, 232, 218);
+  box-shadow: 0 4rpx 20rpx rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform 0.2s;
+}
+
+.chocolate-jar-btn:active {
+  transform: scale(0.95);
+}
+
+.chocolate-jar-icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 心灵鸡汤弹窗遮罩 */
+.soul-popup-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 心灵鸡汤弹窗内容 */
+.soul-popup {
+  position: relative;
+  width: 600rpx;
+  min-height: 300rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-shadow: 0 8rpx 40rpx rgba(0, 0, 0, 0.2);
+}
+
+.soul-close {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  color: #999;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.soul-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #337559;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.soul-content {
+  font-size: 28rpx;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+  margin-bottom: 40rpx;
+  min-height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soul-loading {
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  padding: 40rpx 0;
+}
+
+.soul-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.soul-btn {
+  background: #337559;
+  color: #fff;
+  border-radius: 40rpx;
+  padding: 0 40rpx;
+}
+
+/* 巧克力罐Tab切换 */
+.soul-tabs {
+  display: flex;
+  border-bottom: 2rpx solid #eee;
+  margin-bottom: 30rpx;
+}
+
+.soul-tab {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  color: #999;
+  border-bottom: 4rpx solid transparent;
+}
+
+.soul-tab.active {
+  color: #337559;
+  border-bottom-color: #337559;
+  font-weight: bold;
+}
+
+/* 查看模式 */
+.soul-view {
+  min-height: 300rpx;
+}
+
+/* 添加模式 */
+.soul-add {
+  min-height: 300rpx;
+}
+
+.soul-input {
+  width: 100%;
+  min-height: 200rpx;
+  padding: 20rpx;
+  border: 2rpx solid #eee;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+  margin-bottom: 20rpx;
+}
+
+.soul-input-tip {
+  text-align: right;
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+
+.soul-btn-random,
+.soul-btn-view-all {
+  margin: 0 10rpx;
+  background: #fff;
+  color: #337559;
+  border: 2rpx solid #337559;
+}

@@ -29,3 +29,5 @@ image/log/
 coverage/
 dist/
 build/
+mysql-8.4.6-winx64/
+Redis-x64-5.0.14.1/
