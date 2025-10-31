@@ -100,6 +100,35 @@ class Soul {
     }
     return null
   }
+
+  /**
+   * 智能推送 - 根据识别出的情绪标签智能推送鸡汤句子
+   * 自动识别用户最近的情绪标签并推送匹配的句子
+   */
+  static async getSmartPush() {
+    const res = await wxutil.request.get(`${api.soulAPI}/smart`)
+    if (res.code === 0) {
+      return res
+    }
+    return null
+  }
+
+  /**
+   * 根据已识别的情绪标签，获取数据库中的另一条句子（换一条）
+   * @param {string} emotionLabelId - 情绪标签ID
+   * @param {string} excludePushId - 要排除的句子ID（可选）
+   */
+  static async getAnotherSmartPush(emotionLabelId, excludePushId = null) {
+    const params = { emotion_label_id: emotionLabelId }
+    if (excludePushId) {
+      params.exclude_push_id = excludePushId
+    }
+    const res = await wxutil.request.get(`${api.soulAPI}/smart/another`, params)
+    if (res.code === 0) {
+      return res
+    }
+    return null
+  }
 }
 
 export { Soul }

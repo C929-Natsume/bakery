@@ -64,9 +64,23 @@
     <!-- 查看模式 -->
     <view wx:if="{{soulTabIndex === 0}}" class="soul-view">
       <view class="soul-title">🍫 巧克力罐</view>
-      <view class="soul-content">{{soulMessage.content || '点击"添加"来添加你的专属句子'}}</view>
+      <!-- 显示智能识别出的情绪标签 -->
+      <view wx:if="{{soulMessage.emotion_label && soulMessage.emotion_label.name}}" class="soul-emotion-info">
+        <view class="soul-emotion-header">
+          <text class="soul-emotion-label-text">智能识别到的情绪</text>
+        </view>
+        <view class="soul-emotion-badge" style="background-color: {{soulMessage.emotion_label.color}}15; border-color: {{soulMessage.emotion_label.color}};">
+          <text class="soul-emotion-icon">{{soulMessage.emotion_label.icon || '🎭'}}</text>
+          <text class="soul-emotion-name" style="color: {{soulMessage.emotion_label.color}};">{{soulMessage.emotion_label.name}}</text>
+        </view>
+        <view wx:if="{{soulMessage.confidence}}" class="soul-confidence-info">
+          <text class="soul-confidence-label">算法识别匹配度：</text>
+          <text class="soul-confidence-value" style="color: {{soulMessage.emotion_label.color}};">{{soulMessage.confidence_percent}}%</text>
+        </view>
+      </view>
+      <view class="soul-content">{{soulMessage.content || ''}}</view>
       <view wx:if="{{soulMessage.push_id}}" class="soul-actions">
-        <button class="soul-btn-collect" size="mini" bindtap="collectSoulMessage">收藏</button>
+        <button class="soul-btn-collect" size="mini" bindtap="collectSoulMessage">{{soulMessage.is_collected ? '已收藏' : '收藏'}}</button>
       </view>
       <view class="soul-actions">
         <button class="soul-btn-random" size="mini" bindtap="getRandomMessage">换一条</button>

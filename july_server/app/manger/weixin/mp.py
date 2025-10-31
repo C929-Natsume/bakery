@@ -40,11 +40,15 @@ class WeixinBase(object):
         """
         access_token_key = f"{self.wx_type}_access_token_{self.app_id}"
 
-        # redis 获取 access_token
-        from app import access_token_db
-        access_token = access_token_db.get(access_token_key)
-        if access_token:
-            return access_token
+        # redis 获取 access_token（如果Redis不可用，跳过缓存）
+        try:
+            from app import access_token_db
+            access_token = access_token_db.get(access_token_key)
+            if access_token:
+                current_app.logger.debug(f"从Redis获取access_token成功")
+                return access_token
+        except Exception as e:
+            current_app.logger.warning(f"Redis连接失败，跳过缓存: {str(e)}")
 
         # 接口请求获取 access_token
         params = {
@@ -63,8 +67,16 @@ class WeixinBase(object):
             raise WeixinAPIError
 
         access_token = res['access_token']
-        access_token_db.set(access_token_key, access_token, res['expires_in'])
-        current_app.logger.info(f"微信获取access_token成功: {res}")
+        
+        # 尝试缓存到Redis（如果Redis不可用，跳过缓存）
+        try:
+            from app import access_token_db
+            access_token_db.set(access_token_key, access_token, res['expires_in'])
+            current_app.logger.debug(f"access_token已缓存到Redis")
+        except Exception as e:
+            current_app.logger.warning(f"Redis缓存失败，跳过缓存: {str(e)}")
+        
+        current_app.logger.info(f"微信获取access_token成功")
 
         return access_token
 

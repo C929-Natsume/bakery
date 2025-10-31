@@ -119,42 +119,65 @@ Page({
 
   //cocobegin
     /**
-   * 打开心灵鸡汤弹窗
+   * 打开心灵鸡汤弹窗 - 使用智能推送
+   * 根据识别出的情绪标签智能推送鸡汤句子
    */
   async openSoulMessage() {
-    // 显示加载状态
+    // 等待分析时显示的随机鼓励句子
+    const waitingMessages = [
+      "Life is like a box of chocolates, you never know what you're gonna get."
+    ]
+    
+    // 先显示一个随机鼓励句子
+    const randomWaiting = waitingMessages[Math.floor(Math.random() * waitingMessages.length)]
+    
+    // 显示加载状态，先显示等待句子
     this.setData({
       showSoulPopup: true,
-      soulTabIndex: 0 // 默认显示查看模式
+      soulTabIndex: 0, // 默认显示查看模式
+      soulLoading: true,
+      soulMessage: {
+        content: randomWaiting,
+        push_id: null,
+        source: 'waiting'
+      }
     })
-    
-    // 加载一条消息（优先自定义消息）
-    this.loadRandomOrCustomMessage()
 
     try {
-      // 调用 API 获取随机心灵鸡汤
-      const data = await Soul.getRandom()
+      // 调用智能推送API - 自动识别用户情绪标签并推送匹配的句子
+      const res = await Soul.getSmartPush()
       
-      if (data) {
+      if (res && res.code === 0 && res.data) {
+        const data = res.data
+        // 格式化置信度为百分比
+        const confidencePercent = data.confidence ? Math.round(data.confidence * 100) : 0
+        
         this.setData({
-          soulMessage: data,
+          soulMessage: {
+            push_id: data.push_id,
+            content: data.content,
+            emotion_label: data.emotion_label,
+            confidence: data.confidence,
+            confidence_percent: confidencePercent, // 格式化后的百分比
+            source: data.source,
+            is_collected: false // 默认未收藏
+          },
           soulLoading: false
         })
+        
+        // 如果有情绪标签信息，可以显示给用户
+        if (data.emotion_label && data.emotion_label.name) {
+          console.log(`智能识别到情绪: ${data.emotion_label.name} (置信度: ${confidencePercent}%)`)
+        }
       } else {
-        wx.showToast({
-          title: '获取失败，请重试',
-          icon: 'none'
-        })
+        // 如果智能推送失败，保持显示的等待句子
         this.setData({
           soulLoading: false
         })
       }
     } catch (error) {
-      console.error('获取心灵鸡汤失败:', error)
-      wx.showToast({
-        title: '网络错误',
-        icon: 'none'
-      })
+      console.error('获取智能推送失败:', error)
+      // 保持显示的等待句子
       this.setData({
         soulLoading: false
       })
@@ -260,22 +283,40 @@ async saveCustomMessage() {
   })
   
   try {
-    // 调用API保存到后端
+    // 调用API保存到后端（后端会调用情绪识别功能）
     const res = await Soul.saveCustom(message)
     
     if (res.code === 0) {
+      const data = res.data
+      const createdCount = data.created_count || 1
+      
       wx.showToast({
-        title: '保存成功',
-        icon: 'success'
+        title: `保存成功（已创建${createdCount}条记录）`,
+        icon: 'success',
+        duration: 2000
       })
       
       // 清空输入，切换到查看模式，显示刚保存的句子
       this.setData({
         customMessage: '',
         soulTabIndex: 0,
-        soulMessage: res.data, // 使用API返回的数据
+        soulMessage: {
+          push_id: data.push_id,
+          content: data.content,
+          emotion_label: data.emotion_label,
+          emotion_name: data.emotion_name, // 识别出的情绪名称
+          source: 'user_custom',
+          is_collected: false
+        },
         soulLoading: false
       })
+      
+      // 如果有情绪标签信息，记录日志
+      if (data.emotion_label && data.emotion_label.name) {
+        console.log(`保存的自定义句子识别为: ${data.emotion_label.name}, 创建了${createdCount}条记录`)
+      } else if (data.emotion_name) {
+        console.log(`保存的自定义句子识别为: ${data.emotion_name}, 创建了${createdCount}条记录`)
+      }
     } else {
       wx.showToast({
         title: res.msg || '保存失败',
@@ -307,81 +348,105 @@ cancelAddMessage() {
 
 /**
  * 加载随机或自定义消息
+ * 改为使用智能推送（匹配数据库中情绪标签一致的句子）
  */
 async loadRandomOrCustomMessage() {
-  // 1. 先尝试从API获取公共句子库的随机句子
-  try {
-    const res = await Soul.getPublicRandom()
-    if (res && res.code === 0) {
-      this.setData({
-        soulMessage: res.data,
-        soulLoading: false
-      })
-      return
-    }
-  } catch (error) {
-    console.error('获取公共句子失败:', error)
-  }
-  
-  // 2. 然后尝试从用户自定义句子中随机选择
-  try {
-    const customData = await Soul.getCustomList({ page: 1, size: 50 })
-    
-    if (customData && customData.items && customData.items.length > 0) {
-      // 随机选择一条自定义消息
-      const messages = customData.items
-      const randomIndex = Math.floor(Math.random() * messages.length)
-      
-      this.setData({
-        soulMessage: {
-          push_id: messages[randomIndex].id,
-          content: messages[randomIndex].content,
-          is_custom: true
-        },
-        customMessages: messages,
-        soulLoading: false
-      })
-      return
-    }
-  } catch (error) {
-    console.error('获取自定义句子失败:', error)
-  }
-  
-  // 3. 最后获取LLM生成的随机推送
+  // 直接使用智能推送
   this.getRandomMessage()
 },
 
 /**
- * 获取随机消息
+ * 获取随机消息 - 根据已识别的情绪标签获取另一条句子（换一条）
  */
 async getRandomMessage() {
+  // 获取当前保存的情绪标签ID和句子ID
+  const currentEmotionLabel = this.data.soulMessage?.emotion_label
+  const currentPushId = this.data.soulMessage?.push_id
+  
+  // 等待分析时显示的随机鼓励句子
+  const waitingMessages = [
+    "Life is like a box of chocolates, you never know what you're gonna get."
+  ]
+  
+  // 先显示一个随机鼓励句子
+  const randomWaiting = waitingMessages[Math.floor(Math.random() * waitingMessages.length)]
+  
   this.setData({
     soulLoading: true,
-    soulMessage: {}
+    soulMessage: {
+      ...this.data.soulMessage,
+      content: randomWaiting,
+      push_id: null,
+      source: 'waiting'
+    }
   })
   
+  // 如果有已识别的情绪标签，使用它获取另一条句子
+  if (currentEmotionLabel && currentEmotionLabel.id) {
+    try {
+      // 根据已识别的情绪标签获取另一条句子（排除当前显示的句子）
+      const res = await Soul.getAnotherSmartPush(currentEmotionLabel.id, currentPushId)
+      
+      if (res && res.code === 0 && res.data) {
+        const data = res.data
+        
+        this.setData({
+          soulMessage: {
+            push_id: data.push_id,
+            content: data.content,
+            emotion_label: data.emotion_label,
+            confidence: this.data.soulMessage?.confidence, // 保持原有的置信度
+            confidence_percent: this.data.soulMessage?.confidence_percent, // 保持原有的置信度百分比
+            source: data.source,
+            is_collected: false // 默认未收藏
+          },
+          soulLoading: false
+        })
+        
+        console.log(`根据已识别情绪标签获取另一条句子: ${data.emotion_label?.name}`)
+        return
+      }
+    } catch (error) {
+      console.error('获取另一条句子失败:', error)
+      // 继续下面的逻辑，可能没有已识别的标签，需要重新分析
+    }
+  }
+  
+  // 如果没有已识别的情绪标签，调用智能推送接口（重新分析）
   try {
-    const data = await Soul.getRandom()
-    if (data) {
+    const res = await Soul.getSmartPush()
+    
+    if (res && res.code === 0 && res.data) {
+      const data = res.data
+      // 格式化置信度为百分比
+      const confidencePercent = data.confidence ? Math.round(data.confidence * 100) : 0
+      
       this.setData({
-        soulMessage: data,
+        soulMessage: {
+          push_id: data.push_id,
+          content: data.content,
+          emotion_label: data.emotion_label,
+          confidence: data.confidence,
+          confidence_percent: confidencePercent,
+          source: data.source,
+          is_collected: false // 默认未收藏
+        },
         soulLoading: false
       })
+      
+      // 如果有情绪标签信息，记录日志
+      if (data.emotion_label && data.emotion_label.name) {
+        console.log(`智能识别到情绪: ${data.emotion_label.name} (置信度: ${confidencePercent}%)`)
+      }
     } else {
-      wx.showToast({
-        title: '获取失败，请重试',
-        icon: 'none'
-      })
+      // 如果智能推送失败，保持显示的等待句子
       this.setData({
         soulLoading: false
       })
     }
   } catch (error) {
-    console.error('获取随机消息失败:', error)
-    wx.showToast({
-      title: '网络错误',
-      icon: 'none'
-    })
+    console.error('获取智能推送失败:', error)
+    // 保持显示的等待句子
     this.setData({
       soulLoading: false
     })

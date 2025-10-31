@@ -238,3 +238,43 @@ def _convert_to_wave_data(trend):
     
     return wave_data
 
+
+@api.route('/analyze/today', methods=['GET'])
+@auth.login_required
+def analyze_emotion_today():
+    """
+    智能分析用户今日情绪标签
+    基于近7天的发帖、日记和浏览内容
+    使用 DeepSeek V3 进行智能分类
+    """
+    from app.service.emotion_analysis import EmotionAnalysisService
+    
+    try:
+        result = EmotionAnalysisService.analyze_user_emotion_today(g.user.id)
+        
+        current_app.logger.info(
+            f"情绪分析完成, 用户ID: {g.user.id}, "
+            f"推荐情绪: {result['emotion_name']}, "
+            f"置信度: {result['confidence']}"
+        )
+        
+        return Success(data=result)
+    except Exception as e:
+        current_app.logger.error(f"情绪分析失败, 用户ID: {g.user.id}, 错误: {str(e)}")
+        # 返回默认情绪
+        calm_emotion = EmotionLabel.query.filter_by(name='平静', delete_time=None).first()
+        if calm_emotion:
+            return Success(data={
+                'emotion_label_id': calm_emotion.id,
+                'emotion_name': calm_emotion.name,
+                'confidence': 0.3,
+                'analysis': '分析过程出现错误，已为您推荐默认情绪标签',
+                'factors': {
+                    'diary_count': 0,
+                    'topic_count': 0,
+                    'browse_count': 0,
+                    'emotion_scores': {}
+                }
+            })
+        raise
+

@@ -32,13 +32,15 @@ def create_diary():
     location = data.get('location')
     images = data.get('images', [])
     
-    # 获取用户ID（未登录时使用测试ID）
+    # 获取用户ID（必须登录）
     try:
         auth.login_required()
         user_id = g.user.id
-    except:
-        # 开发模式：使用固定的测试用户ID
-        user_id = 'test_user_diary_dev'
+        current_app.logger.info(f"创建日记, 已登录用户ID: {user_id}")
+    except Exception as e:
+        # 未登录时记录警告并返回错误
+        current_app.logger.warning(f"创建日记失败: 用户未登录或token无效, 错误: {str(e)}")
+        raise Forbidden(msg='请先登录后再创建日记')
     
     # 参数验证
     if not content:

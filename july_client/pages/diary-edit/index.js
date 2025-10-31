@@ -135,10 +135,15 @@ Page({
       const method = isEdit ? 'PUT' : 'POST';
       const url = isEdit ? `${api.diaryAPI}/${diaryId}` : api.diaryAPI;
       
+      // 获取请求头（包含Authorization token）
+      const app = getApp();
+      const header = app.getHeader ? app.getHeader() : {};
+      
       const res = await new Promise((resolve, reject) => {
         wx.request({
           url: url,
           method: method,
+          header: header,
           data: {
             diary_date: date,  // 后端使用 diary_date 字段
             content: content.trim(),

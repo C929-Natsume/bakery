@@ -57,6 +57,21 @@ pip install -r requirements.txt
 - 七牛云 https://www.qiniu.com/
 - Server酱 https://sct.ftqq.com/
 - 腾讯位置服务 https://lbs.qq.com/
+- DeepSeek API（可选，用于智能情绪分析）https://www.deepseek.com/
+
+**DeepSeek API 配置（可选）：**
+
+如果启用智能情绪分析功能，需要在环境变量中配置：
+
+```bash
+# DeepSeek API Key（用于智能情绪分析）
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
+
+# LLM类型选择（deepseek/openai/qianwen/wenxin/fallback）
+LLM_TYPE=deepseek
+```
+
+获取 DeepSeek API Key：访问 https://platform.deepseek.com/ 注册并获取API密钥。
 
 **5. 导入数据库文件**
 

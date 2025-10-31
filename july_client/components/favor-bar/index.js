@@ -45,9 +45,14 @@ Component({
     loadInteractionStats() {
       if (!this.properties.topicId) return;
 
+      // 获取请求头（如果用户已登录，会包含Authorization）
+      const app = getApp();
+      const header = app.getHeader ? app.getHeader() : {};
+
       wx.request({
         url: `${api.starAPI}/stat/${this.properties.topicId}`,
         method: 'GET',
+        header: header,
         success: (res) => {
           if (res.data.code === 0) {
             const { stats, user_interactions } = res.data.data;
@@ -108,24 +113,36 @@ Component({
     handleInteraction(type) {
       if (this.data.loading) return;
 
-      const token = wx.getStorageSync('token');
-      if (!token) {
+      // 从userDetail中获取token
+      const app = getApp();
+      const userDetail = wx.getStorageSync('userDetail') || app.globalData.userDetail;
+      
+      if (!userDetail || !userDetail.token) {
         wx.showToast({
           title: '请先登录',
           icon: 'none'
         });
+        // 跳转到登录页
+        setTimeout(() => {
+          wx.navigateTo({
+            url: '/pages/auth/index'
+          });
+        }, 1500);
         return;
       }
 
       this.setData({ loading: true });
 
+      // 使用app.getHeader()获取完整的请求头（包含Authorization）
+      const header = app.getHeader ? app.getHeader() : {
+        'Authorization': `Token ${userDetail.token}`,
+        'Content-Type': 'application/json'
+      };
+
       wx.request({
         url: api.starAPI + '/',
         method: 'POST',
-        header: {
-          'Authorization': `Token ${token}`,
-          'Content-Type': 'application/json'
-        },
+        header: header,
         data: {
           topic_id: this.properties.topicId,
           interaction_type: type
