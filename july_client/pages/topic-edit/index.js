@@ -2,9 +2,8 @@
 import api from '../../config/api'
 import template from '../../config/template'
 import wxutil from '../../miniprogram_npm/@yyjeffrey/wxutil/index'
-import { init, upload } from '../../utils/qiniuUploader'
+import { uploadImage, uploadImages, uploadVideo } from '../../utils/cloudStorage'
 import { Label } from '../../models/label'
-import { OSS } from '../../models/oss'
 import { Topic } from '../../models/topic'
 import { Video } from '../../models/video'
 
@@ -54,19 +53,6 @@ Page({
     })
   },
 
-  /**
-   * 初始化七牛云配置
-   */
-  async initQiniu() {
-    const uptoken = await OSS.getQiniu()
-    const options = {
-      region: 'ECN',
-      uptoken: uptoken,
-      domain: api.ossDomain,
-      shouldUseQiniuFileName: false
-    }
-    init(options)
-  },
 
   /**
    * 设置内容
@@ -154,31 +140,29 @@ Page({
   },
 
   /**
-   * 多图上传
+   * 多图上传到云存储
    */
-  sendImages(imageFiles) {
-    return Promise.all(imageFiles.map((imageFile) => {
-      return this.sendMedia(imageFile)
-    }))
+  async sendImages(imageFiles) {
+    try {
+      const results = await uploadImages(imageFiles, 'topic')
+      return results.map(r => r.url)
+    } catch (error) {
+      console.error('批量上传图片失败:', error)
+      throw error
+    }
   },
 
   /**
-   * 媒体文件上传至OSS
+   * 上传单张图片到云存储
    */
-  sendMedia(imageFile, path = 'topic') {
-    return new Promise((resolve, reject) => {
-      upload(imageFile, (res) => {
-        resolve(res.imageURL)
-      }, (error) => {
-        reject(error)
-      }, {
-        region: 'ECN',
-        uptoken: null,
-        domain: null,
-        shouldUseQiniuFileName: false,
-        key: path + '/' + wxutil.getUUID(false)
-      })
-    })
+  async sendMedia(imageFile, path = 'topic') {
+    try {
+      const result = await uploadImage(imageFile, path)
+      return result.url
+    } catch (error) {
+      console.error('上传图片失败:', error)
+      throw error
+    }
   },
 
   /**
@@ -249,29 +233,38 @@ Page({
         console.log('发布数据:', JSON.stringify(data));  // 添加这行
         // 发布图文
         if (imageFiles.length > 0) {
-          await this.initQiniu()
-          this.sendImages(imageFiles).then((res) => {
-            data.images = res
+          try {
+            const imageUrls = await this.sendImages(imageFiles)
+            data.images = imageUrls
             this.uploadTopic(data)
-          })
+          } catch (error) {
+            wx.hideLoading()
+            wx.lin.showMessage({
+              type: 'error',
+              content: '图片上传失败，请重试'
+            })
+          }
         }
         // 发布视文
         else if (video) {
-          await this.initQiniu()
-          this.sendMedia(video.src, 'video').then(src => {
-            this.sendMedia(video.cover, 'video-cover').then(async cover => {
-              video.src = src
-              video.cover = cover
-              this.setData({
-                video: video
-              })
-              const res = await Video.uploadVideo(video)
-              if (res.code === 1) {
-                data.video_id = res.data.video_id
-                this.uploadTopic(data)
-              }
+          try {
+            const videoResult = await uploadVideo(video.src, 'video')
+            const coverResult = await uploadImage(video.cover, 'video-cover')
+            video.src = videoResult.url
+            video.cover = coverResult.url
+            this.setData({ video: video })
+            const res = await Video.uploadVideo(video)
+            if (res.code === 1) {
+              data.video_id = res.data.video_id
+              this.uploadTopic(data)
+            }
+          } catch (error) {
+            wx.hideLoading()
+            wx.lin.showMessage({
+              type: 'error',
+              content: '视频上传失败，请重试'
             })
-          })
+          }
         }
         // 发布纯文
         else {

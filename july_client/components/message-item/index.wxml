@@ -13,7 +13,7 @@
     <text class="message-content">{{message.action_user.nickname}}{{message.content}}</text>
   </view>
   <view wx:if="{{message.topic}}" class="topic" bindtap="gotoTopicDetail">
-    <image class="img" wx:if="{{message.topic.images.length > 0 || message.topic.video}}" src="{{message.topic.images.length > 0 ? message.topic.images[0] + '?imageView2/1/w/180/h/180' : (message.topic.video ? message.topic.video.cover + '?imageView2/1/w/180/h/180' : '')}}" mode="aspectFill" />
+    <image class="img" wx:if="{{message.topic.images.length > 0 || message.topic.video}}" src="{{message.topic.images.length > 0 ? message.topic.images[0] : (message.topic.video ? message.topic.video.cover : '')}}" mode="aspectFill" />
     <view class="topic-right">
       <nickname nickname="{{message.topic.user.nickname}}" user-id="{{message.topic.user.id}}" />
       <text class="topic-content">{{message.topic.content}}</text>

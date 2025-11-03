@@ -14,6 +14,13 @@ App({
   },
 
   onLaunch() {
+    // 初始化云开发
+    if (wx.cloud) {
+      wx.cloud.init({
+        env: 'cloud1-6gw8d7vr037b37d7', // 替换为你的云开发环境ID
+        traceUser: true
+      })
+    }
     this.getUserDetail()
     wxutil.autoUpdate()
   },

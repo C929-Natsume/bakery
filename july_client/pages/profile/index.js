@@ -1,13 +1,12 @@
 // pages/profile/index.js
 import api from '../../config/api'
 import wxutil from '../../miniprogram_npm/@yyjeffrey/wxutil/index'
-import { init, upload } from '../../utils/qiniuUploader'
+import { uploadImage } from '../../utils/cloudStorage'
 import { User } from '../../models/user'
 import { Topic } from '../../models/topic'
 import { Comment } from '../../models/comment'
 import { Star } from '../../models/star'
 import { Message } from '../../models/message'
-import { OSS } from '../../models/oss'
 const app = getApp()
 
 Page({
@@ -93,36 +92,16 @@ Page({
   },
 
   /**
-   * 初始化七牛云配置
+   * 上传图片到云存储
    */
-  async initQiniu() {
-    const uptoken = await OSS.getQiniu()
-    const options = {
-      region: 'ECN',
-      uptoken: uptoken,
-      domain: api.ossDomain,
-      shouldUseQiniuFileName: false
+  async sendMedia(imageFile, folder = 'avatar') {
+    try {
+      const result = await uploadImage(imageFile, folder)
+      return result.url
+    } catch (error) {
+      console.error('上传图片失败:', error)
+      throw error
     }
-    init(options)
-  },
-
-  /**
-   * 媒体文件上传至OSS
-   */
-  sendMedia(imageFile, path) {
-    return new Promise((resolve, reject) => {
-      upload(imageFile, (res) => {
-        resolve(res.imageURL)
-      }, (error) => {
-        reject(error)
-      }, {
-        region: 'ECN',
-        uptoken: null,
-        domain: null,
-        shouldUseQiniuFileName: false,
-        key: path + '/' + wxutil.getUUID(false)
-      })
-    })
   },
 
   /**
@@ -269,31 +248,38 @@ Page({
       }
 
       wxutil.showLoading('上传中...')
-      await this.initQiniu()
-      const poster = await this.sendMedia(res.tempFilePaths[0], 'poster')
+      try {
+        const poster = await this.sendMedia(res.tempFilePaths[0], 'poster')
 
-      const data = {
-        avatar: this.data.user.avatar,
-        nickname: this.data.user.nickname,
-        signature: this.data.user.signature,
-        gender: this.data.user.gender,
-        poster: poster
-      }
-      const info = await User.updateUser(data)
-      if (info.code === 2) {
-        this.getUserInfo(false)
+        const data = {
+          avatar: this.data.user.avatar,
+          nickname: this.data.user.nickname,
+          signature: this.data.user.signature,
+          gender: this.data.user.gender,
+          poster: poster
+        }
+        const info = await User.updateUser(data)
+        if (info.code === 2) {
+          this.getUserInfo(false)
 
-        wx.lin.showMessage({
-          type: 'success',
-          content: '封面修改成功！',
-        })
-      } else {
+          wx.lin.showMessage({
+            type: 'success',
+            content: '封面修改成功！',
+          })
+        } else {
+          wx.lin.showMessage({
+            type: 'error',
+            content: '封面修改失败！'
+          })
+        }
+      } catch (error) {
         wx.lin.showMessage({
           type: 'error',
-          content: '封面修改失败！'
+          content: '上传失败，请重试'
         })
+      } finally {
+        wx.hideLoading()
       }
-      wx.hideLoading()
     })
   },
 
@@ -318,35 +304,41 @@ Page({
    */
   async onClipTap(event) {
     wxutil.showLoading('上传中...')
-    await this.initQiniu()
-    const avatar = await this.sendMedia(event.detail.url, 'avatar')
+    try {
+      const avatar = await this.sendMedia(event.detail.url, 'avatar')
 
-    // 更新用户信息
-    const data = {
-      avatar: avatar,
-      nickname: this.data.user.nickname,
-      signature: this.data.user.signature,
-      gender: this.data.user.gender
-    }
-    const res = await User.updateUser(data)
-    if (res.code === 2) {
-      this.getUserInfo(false)
+      // 更新用户信息
+      const data = {
+        avatar: avatar,
+        nickname: this.data.user.nickname,
+        signature: this.data.user.signature,
+        gender: this.data.user.gender
+      }
+      const res = await User.updateUser(data)
+      if (res.code === 2) {
+        this.getUserInfo(false)
 
-      wx.lin.showMessage({
-        type: 'success',
-        content: '头像修改成功！',
-      })
-    } else {
+        wx.lin.showMessage({
+          type: 'success',
+          content: '头像修改成功！',
+        })
+      } else {
+        wx.lin.showMessage({
+          type: 'error',
+          content: '头像修改失败！'
+        })
+      }
+    } catch (error) {
       wx.lin.showMessage({
         type: 'error',
-        content: '头像修改失败！'
+        content: '上传失败，请重试'
+      })
+    } finally {
+      wx.hideLoading()
+      this.setData({
+        showImageClipper: false,
       })
     }
-    wx.hideLoading()
-
-    this.setData({
-      showImageClipper: false,
-    })
   },
 
   /**

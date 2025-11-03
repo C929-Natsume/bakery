@@ -9,7 +9,7 @@
       <text wx:if="{{isOwner}}" class="delete" data-index="{{index}}" catchtap="onDeleteTap">删除</text>
     </view>
     <view class="topic">
-      <image class="img" wx:if="{{item.topic.images.length > 0 || item.topic.video}}" src="{{item.topic.images.length > 0 ? item.topic.images[0] + '?imageView2/1/w/180/h/180' : (item.topic.video ? item.topic.video.cover + '?imageView2/1/w/180/h/180' : '')}}" mode="aspectFill" />
+      <image class="img" wx:if="{{item.topic.images.length > 0 || item.topic.video}}" src="{{item.topic.images.length > 0 ? item.topic.images[0] : (item.topic.video ? item.topic.video.cover : '')}}" mode="aspectFill" />
       <view class="topic-right">
         <nickname nickname="{{item.topic.user.nickname || ''}}" user-id="{{item.topic.user.id || ''}}" />
         <text class="topic-content">{{item.topic.content}}</text>
