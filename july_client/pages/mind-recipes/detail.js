@@ -20,7 +20,27 @@ Page({
   async onLoad(options){
     const id = options.id
     const item = await Mind.getKnowledgeDetail(id)
-    this.setData({ item })
+    // 将原始正文分段并生成 rich-text 所需的节点结构，避免在页面显示为一整段文字
+    const richNodes = []
+    try {
+      const content = item.content || ''
+      // 按连续空行分段（兼容 Windows/Unix 换行）
+      const paragraphs = content.split(/\n\s*\n/).filter(p => p && p.trim())
+      if (paragraphs.length === 0 && content.trim()) {
+        // 若没有双换行但有内容，则按单换行分割
+        paragraphs.push(...content.split(/\n/).filter(p => p && p.trim()))
+      }
+      for (const p of paragraphs) {
+        // 按段落内容生成节点（不在文本中插入额外空格，样式可通过 CSS 控制）
+        richNodes.push({ name: 'p', attrs: {}, children: [{ type: 'text', text: p.trim() }] })
+      }
+      // 如果没有任何段落节点，放入一条空文本以避免 rich-text 报错
+      if (richNodes.length === 0) richNodes.push({ name: 'p', attrs: {}, children: [{ type: 'text', text: '' }] })
+    } catch (e) {
+      // 保底：若解析失败，仍把原始 content 放入一个段落
+      richNodes.push({ name: 'p', attrs: {}, children: [{ type: 'text', text: (item.content || '') }] })
+    }
+    this.setData({ item, richNodes })
     if (FORCE_HUST_AS_BASE){
       // 统一以华中科技大学为中心检索（仅当强制开关为 true 时）
       this.setData({ lastCoord: { lat: FALLBACK_COORD.lat, lng: FALLBACK_COORD.lng } })

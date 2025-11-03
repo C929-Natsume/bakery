@@ -14,6 +14,7 @@ from app.lib.schema import paginator_schema
 from app.model.mind import MindKnowledge, MindStar
 from app.model.base import db
 from app.service.lbs_service import search_nearby
+from app.lib.mind_content_generator import generate_content
 from app.lib.token import auth
 from sqlalchemy import and_
 
@@ -27,7 +28,7 @@ _KNOWLEDGE = [
         'title': '认识焦虑：症状、成因与自助方法',
         'tags': ['焦虑', '科普'],
         'source': '中国心理学会科普工作委员会',
-        'content': '焦虑是对未来威胁的警觉与担心……（内容占位）',
+        'content': '焦虑是一种面对未知或可能的威胁时产生的警觉和担心。常见表现包括心跳加速、出汗、注意力受损与睡眠困难。成因通常由遗传易感性、环境压力与认知偏差共同作用。自助方法包括规律作息、呼吸与放松训练、分步暴露不适情境以及记录并挑战灾难化想法；若影响日常功能，建议及时寻求专业评估与支持。',
         'read_count': 128
     },
     {
@@ -35,7 +36,7 @@ _KNOWLEDGE = [
         'title': '抑郁情绪的识别与求助指南',
         'tags': ['抑郁', '求助'],
         'source': 'WHO 心理健康指南',
-        'content': '持续两周以上的低落、兴趣减退、睡眠饮食改变……（内容占位）',
+        'content': '抑郁是一种以持续低落心情、兴趣或快感丧失、能量下降为核心的状态，常伴随睡眠与食欲改变、负性自评与注意力受损。若这些症状持续两周以上并影响学习或工作，应重视并寻求评估。初步自助可包括活动安排（行为激活）、规律作息与社会支持；严重时可考虑专业心理治疗或药物治疗，并联系当地心理卫生资源或危机干预热线。',
         'read_count': 96
     },
     {
@@ -43,7 +44,7 @@ _KNOWLEDGE = [
         'title': '睡眠卫生：提高睡眠质量的10个建议',
         'tags': ['睡眠', '行为建议'],
         'source': 'NIMH 睡眠建议',
-        'content': '固定作息、睡前减少电子设备、咖啡因限制……（内容占位）',
+        'content': '改善睡眠的关键在于睡眠卫生：保持固定的就寝与起床时间，睡前一小时减少屏幕与强刺激活动，限制咖啡因与酒精摄入，创造安静黑暗的睡眠环境。白天适度运动与避免长时间午睡也有帮助。若长期失眠影响日常功能，可尝试睡眠限制疗法与认知行为治疗（CBT-I），必要时寻求专业睡眠医学评估。',
         'read_count': 210
     },
     {
@@ -51,7 +52,7 @@ _KNOWLEDGE = [
         'title': '认知重建：识别与修正消极自动化思维',
         'tags': ['认知行为疗法', '技巧'],
         'source': 'CBT 实践手册',
-        'content': '识别常见思维谬误：过度概括、非黑即白、灾难化……（内容占位）',
+        'content': '认知重建旨在识别自动出现的负面想法（如灾难化、过度概括）并通过证据检验与替代性解释来修正。实践步骤包括记录触发事件、自动思维和证据；提出更平衡的替代想法并在日常中练习。长期练习可减少情绪困扰并提升行为适应性。',
         'read_count': 88
     },
     {
@@ -59,7 +60,7 @@ _KNOWLEDGE = [
         'title': '压力管理：ABCDE 技术与呼吸放松',
         'tags': ['压力', '放松'],
         'source': '心理咨询基础',
-        'content': 'ABCDE：触发-信念-后果-辩论-效果；配合腹式呼吸训练……（内容占位）',
+        'content': 'ABCDE 即识别触发事件（A）、辨认信念（B）、理解后果（C）、对信念进行辩论（D）并观察效果（E）。配合腹式呼吸或渐进性肌肉放松练习，可在紧张时刻快速调节生理激活。建议将这些技术作为常规工具，在压力情境中有意识地练习并记录效果。',
         'read_count': 77
     },
     {
@@ -67,10 +68,21 @@ _KNOWLEDGE = [
         'title': '人际界限：学会说“不”的三步法',
         'tags': ['人际', '自我保护'],
         'source': '人际沟通技巧',
-        'content': '表达事实-表达感受-提出请求，保持尊重而坚定……（内容占位）',
+        'content': '学会设置界限可保护心理资源。三步法为：首先陈述事实（描述具体情境），其次表达感受或需求，最后明确提出可接受的请求或替代方案。练习时保持语气平和、言辞具体，有助于既维护关系又保护自我界限。',
         'read_count': 65
     }
 ]
+
+# 在模块加载时，使用生成器为后备条目扩写正文，保证本地回退时内容详尽一致
+try:
+    for x in _KNOWLEDGE:
+        try:
+            x['content'] = generate_content(x.get('title'), x.get('tags', []), x.get('source'))
+        except Exception:
+            # 保底：如果生成出错，保留现有 content
+            pass
+except Exception:
+    pass
 
 
 def _paginate(items, page: int, size: int):
@@ -156,7 +168,15 @@ def knowledge_detail(kid):
                     starred = MindStar.get_one(user_id=g.user.id, knowledge_id=it.id) is not None
             except Exception:
                 pass
+            # MindKnowledge model hides 'content' by default (for list responses).
+            # For detail API we must explicitly include the content field so the
+            # client can render the full post body.
             data = dict(it)
+            try:
+                data['content'] = it.content
+            except Exception:
+                # 保底：如果访问失败，仍保留已有响应结构
+                data['content'] = ''
             data['starred'] = starred
             return Success(data=data)
     except Exception as e:
