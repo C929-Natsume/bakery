@@ -9,7 +9,8 @@
     <button size="mini" bindtap="toggleStar">{{item.starred ? '取消收藏' : '收藏'}}</button>
     <button size="mini" open-type="share">分享</button>
   </view>
-  <view class="content">{{item.content}}</view>
+  <!-- 正文：使用 rich-text 按段落渲染，保证换行/段落显示一致 -->
+  <rich-text class="content" nodes="{{richNodes}}"></rich-text>
 
   <view class="nearby-title">附近心理咨询点</view>
   <view wx:if="{{nearby.items.length === 0}}" class="nearby-empty">
