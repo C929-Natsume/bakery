@@ -1,0 +1,4 @@
+<!-- pages/message/index.wxml -->
+
+<!-- 动态消息 -->
+<message-item wx:for="{{messages}}" wx:key="index" message="{{item}}" has-border="{{index !== messages.length - 1}}" bind:messageTap="onMessageTap" />

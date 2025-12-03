@@ -1,0 +1,27 @@
+/* components/emotion-chart/index.wxss */
+.chart-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF9F0;
+}
+
+/* 避免在组件样式中使用标签选择器（小程序限制），使用类名替代 */
+.ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-loading,
+.chart-error {
+  text-align: center;
+  color: #8B7355;
+  font-size: 28rpx;
+  padding: 40rpx;
+}
+
+.chart-error {
+  color: #FF6B6B;
+}

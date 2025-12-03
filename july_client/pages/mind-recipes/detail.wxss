@@ -1,0 +1,47 @@
+.container{padding:12px; background: #fffce0;}
+.title{font-size:18px;font-weight:700;color:#5A4C3E;margin-bottom:6px}
+.meta{font-size:12px;color:#8B7355;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tag{background:#FFD8A6;color:#8B5A2B;border-radius:12px;padding:4px 12px;font-weight:600}
+.source{margin-left:auto;color:#8B7355}
+.read{margin-left:8px;color:#8B7355}
+.content{line-height:1.85;color:#5A4C3E;background:#fff;padding:12px;border-radius:12px;margin-bottom:16px;border:2px solid #FFD8A6}
+.actions{display:flex;gap:12px;margin:8px 0}
+.nearby-title{font-weight:600;color:#5A4C3E;margin:8px 0}
+.nearby-badge{font-size:12px;color:#8B7355;margin-left:8px;background:#FFF9F0;border-radius:10px;padding:4px 10px;border:1px solid #FFD8A6}
+.radius-chips{white-space:nowrap;margin:6px 0 8px}
+.radius-chips .chip{display:inline-block;border:1px solid #FFD8A6;padding:6px 14px;border-radius:16px;margin-right:8px;background:#FFF9F0;color:#8B7355;font-weight:600}
+.radius-chips .chip.active{background:linear-gradient(135deg, #FFD47F, #FFB74D);color:#fff;border-color:transparent}
+.poi{background:#fff;border-radius:12px;padding:12px;margin-bottom:10px;box-shadow:0 2px 6px rgba(139, 115, 85, 0.1);border:1px solid #FFD8A6}
+.poi-name{font-weight:600;color:#5A4C3E}
+.poi-addr,.poi-tel{font-size:12px;color:#8B7355;margin-top:4px}
+.poi-action{color:#FF9A76;margin-left:12rpx;font-weight:600}
+
+/* 地图预览遮罩 */
+.map-mask{
+	position: fixed;
+	left: 0; right: 0; top: 0; bottom: 0;
+	background: rgba(139, 115, 85, 0.35);
+	z-index: 1000;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.map-view{
+	width: 92vw;
+	height: 68vh;
+	border-radius: 12rpx;
+	overflow: hidden;
+}
+.map-close{
+	margin-top: 20rpx;
+	background: linear-gradient(135deg, #FFD47F, #FFB74D);
+	color: #fff;
+	border: none;
+	border-radius: 12px;
+	padding: 8px 20px;
+	font-weight: 600;
+}
+/* 空态与重试 */
+.nearby-empty{background:#fff;border-radius:12px;padding:12px;color:#8B7355;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;border:1px solid #FFD8A6}
+.btn-retry{background:linear-gradient(135deg, #FFD47F, #FFB74D);color:#fff;border:none;border-radius:8px;padding:6px 16px;font-weight:600}

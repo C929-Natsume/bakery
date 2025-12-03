@@ -1,0 +1,13 @@
+<!--pages/following/index.wxml -->
+
+<!-- Ta的关注 -->
+<follow-item wx:for="{{followingList}}" wx:key="index" user="{{item.follow_user}}" has-follow="{{item.followed}}" has-border="{{index !== followingList.length - 1}}" is-following data-index="{{index}}" bind:tagTap="onTagTap" />
+
+<!-- nothing -->
+<nothing wx:if="{{followingList.length === 0}}" pic="../../images/icon_nothing/pic_follow.png" tip="暂时还没有关注任何人" />
+
+<!-- 操作菜单 -->
+<l-action-sheet l-title-class="action-title" />
+
+<!-- 消息提示 -->
+<l-message />

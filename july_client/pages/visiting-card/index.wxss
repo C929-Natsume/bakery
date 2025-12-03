@@ -1,0 +1,67 @@
+/* pages/visiting-card/index.wxss */
+
+.tabs {
+  margin-top: 10rpx;
+  background: #ffffff;
+  border-bottom: 2rpx solid #FFD8A6;
+}
+
+.tabs-line {
+  width: 30% !important;
+  background: #FF9A76 !important;
+  height: 4rpx !important;
+}
+
+.tab-content {
+  height: 100%;
+  background: #fffce0;
+}
+
+.nothing {
+  margin-top: 335rpx;
+  color: #8B7355;
+  text-align: center;
+}
+
+.action-title {
+  font-size: 26rpx !important;
+  color: #8B7355 !important;
+  font-weight: 600;
+}
+
+.tabs-fixed {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 80rpx;
+  z-index: 99;
+  background: #ffffff;
+  border-bottom: 2rpx solid #FFD8A6;
+}
+
+/* 添加标签页样式 */
+.tab-item {
+  color: #8B7355 !important;
+  font-weight: 600;
+}
+
+.tab-item.active {
+  color: #FF9A76 !important;
+}
+
+/* 卡片样式 */
+.visiting-card {
+  background: #ffffff;
+  margin: 20rpx 30rpx;
+  padding: 30rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #FFD8A6;
+  box-shadow: 0 4rpx 20rpx rgba(139, 115, 85, 0.1);
+}
+
+/* 加载状态 */
+.loading {
+  color: #8B7355;
+  text-align: center;
+  padding: 40rpx 0;
+}

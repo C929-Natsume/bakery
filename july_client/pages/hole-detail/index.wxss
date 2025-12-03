@@ -1,0 +1,43 @@
+/* pages/hole-detail/index.wxss */
+
+.poster {
+  height: 380rpx;
+}
+
+.content {
+  margin-top: -20rpx;
+  padding: 30rpx;
+  border-radius: 20rpx 20rpx 0 0;
+  background: #fff;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10rpx;
+}
+
+.desp {
+  text-align: justify;
+  line-height: 48rpx;
+  margin-top: 30rpx;
+}
+
+.tip-group {
+  margin-top: 30rpx;
+  color: #999;
+}
+
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin: 50rpx 0 40rpx 0;
+}
+
+.btn-share {
+  margin-right: 15rpx;
+  color: #337559 !important;
+  border-color: #337559 !important;
+}

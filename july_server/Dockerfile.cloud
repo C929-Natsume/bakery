@@ -1,0 +1,40 @@
+FROM python:3.7-slim
+
+LABEL maintainer="Jeffrey"
+
+# 设置工作目录
+WORKDIR /app
+
+# 安装系统依赖（编译Python包所需）
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# 设置时区
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo 'Asia/Shanghai' > /etc/timezone
+
+# 复制依赖文件
+COPY requirements.txt .
+
+# 安装Python依赖
+RUN pip install --no-cache-dir --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple/ && \
+    pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+
+# 复制应用代码
+COPY . .
+
+# 创建日志目录
+RUN mkdir -p log
+
+# 暴露端口（云托管要求80端口）
+EXPOSE 80
+
+# 健康检查
+HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:80')"
+
+# 启动命令：使用starter_no_socketio避免SSL问题，监听80端口
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:80", "starter_no_socketio:app", "--timeout", "120", "--access-logfile", "-", "--error-logfile", "-"]
+

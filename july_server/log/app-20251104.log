@@ -1,0 +1,27 @@
+2025-11-05 00:00:23,390 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 00:00:23,398 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:00:23,464 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 00:00:23,556 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:00:58,463 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:01:04,648 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '1ba7628ed2974ab5831cdc41f6f3223e'}
+2025-11-05 00:02:05,659 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:02:10,717 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '064f9bac909c41769b4f2a82020787d6'}
+2025-11-05 00:04:39,320 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:04:39,371 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:10:50,747 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:10:55,449 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '9ded1b34367c4e46a25201ca984c806d'}
+2025-11-05 00:11:16,371 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:11:20,946 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '710318fbb7b6451a93a2da276f552015'}
+2025-11-05 00:12:08,920 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:12:13,622 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '33526051fd2b48579e361659747be159'}
+2025-11-05 00:13:20,125 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)

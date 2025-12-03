@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="form-item"><text class="label">标题</text><input class="input" placeholder="请输入标题" value="{{title}}" data-key="title" bindinput="bindInput" /></view>
+  <view class="form-item"><text class="label">分类</text><input class="input" placeholder="例如 科普/指南/技巧" value="{{category}}" data-key="category" bindinput="bindInput" /></view>
+  <view class="form-item"><text class="label">标签</text><input class="input" placeholder="逗号分隔，如 焦虑,科普" value="{{tagsStr}}" data-key="tagsStr" bindinput="bindInput" /></view>
+  <view class="form-item"><text class="label">来源</text><input class="input" placeholder="可选" value="{{source}}" data-key="source" bindinput="bindInput" /></view>
+  <view class="form-item textarea"><text class="label">内容</text><textarea class="textarea-input" placeholder="正文内容" value="{{content}}" auto-height data-key="content" bindinput="bindInput" />
+  </view>
+  <view class="actions">
+    <button type="primary" bindtap="save">保存</button>
+    <button class="danger" wx:if="{{id}}" bindtap="remove">删除</button>
+  </view>
+</view>

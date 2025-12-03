@@ -1,0 +1,487 @@
+2025-11-04 09:04:12,825 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:04:12,825 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:08:07,219 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 09:08:12,045 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '49e9a42b0bb147efbddcf56986082f86'}
+2025-11-04 09:08:16,219 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'ecafec0cf2e84534a6a3f0bab79ff180'}
+2025-11-04 09:08:20,438 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'bdb60ff032994255a1459570ea0bd0d2'}
+2025-11-04 09:15:18,576 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:15:18,576 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:16:28,529 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 09:16:55,015 ERROR lbs_service.py:187 LBS查询异常: HTTPSConnectionPool(host='apis.map.qq.com', port=443): Max retries exceeded with url: /ws/place/v1/search?keyword=%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2&boundary=nearby%2830.49984%2C114.34253%2C5000%29&page_size=20&page_index=1&key=xxx (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1059: The handshake operation timed out')))
+2025-11-04 09:22:46,622 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:22:46,622 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:28:17,995 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:28:17,996 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:33:37,239 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:33:37,239 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:34:22,391 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 09:34:27,230 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '01837777420e4d679253efdb164416d9'}
+2025-11-04 09:34:30,044 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:34:30,044 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:35:27,146 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['认知行为疗法', '技巧'], '40169cecb8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 09:35:31,646 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '6afc6ebe18714995a0081ac985074a6f'}
+2025-11-04 09:51:42,701 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:51:42,701 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:53:05,716 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 09:53:05,863 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 09:53:40,786 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 09:53:43,504 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:53:43,504 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:53:49,338 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 09:53:49,479 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 09:53:51,979 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:53:51,979 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:53:55,881 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:53:55,881 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:53:56,617 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:53:56,617 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:53:57,429 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:53:57,429 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:53:58,074 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:53:58,074 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:53:59,769 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:53:59,769 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:54:01,585 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:54:01,586 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:54:02,074 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 09:54:02,074 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 09:54:36,444 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 11:32:07,530 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 11:32:07,675 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 11:33:21,295 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 11:33:21,376 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 11:33:26,400 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 11:33:26,509 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 12:51:04,715 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 12:51:04,716 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 14:29:23,147 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:29:23,271 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:29:31,167 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:29:34,805 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:31:49,587 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:31:49,728 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:32:05,114 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:32:23,070 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:32:38,447 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:32:41,590 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:33:24,432 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:33:26,432 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 14:33:50,233 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:33:56,972 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 14:34:02,418 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '1de7a3aadab44a378556a3e4fe6f68d6'}
+2025-11-04 14:34:02,435 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['焦虑', '科普'], '4015964ab8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 14:34:07,005 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'c1d801171971412f835c9d5645f04a8d'}
+2025-11-04 14:34:25,020 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:34:26,661 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 14:34:34,148 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 14:34:39,117 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 14:34:39,673 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 14:34:41,867 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 14:34:59,095 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 14:34:59,095 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 14:34:59,095 WARNING emotion_analysis.py:303 话题DeepSeek分析失败或无结果: 好...
+2025-11-04 14:34:59,095 WARNING emotion_analysis.py:303 话题DeepSeek分析失败或无结果: 好...
+2025-11-04 14:34:59,101 WARNING emotion_analysis.py:303 话题DeepSeek分析失败或无结果: 好...
+2025-11-04 14:35:11,840 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:35:13,048 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 14:35:13,048 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 14:35:13,053 WARNING emotion_analysis.py:303 话题DeepSeek分析失败或无结果: 好...
+2025-11-04 14:35:13,053 WARNING emotion_analysis.py:303 话题DeepSeek分析失败或无结果: 好...
+2025-11-04 14:35:13,053 WARNING emotion_analysis.py:303 话题DeepSeek分析失败或无结果: 好...
+2025-11-04 14:35:17,020 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 14:35:40,503 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:36:24,424 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:38:17,871 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:39:25,529 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:39:29,987 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:49:42,677 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 14:49:50,471 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '16fd54bd7c9f4db98527b776252c9f3b'}
+2025-11-04 14:49:50,491 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 14:50:18,729 ERROR lbs_service.py:187 LBS查询异常: HTTPSConnectionPool(host='apis.map.qq.com', port=443): Read timed out. (read timeout=20)
+2025-11-04 14:50:28,977 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:50:29,087 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 14:50:32,979 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 14:50:58,078 ERROR lbs_service.py:187 LBS查询异常: HTTPSConnectionPool(host='apis.map.qq.com', port=443): Max retries exceeded with url: /ws/place/v1/search?keyword=%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2&boundary=nearby%2830.49984%2C114.34253%2C5000%29&page_size=20&page_index=1&key=xxx (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1059: The handshake operation timed out')))
+2025-11-04 14:53:56,480 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 14:54:06,950 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'd179145702794f41aa6935ca12b5c1e9'}
+2025-11-04 14:54:06,966 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 14:54:31,010 ERROR lbs_service.py:187 LBS查询异常: HTTPSConnectionPool(host='apis.map.qq.com', port=443): Max retries exceeded with url: /ws/place/v1/search?keyword=%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2&boundary=nearby%2830.49984%2C114.34253%2C5000%29&page_size=20&page_index=1&key=xxx (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1059: The handshake operation timed out')))
+2025-11-04 14:54:55,075 ERROR lbs_service.py:187 LBS查询异常: HTTPSConnectionPool(host='apis.map.qq.com', port=443): Max retries exceeded with url: /ws/place/v1/search?keyword=%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2&boundary=nearby%2830.49984%2C114.34253%2C5000%29&page_size=20&page_index=1&key=xxx (Caused by ProxyError('Cannot connect to proxy.', timeout('_ssl.c:1059: The handshake operation timed out')))
+2025-11-04 14:54:55,091 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 15:08:40,863 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 15:08:41,012 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 15:09:28,900 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 15:09:30,172 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 15:09:30,172 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 15:59:18,646 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 15:59:18,771 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 15:59:19,860 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 15:59:19,860 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:20:48,659 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:20:53,696 ERROR __init__.py:205 {'error': InternalError('(cymysql.err.InternalError) (1054, "Unknown column \'emotion_stat.delete_time\' in \'field list\'")'), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'days': '30'}, 'data': None}
+2025-11-04 16:22:35,933 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:35,933 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:22:48,262 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:48,262 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:22:49,352 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:49,352 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:22:54,235 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:54,235 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:22:55,743 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:55,743 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:22:56,895 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:56,895 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:22:57,984 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:57,984 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:22:59,817 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:22:59,819 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:23:05,132 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:23:05,132 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:23:06,317 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:23:06,317 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:23:07,192 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:23:07,193 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:38:06,410 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:38:06,549 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:38:07,451 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:38:07,451 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:38:11,120 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:38:11,120 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:38:12,097 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:38:12,097 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:38:17,796 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:38:17,796 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:40:14,410 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:40:14,410 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:40:16,652 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:40:16,652 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:40:17,515 WARNING emotion_analysis.py:161 ⚠️ 用户 c8ea93725d4f4bb0a56fe9854ad78888 在时间范围 2025-10-28 至 2025-11-04 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-04 16:40:17,515 ERROR emotion_analysis.py:180 ❌ 用户 c8ea93725d4f4bb0a56fe9854ad78888 没有任何日记！
+2025-11-04 16:40:21,856 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:40:37,551 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:40:38,463 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:40:42,479 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:10,188 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:41:11,362 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:14,818 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:17,675 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:19,051 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:30,605 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:41:31,949 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:41,266 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:41,742 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:42,208 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:42,634 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:42,836 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:43,331 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:43,865 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:44,041 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:44,215 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:44,613 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:44,810 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:45,288 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:45,650 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:45,841 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:46,029 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:46,217 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:46,401 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:46,596 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:46,785 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:46,961 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:47,159 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:47,716 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:47,890 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:48,062 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:48,216 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:48,389 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:48,562 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:48,741 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:50,192 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:50,400 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:50,878 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:51,144 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:51,317 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:51,512 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:51,935 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:52,139 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:52,335 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:52,531 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:52,721 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:52,899 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:53,409 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:53,567 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:53,755 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:53,950 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:54,172 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:54,634 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:54,801 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:55,193 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:55,562 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:41:56,098 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 16:42:50,544 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:43:01,346 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 16:43:06,937 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 18:56:00,770 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 18:56:18,057 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 18:56:22,547 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 18:56:26,455 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 18:56:41,624 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 18:56:42,264 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 18:56:49,890 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 18:57:41,066 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:15:08,249 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:15:08,360 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:15:16,338 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:17:12,511 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:17:17,792 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:17:34,441 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:45:23,603 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:45:23,689 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:45:24,857 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:45:27,303 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:45:28,298 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:45:29,063 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:45:30,049 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:21,659 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:23,029 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:23,504 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:23,948 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:24,395 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:24,835 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:25,211 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:25,580 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:25,907 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:26,124 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:26,312 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:26,472 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:26,808 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:27,009 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:27,192 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:27,423 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:27,668 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:27,859 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:32,897 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:48:36,808 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:48:38,884 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:39,639 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:42,137 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:55,635 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:56,367 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:58,750 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:48:59,540 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:49:00,124 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:49:00,833 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:49:01,441 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:49:05,265 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:49:14,628 ERROR __init__.py:205 {'error': TypeError("paginate() got an unexpected keyword argument 'per_page'"), 'path': '/v2/emotion/stat', 'args': {'user_id': 'c8ea93725d4f4bb0a56fe9854ad78888', 'page': '1', 'page_size': '20', 'size': '16'}, 'data': None}
+2025-11-04 19:49:17,285 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:51:49,950 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:51:51,504 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:52:36,441 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 19:52:59,833 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 19:53:05,951 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 19:53:37,756 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:00:36,783 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:00:40,555 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:00:45,630 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['认知行为疗法', '技巧'], '40169cecb8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:00:48,915 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['抑郁', '求助'], '4015fb2cb8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:01:15,591 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:01:22,401 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '5a10a951f85c452dbce5e94697cb480c'}
+2025-11-04 20:01:22,415 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:01:22,600 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['认知行为疗法', '技巧'], '40169cecb8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:01:25,993 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:01:30,947 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['焦虑', '科普'], '4015964ab8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:04:32,871 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:04:47,992 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:04:57,147 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:05:00,753 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:05:06,981 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['认知行为疗法', '技巧'], '40169cecb8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:16:48,936 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:17:19,283 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:21:04,732 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:21:15,410 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:21:18,635 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:21:21,388 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:21:55,700 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:22:00,918 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '276bc2e7ea02468ebd4dec14e2b15369'}
+2025-11-04 20:22:11,524 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '848dcb7d66914141a86cf20e89d47003'}
+2025-11-04 20:22:17,197 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '345dc08ec5114d6b97d1d08fe49ca63b'}
+2025-11-04 20:22:17,210 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:22:21,759 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'aad1df84f0cf4747b2ae4501df7c751d'}
+2025-11-04 20:22:21,773 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '4016f1e7b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:22:25,992 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '0005b3cbfa7540b1aa4f8d8206db9326'}
+2025-11-04 20:22:26,004 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 20:22:30,212 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'b2f0de3e31c64305889b082d091db637'}
+2025-11-04 20:38:52,783 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 21:06:21,120 WARNING emotion_analysis.py:235 日记DeepSeek分析失败或无结果: 很好...
+2025-11-04 21:14:12,186 WARNING mind.py:163 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '40174553b8b611f0bee9005056c00001')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-04 21:14:16,916 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '093bf93f317e477fb5aab79075b65deb'}
+2025-11-04 21:14:21,151 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '3a5ca7f8746549dc8dda258f4579a2fd'}
