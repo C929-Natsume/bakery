@@ -1,0 +1,242 @@
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 251-128-798
+(37804) wsgi starting up on http://0.0.0.0:5000
+(37804) accepted ('127.0.0.1', 56602)
+[2025-11-05 12:07:06,355] ERROR in mind: mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+127.0.0.1 - - [05/Nov/2025 12:07:06] "GET /v2/mind/meta HTTP/1.1" 200 477 0.022476
+(37804) accepted ('127.0.0.1', 64093)
+[2025-11-05 12:08:09,875] ERROR in __init__: {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: <GreenThread object at 0x000001686C1B21A8 (otid=0x000001686C154458) current active started>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\__init__.py", line 209, in handle_error
+    raise e
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\api\v2\label.py", line 22, in get_labels
+    labels = get_label_list(topic_id=topic_id)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\service\label.py", line 15, in get_label_list
+    query = db.session.query(Label).order_by(Label.priority.desc())
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\session.py", line 3309, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 943, in engine
+    return self.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\__init__.py", line 525, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\strategies.py", line 173, in create
+    engineclass.__name__,
+TypeError: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+127.0.0.1 - - [05/Nov/2025 12:08:09] "GET /v2/label HTTP/1.1" 500 45162 0.035495
+(37804) accepted ('127.0.0.1', 63959)
+[2025-11-05 12:08:09,916] ERROR in __init__: {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: <GreenThread object at 0x000001686C40FBF8 (otid=0x000001686C154458) current active started>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\__init__.py", line 209, in handle_error
+    raise e
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\api\v2\topic.py", line 53, in get_topics
+    topics = get_topic_list(label_id=label_id, user_id=user_id)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\service\topic.py", line 50, in get_topic_list
+    query = db.session.query(Topic, User, Video) \
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\session.py", line 3309, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 943, in engine
+    return self.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\__init__.py", line 525, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\strategies.py", line 173, in create
+    engineclass.__name__,
+TypeError: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+127.0.0.1 - - [05/Nov/2025 12:08:09] "GET /v2/topic?page=1&size=16 HTTP/1.1" 500 45579 0.032789
+[2025-11-05 12:09:20,407] ERROR in __init__: {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: <GreenThread object at 0x000001686C40FBF8 (otid=0x000001686C154458) current active started>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\__init__.py", line 209, in handle_error
+    raise e
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\api\v2\label.py", line 22, in get_labels
+    labels = get_label_list(topic_id=topic_id)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\service\label.py", line 15, in get_label_list
+    query = db.session.query(Label).order_by(Label.priority.desc())
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\session.py", line 3309, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 943, in engine
+    return self.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\__init__.py", line 525, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\strategies.py", line 173, in create
+    engineclass.__name__,
+TypeError: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+127.0.0.1 - - [05/Nov/2025 12:09:20] "GET /v2/label HTTP/1.1" 500 45162 0.026270
+[2025-11-05 12:09:20,435] ERROR in __init__: {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1020, in __call__
+    return self.registry[key]
+KeyError: <GreenThread object at 0x000001686C1B21A8 (otid=0x000001686C154458) current active started>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2450, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1867, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1822, in handle_user_exception
+    return handler(e)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\__init__.py", line 209, in handle_error
+    raise e
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\api\v2\topic.py", line 53, in get_topics
+    topics = get_topic_list(label_id=label_id, user_id=user_id)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\app_2\service\topic.py", line 50, in get_topic_list
+    query = db.session.query(Topic, User, Video) \
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\scoping.py", line 163, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\util\_collections.py", line 1022, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\orm\session.py", line 3309, in __call__
+    return self.class_(**local_kw)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 138, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 943, in engine
+    return self.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 962, in get_engine
+    return connector.get_engine()
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 556, in get_engine
+    self._engine = rv = self._sa.create_engine(sa_url, options)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\flask_sqlalchemy\__init__.py", line 972, in create_engine
+    return sqlalchemy.create_engine(sa_url, **engine_opts)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\__init__.py", line 525, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Users\lyy\Downloads\july_client (3)\july_server\.venv3\lib\site-packages\sqlalchemy\engine\strategies.py", line 173, in create
+    engineclass.__name__,
+TypeError: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+127.0.0.1 - - [05/Nov/2025 12:09:20] "GET /v2/topic?page=1&size=16 HTTP/1.1" 500 45579 0.027206
+[2025-11-05 12:09:27,039] ERROR in mind: mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+127.0.0.1 - - [05/Nov/2025 12:09:27] "GET /v2/mind/meta HTTP/1.1" 200 477 0.005061
+[2025-11-05 12:09:27,279] WARNING in mind: mind list fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+127.0.0.1 - - [05/Nov/2025 12:09:27] "GET /v2/mind/knowledge?keyword=&category=&tag=&page=1&size=16 HTTP/1.1" 200 2825 0.151455
+[2025-11-05 12:09:29,708] WARNING in mind: mind detail fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.

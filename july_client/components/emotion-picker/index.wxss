@@ -1,0 +1,60 @@
+/* components/emotion-picker/index.wxss */
+.emotion-picker {
+  padding: 20rpx 0;
+  background: #fff;
+}
+
+.emotion-title {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+  padding: 0 30rpx;
+  font-weight: 500;
+}
+
+.emotion-loading {
+  text-align: center;
+  padding: 40rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.emotion-list {
+  white-space: nowrap;
+  padding: 0 20rpx;
+}
+
+.emotion-item {
+  display: inline-block;
+  width: 120rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  padding: 20rpx 10rpx;
+  border: 2rpx solid #e5e5e5;
+  border-radius: 20rpx;
+  transition: all 0.3s;
+  background: #fff;
+}
+
+.emotion-item.selected {
+  background: #fef9f5;
+  transform: scale(1.05);
+}
+
+.emotion-icon {
+  font-size: 48rpx;
+  line-height: 60rpx;
+  margin-bottom: 8rpx;
+}
+
+.emotion-name {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 32rpx;
+  transition: color 0.3s;
+}
+
+.emotion-item.selected .emotion-name {
+  font-weight: 500;
+}
+

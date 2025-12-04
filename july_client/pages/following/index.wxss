@@ -1,0 +1,6 @@
+/* pages/following/index.wxss */
+
+.action-title {
+  font-size: 26rpx !important;
+  color: #999 !important;
+}

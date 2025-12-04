@@ -1,0 +1,62 @@
+<!--pages/diary-edit/index.wxml-->
+<view class="diary-edit-page">
+  <!-- 日期显示 -->
+  <view class="date-section">
+    <text class="date-text">{{dateDisplay}}</text>
+  </view>
+
+  <!-- 情绪选择 -->
+  <view class="emotion-section">
+    <view class="section-title">
+      <text>今天的心情</text>
+      <text class="required">*</text>
+    </view>
+    <emotion-picker 
+      selectedId="{{selectedEmotionId}}"
+      bind:select="onEmotionSelect"
+    />
+  </view>
+
+  <!-- 内容输入 -->
+  <view class="content-section">
+    <view class="section-title">
+      <text>今天发生了什么？</text>
+      <text class="required">*</text>
+    </view>
+    <textarea 
+      class="content-input"
+      placeholder="记录这一刻的心情和想法..."
+      value="{{content}}"
+      maxlength="1000"
+      bindinput="onContentInput"
+      auto-height
+      show-confirm-bar="{{false}}"
+    />
+    <view class="char-count">{{content.length}}/1000</view>
+  </view>
+
+  <!-- 隐私设置 -->
+  <view class="privacy-section">
+    <view class="privacy-item">
+      <view class="privacy-label">
+        <text class="privacy-icon">{{isPublic ? '🌍' : '🔒'}}</text>
+        <text class="privacy-text">{{isPublic ? '公开可见' : '仅自己可见'}}</text>
+      </view>
+      <switch 
+        checked="{{isPublic}}" 
+        bindchange="onPrivacyChange"
+        color="#337559"
+      />
+    </view>
+    <view class="privacy-tip">
+      <text>💡 私密日记只有你自己能看到</text>
+    </view>
+  </view>
+
+  <!-- 保存按钮 -->
+  <view class="save-section">
+    <button class="save-btn" bindtap="onSave">
+      {{isEdit ? '更新日记' : '保存日记'}}
+    </button>
+  </view>
+</view>

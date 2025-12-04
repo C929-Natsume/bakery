@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "今日订单",
+  "usingComponents": {
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index"
+  }
+}
