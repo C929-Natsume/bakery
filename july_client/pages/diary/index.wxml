@@ -1,0 +1,73 @@
+<!--pages/diary/index.wxml-->
+<view class="diary-page">
+  <!-- 日历头部 -->
+  <view class="calendar-header">
+    <view class="month-selector">
+      <l-icon name="left" size="40" color="#337559" bindtap="onPrevMonth" />
+      <text class="month-text">{{currentYear}}年{{currentMonth}}月</text>
+      <l-icon name="right" size="40" color="#337559" bindtap="onNextMonth" />
+    </view>
+  </view>
+
+  <!-- 星期标题 -->
+  <view class="week-header">
+    <text class="week-day">日</text>
+    <text class="week-day">一</text>
+    <text class="week-day">二</text>
+    <text class="week-day">三</text>
+    <text class="week-day">四</text>
+    <text class="week-day">五</text>
+    <text class="week-day">六</text>
+  </view>
+
+  <!-- 日历主体 -->
+  <view class="calendar-body">
+    <view class="calendar-week" wx:for="{{calendar}}" wx:key="index">
+      <view 
+        class="calendar-day {{dayItem ? (dayItem.isToday ? 'today' : '') : 'empty'}}"
+        wx:for="{{item}}" 
+        wx:for-item="dayItem"
+        wx:key="day"
+        data-date="{{dayItem ? dayItem.date : ''}}"
+        bindtap="onDateTap"
+      >
+        <view wx:if="{{dayItem}}" class="day-content">
+          <text class="day-number">{{dayItem.day}}</text>
+          <view wx:if="{{dayItem.hasDiary}}" class="day-indicator" style="background-color: {{dayItem.emotion ? dayItem.emotion.color : '#337559'}};">
+            <text class="day-emoji">{{dayItem.emotion ? dayItem.emotion.icon : '📝'}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 今日日记预览 -->
+  <view class="today-diary">
+    <view class="section-title">
+      <text>今日订单</text>
+      <text class="date-text">{{currentMonth}}月{{currentDay}}日</text>
+    </view>
+    
+    <view wx:if="{{todayDiary}}" class="diary-preview" bindtap="onViewTodayDiary">
+      <view class="diary-emotion">
+        <text class="emotion-icon">{{todayDiary.emotion_label.icon}}</text>
+        <text class="emotion-name" style="color: {{todayDiary.emotion_label.color}};">{{todayDiary.emotion_label.name}}</text>
+      </view>
+      <text class="diary-content">{{todayDiary.content}}</text>
+      <view class="diary-meta">
+        <text class="diary-time">{{todayDiary.create_time}}</text>
+        <text class="diary-privacy">{{todayDiary.is_public ? '公开' : '🔒 私密'}}</text>
+      </view>
+    </view>
+
+    <view wx:else class="no-diary" bindtap="onCreateTodayDiary">
+      <l-icon name="add" size="80" color="#ccc" />
+      <text class="no-diary-text">写下今天的心情</text>
+    </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view wx:if="{{loading}}" class="loading">
+    <l-icon name="loading" size="60" color="#337559" />
+  </view>
+</view>

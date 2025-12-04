@@ -1,0 +1,170 @@
+/* components/topic-item/index.wxss */
+
+.topic-item {
+  padding: 20rpx 30rpx;
+  background: #ffffff;
+  border-radius: 20rpx;              /* ✅ 加上圆角 */
+  border: 3.5rpx solid #0a0a0a;        /* ✅ 浅橙边框 */
+  box-shadow: 0 4rpx 12rpx rgba(255, 166, 77, 0.15);  /* ✅ 柔和阴影 */
+  margin: 20rpx 20rpx;                   /* ✅ 每个卡片间隔 */
+}
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+
+.info-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.admin-tag {
+  height: 38rpx !important;
+  margin-left: 15rpx;
+  box-sizing: border-box;
+  border-radius: 12rpx !important;
+  color: #FF9A76 !important;
+  border: 2rpx solid #FF9A76 !important;
+  background: #FFF9F0 !important;
+  font-weight: 600;
+}
+
+/* 新增：情绪标签样式 */
+.emotion-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 15rpx;
+  padding: 3rpx 3rpx;
+  border-radius: 12rpx;
+  background: #FFF9F0;
+}
+
+.emotion-icon {
+  font-size: 24rpx;
+  margin-right: 6rpx;
+}
+
+.emotion-name {
+  font-size: 22rpx;
+  font-weight: 600;
+  color: #5A4C3E;
+}
+
+.time {
+  color: #8B7355;
+  font-size: 26rpx;
+}
+
+.icon-more {
+  color: #8B7355 !important;
+  font-size: 38rpx !important;
+}
+
+.topic-content {
+  margin: 20rpx 0;
+}
+
+.content-text {
+  text-align: justify;
+  color: #0e0d0c;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.content-text-expand {
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-expand {
+  color: #FF9A76;
+  font-weight: bold;
+}
+
+.media {
+  margin-bottom: 10rpx;
+}
+
+.posters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.posters .image {
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #FFD8A6;
+}
+
+.posters .column-one {
+  width: 360rpx;
+  max-height: 800rpx;
+}
+
+.posters .column-two {
+  width: 270rpx;
+  height: 270rpx;
+}
+
+.video {
+  margin-bottom: 10rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #FFD8A6;
+}
+
+.tags-list {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20rpx;
+}
+
+.tag {
+  margin-right: 10rpx;
+  background: #FFD8A6;
+  color: #8B5A2B;
+  border-radius: 12rpx;
+  padding: 6rpx 12rpx;
+  font-size: 22rpx;
+  font-weight: 600;
+}
+
+/* 添加用户信息样式 */
+.username {
+  color: #5A4C3E;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.user-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  border: 2rpx solid #FFD8A6;
+}
+
+
+

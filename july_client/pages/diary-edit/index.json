@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "今日订单",
+  "usingComponents": {
+    "emotion-picker": "/components/emotion-picker/index"
+  }
+}

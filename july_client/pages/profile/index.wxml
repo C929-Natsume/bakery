@@ -1,0 +1,109 @@
+<!-- pages/profile/index.wxml -->
+
+<!-- 用户卡片 -->
+<profile-card user="{{user}}" bind:chooseAvatarTap="changeAvatar" bind:posterTap="changePoster" />
+
+<!-- 消息胶囊 -->
+<view wx:if="{{messageBrief}}" class="msg-capsule" bindtap="gotoMessage">
+  <avatar src="{{messageBrief[0].action_user.avatar}}" isLink="{{false}}" />
+  <text class="msg-tip">{{messageBrief.length < 99 ? messageBrief.length : '99+' }}条新动态</text>
+</view>
+
+<!-- TAB栏 -->
+<l-tabs id="tabs" l-header-class="tabs {{tabsFixed ? 'tabs-fixed' : ''}}" l-line-class="tabs-line" animated animated-for-line active-color="#000" bind:linchange="changeTabs">
+  <l-tabpanel tab="话题" key="topic" slot="topic">
+    <view style="{{tabsFixed ? 'margin-top: 80rpx;' : ''}}">
+      <nothing wx:if="{{topics.length === 0}}" nothing-class="{{messageBrief ? 'nothing-message' : 'nothing'}}" pic="../../images/icon_nothing/pic_topic.png" tip="你还没有发布话题" />
+      <profile-topic topics="{{topics}}" isOwner bind:deleteTap="deleteTopic" />
+      <l-loadmore show="{{!hasMoreTopic && topics.length > 0}}" line type="end" end-text="已经到底了" />
+    </view>
+  </l-tabpanel>
+  <l-tabpanel tab="评论" key="comment" slot="comment">
+    <view style="{{tabsFixed ? 'margin-top: 80rpx;' : ''}}">
+      <nothing wx:if="{{comments.length === 0}}" nothing-class="{{messageBrief ? 'nothing-message' : 'nothing'}}" pic="../../images/icon_nothing/pic_comment.png" tip="你还没有发表评论" />
+      <profile-comment comments="{{comments}}" isOwner bind:deleteTap="deleteComment" />
+      <l-loadmore show="{{!hasMoreComment && comments.length > 0}}" line type="end" end-text="已经到底了" />
+    </view>
+  </l-tabpanel>
+  <l-tabpanel tab="收藏" key="star" slot="star">
+    <view style="{{tabsFixed ? 'margin-top: 80rpx;' : ''}}">
+      <nothing wx:if="{{stars.length === 0}}" nothing-class="{{messageBrief ? 'nothing-message' : 'nothing'}}" pic="../../images/icon_nothing/pic_star.png" tip="你还没有收藏话题" />
+      <profile-star stars="{{stars}}" isOwner bind:deleteTap="deleteStar" />
+      <l-loadmore show="{{!hasMoreStar && stars.length > 0}}" line type="end" end-text="已经到底了" />
+    </view>
+  </l-tabpanel>
+</l-tabs>
+
+<!-- 图片裁剪器 -->
+<l-image-clipper lock-width lock-height limit-move min-ratio="1" show="{{showImageClipper}}" image-url="{{tmpAvatar}}" bindlinclip="onClipTap" />
+
+<!-- 加载数据提示 -->
+<l-loadmore show="{{loading}}" line type="loading" loading-text="正在加载中..." />
+
+<!-- 消息对话框 -->
+<l-dialog id="dialog" />
+
+<!-- 消息提示 -->
+<l-message />
+
+<!-- cocobegin -->
+<!-- 巧克力罐浮动按钮 -->
+<view class="chocolate-jar-btn" bindtap="openSoulMessage">
+  <image class="chocolate-jar-icon" src="../../images/icon_chocolate.png" mode="aspectFit" />
+</view>
+
+<!-- 心灵鸡汤弹窗 -->
+<l-popup show="{{showSoulPopup}}" bind:linclose="closeSoulPopup" position="center" width="600rpx">
+  <view class="soul-popup">
+    <!-- Tab切换：查看/添加 -->
+    <view class="soul-tabs">
+      <view class="soul-tab {{soulTabIndex === 0 ? 'active' : ''}}" bindtap="switchSoulTab" data-index="0">查看</view>
+      <view class="soul-tab {{soulTabIndex === 1 ? 'active' : ''}}" bindtap="switchSoulTab" data-index="1">添加</view>
+    </view>
+
+    <!-- 查看模式 -->
+    <view wx:if="{{soulTabIndex === 0}}" class="soul-view">
+      <view class="soul-title">🍫 巧克力罐</view>
+      <!-- 显示智能识别出的情绪标签 -->
+      <view wx:if="{{soulMessage.emotion_label && soulMessage.emotion_label.name}}" class="soul-emotion-info">
+        <view class="soul-emotion-header">
+          <text class="soul-emotion-label-text">智能识别到的情绪</text>
+        </view>
+        <view class="soul-emotion-badge" style="background-color: {{soulMessage.emotion_label.color}}15; border-color: {{soulMessage.emotion_label.color}};">
+          <text class="soul-emotion-icon">{{soulMessage.emotion_label.icon || '🎭'}}</text>
+          <text class="soul-emotion-name" style="color: {{soulMessage.emotion_label.color}};">{{soulMessage.emotion_label.name}}</text>
+        </view>
+        <view wx:if="{{soulMessage.confidence}}" class="soul-confidence-info">
+          <text class="soul-confidence-label">算法识别匹配度：</text>
+          <text class="soul-confidence-value" style="color: {{soulMessage.emotion_label.color}};">{{soulMessage.confidence_percent}}%</text>
+        </view>
+      </view>
+      <view class="soul-content">{{soulMessage.content || ''}}</view>
+      <view wx:if="{{soulMessage.push_id}}" class="soul-actions">
+        <button class="soul-btn-collect" size="mini" bindtap="collectSoulMessage">{{soulMessage.is_collected ? '已收藏' : '收藏'}}</button>
+      </view>
+      <view class="soul-actions">
+        <button class="soul-btn-random" size="mini" bindtap="getRandomMessage">换一条</button>
+        <button class="soul-btn-view-all" size="mini" bindtap="viewAllMessages">查看全部</button>
+      </view>
+    </view>
+
+    <!-- 添加模式 -->
+    <view wx:if="{{soulTabIndex === 1}}" class="soul-add">
+      <view class="soul-title">✨ 添加句子</view>
+      <textarea 
+        class="soul-input" 
+        placeholder="输入你想要保存的句子..."
+        value="{{customMessage}}"
+        bindinput="onCustomMessageInput"
+        maxlength="200"
+        auto-height
+      />
+      <view class="soul-input-tip">还可以输入 {{200 - customMessage.length}} 字</view>
+      <view class="soul-actions">
+        <button class="soul-btn-save" size="mini" type="primary" bindtap="saveCustomMessage">保存</button>
+        <button class="soul-btn-cancel" size="mini" bindtap="cancelAddMessage">取消</button>
+      </view>
+    </view>
+  </view>
+</l-popup>
