@@ -1,0 +1,261 @@
+2025-11-05 00:47:50,197 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 00:47:50,296 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 00:55:40,917 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 00:55:41,012 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 00:55:41,102 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 00:55:41,154 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:09:34,770 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 01:09:34,843 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 01:10:30,454 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 01:10:30,552 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 01:10:46,487 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:10:46,576 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:11:39,041 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:11:44,566 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '613ba82be95d4e00af08151346c7fc8f'}
+2025-11-05 01:13:36,688 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 01:13:36,787 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 01:13:36,869 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:13:36,918 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:13:40,888 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:13:46,363 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '9f1f7f863e5c45fd8d4f1b9120afdfdb'}
+2025-11-05 01:13:51,639 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '536d8ad0f7034907917c84c36f35a6a8'}
+2025-11-05 01:13:56,677 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'd31ab3acbd9d4707bcbad23075db3f28'}
+2025-11-05 01:14:35,801 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'bfbbd55414244396ab0371b6bcd3f871'}
+2025-11-05 01:14:38,200 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 01:14:38,268 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 01:14:40,927 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:14:41,014 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:14:43,514 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:14:48,959 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '5bd52ef90236429fb96d92fb010f2919'}
+2025-11-05 01:14:53,319 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '32349604c0b54c5788fb6ba6c7c68d0d'}
+2025-11-05 01:14:57,747 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '6c1aebf03b384d7e8846d7f2f7805afa'}
+2025-11-05 01:15:03,443 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '1e3008016d8d448590255408ef3e83ab'}
+2025-11-05 01:15:07,768 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'c6809cd0f5334eb283f05f37cd3afaa9'}
+2025-11-05 01:15:12,138 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '2e0302d034574cf0ba8126083e034912'}
+2025-11-05 01:15:16,659 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'f4a8d6b7bd2942298ce18e978afaf5b7'}
+2025-11-05 01:20:58,913 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:21:03,414 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'abcea3ae6f3e436e8760acb7d25aeea2'}
+2025-11-05 01:21:34,500 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'accab3d986a64ae7877a4afa7461af45'}
+2025-11-05 01:26:11,333 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 01:26:11,463 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 01:26:11,582 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:26:11,731 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:26:24,928 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:26:29,530 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': '35bdabc5190d4c6aab22655574772fa0'}
+2025-11-05 01:26:34,600 WARNING lbs_service.py:159 LBS查询失败: {'status': 311, 'message': 'key格式错误', 'request_id': 'fb7855d6f0fd43a9bfae557f38424a63'}
+2025-11-05 01:44:06,808 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 01:44:06,898 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 01:44:07,245 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:44:07,362 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 01:44:33,225 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 08:57:42,302 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 08:57:42,363 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 08:57:45,119 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:06:07,075 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:06:07,203 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:06:07,290 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:06:07,382 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:08:24,483 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:08:24,585 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:10:05,946 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:10:06,034 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:12:54,402 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:12:54,501 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:12:54,574 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:12:54,672 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:14:42,530 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:14:42,624 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:14:54,553 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:14:54,631 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:14:57,447 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:14:57,519 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:15:00,882 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:16:11,458 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:16:11,529 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:17:15,648 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:17:15,746 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:17:15,837 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:17:15,900 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:17:40,775 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:17:44,123 WARNING mind.py:163 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:18:06,986 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:18:15,765 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 09:18:15,862 ERROR __init__.py:205 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 09:18:18,520 ERROR mind.py:297 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:18:18,621 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:34:20,505 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:35:29,126 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:35:43,498 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 09:37:52,574 WARNING mind.py:136 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 10:11:15,738 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 10:11:15,772 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 10:11:15,796 ERROR mind.py:297 mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 10:11:15,935 WARNING mind.py:136 mind list fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 10:11:29,816 WARNING mind.py:163 mind detail fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 10:37:18,061 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 10:37:18,096 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 10:44:33,734 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 10:44:33,768 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 11:53:51,873 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 11:53:51,907 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 11:57:55,916 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 11:57:55,951 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 11:59:43,463 ERROR mind.py:297 mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 11:59:43,609 WARNING mind.py:136 mind list fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 11:59:47,036 WARNING mind.py:163 mind detail fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 12:07:06,355 ERROR mind.py:297 mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 12:08:09,875 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 12:08:09,916 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 12:09:20,407 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 12:09:20,435 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 12:09:27,039 ERROR mind.py:297 mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 12:09:27,279 WARNING mind.py:136 mind list fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 12:09:29,708 WARNING mind.py:163 mind detail fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 13:48:03,742 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 13:48:03,785 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 13:48:40,895 ERROR mind.py:297 mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 13:48:41,045 WARNING mind.py:136 mind list fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 13:48:44,246 WARNING mind.py:163 mind detail fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 13:52:58,722 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 13:52:58,774 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 13:53:17,339 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 13:53:17,375 ERROR __init__.py:205 {'error': TypeError("Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components."), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 13:53:22,322 ERROR mind.py:297 mind meta error: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 13:53:22,413 WARNING mind.py:136 mind list fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 13:53:24,950 WARNING mind.py:163 mind detail fallback: Invalid argument(s) 'pool_size','max_overflow','pool_timeout' sent to create_engine(), using configuration SQLiteDialect_pysqlite/NullPool/Engine.  Please check that the keyword arguments are appropriate for this combination of components.
+2025-11-05 16:24:30,714 WARNING mp.py:51 Redis连接失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-11-05 16:24:33,292 WARNING mp.py:77 Redis缓存失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-11-05 16:24:37,875 WARNING emotion_analysis.py:161 ⚠️ 用户 c0f6ae5a1e3d43578613054ea6bd91cc 在时间范围 2025-10-29 至 2025-11-05 内没有日记。该用户共有 0 条日记（不限时间）。
+2025-11-05 16:24:37,875 ERROR emotion_analysis.py:180 ❌ 用户 c0f6ae5a1e3d43578613054ea6bd91cc 没有任何日记！
+2025-11-05 16:24:57,032 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['压力', '放松'], '2c08e7a5b95711f08d16106838f1d7af')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 16:25:01,400 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '79184b918a614688b17400c03cadbd96'}
+2025-11-05 16:25:08,279 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '2c09348eb95711f08d16106838f1d7af')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 16:25:12,654 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'd9fb756d8d754c558d5774aa43f4fbe1'}
+2025-11-05 16:25:28,245 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '88cc30f936a8412d8c4f462f0b1c68d2'}
+2025-11-05 16:25:32,481 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '2c09348eb95711f08d16106838f1d7af')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 16:25:36,820 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '89b2129e7d634d439e4adbe82b1196ec'}
+2025-11-05 16:25:43,016 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'ae548189bc254733b06fe0ec755ecc2f'}
+2025-11-05 16:28:29,013 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '2c09348eb95711f08d16106838f1d7af')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 16:28:33,499 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '37a8e3345adc44b2a41bf9af2bdea379'}
+2025-11-05 16:28:40,522 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '4fe38a8064f24b6cac7d795b5632e8e3'}
+2025-11-05 16:29:45,750 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['人际', '自我保护'], '2c09348eb95711f08d16106838f1d7af')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 16:29:50,408 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'c4397034d0484731acc7234029ca909e'}
+2025-11-05 16:31:16,109 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '81a0354a5b034b3ca3e072af6c7a235d'}
+2025-11-05 16:31:24,815 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '11571261b0b740478bab37521e8445cd'}
+2025-11-05 16:31:29,218 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '92fbc8955b224386b2f3b82111d37c93'}
+2025-11-05 16:31:33,737 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '7b0afeacbb1a4f13a8202cb399de28b1'}
+2025-11-05 16:32:32,297 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'ccf8ceed246f4974acb8c8921c12d7dc'}
+2025-11-05 16:32:38,401 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'f15e26ee562d47a5835d9dc13f7f0523'}
+2025-11-05 16:37:08,889 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '882e51f0fe164cecab47191b4e43fca7'}
+2025-11-05 16:37:13,446 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '1cc4154142b34687b9e262ef73376514'}
+2025-11-05 16:37:20,456 WARNING lbs_service.py:159 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '0e2fff21b18f4ec6885c802968fd10d5'}
+2025-11-05 16:40:54,373 WARNING lbs_service.py:164 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '2a45932917844b1289aea86971ae2359'}
+2025-11-05 16:41:04,308 WARNING lbs_service.py:164 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'dfcae777973244cab0fb037f57228c77'}
+2025-11-05 16:41:14,648 WARNING lbs_service.py:164 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'e150e8ca77334259b008f9a54b7447c3'}
+2025-11-05 16:43:19,833 WARNING lbs_service.py:223 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': 'fba0dd29209b48069b037d91e8551989'}
+2025-11-05 16:46:48,990 WARNING lbs_service.py:223 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '3a6c648583b94eceb2b9e1717a9e95b2'}
+2025-11-05 16:46:58,212 WARNING lbs_service.py:223 LBS查询失败: {'status': 121, 'message': '此key每日调用量已达到上限', 'request_id': '2bb2a83e13494b1a9528a35d23a30c37'}
+2025-11-05 17:14:15,928 WARNING mind.py:226 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['自我关怀', '情绪调节'], 'fc2992adde98403abcb5ac9bdcf0b0f8')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 17:14:29,327 WARNING mind.py:226 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['运动', '生活方式'], 'fbe551dfe29b43a9a1fe445392b34d72')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 17:15:41,975 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['自我关怀', '情绪调节'], 'fc2992adde98403abcb5ac9bdcf0b0f8')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 17:16:08,937 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['自我关怀', '情绪调节'], 'fc2992adde98403abcb5ac9bdcf0b0f8')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 17:16:21,503 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['运动', '生活方式'], 'fbe551dfe29b43a9a1fe445392b34d72')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 17:17:45,083 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['自我关怀', '情绪调节'], 'fc2992adde98403abcb5ac9bdcf0b0f8')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 17:18:23,605 WARNING mind.py:228 mind detail fallback: This Session's transaction has been rolled back due to a previous exception during flush. To begin a new transaction with this Session, first issue Session.rollback(). Original exception was: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(cymysql.err.InternalError) (1241, 'Operand should contain 1 column(s)')
+[SQL: UPDATE mind_knowledge SET update_time=now(), tags=%s WHERE mind_knowledge.id = %s]
+[parameters: (['自我关怀', '情绪调节'], 'fc2992adde98403abcb5ac9bdcf0b0f8')]
+(Background on this error at: http://sqlalche.me/e/13/2j85) (Background on this error at: http://sqlalche.me/e/13/7s2a)
+2025-11-05 19:36:25,866 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-05 19:36:25,968 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-05 19:36:29,003 ERROR mind.py:366 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 19:36:29,061 WARNING mind.py:199 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-05 19:36:31,887 WARNING mind.py:232 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)

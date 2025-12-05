@@ -1,0 +1,175 @@
+/* pages/diary-edit/index.wxss */
+.diary-edit-page {
+  min-height: 100vh;
+  background-color: #fffce0;
+  padding-bottom: 120rpx;
+}
+
+/* 日期显示 */
+.date-section {
+  background-color: #ffffff;
+  padding: 40rpx 30rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #FFD8A6;
+}
+
+.date-text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #5A4C3E;
+}
+
+/* 通用section样式 */
+.emotion-section,
+.content-section,
+.privacy-section {
+  background-color: #ffffff;
+  margin-top: 20rpx;
+  padding: 30rpx;
+  border: 2rpx solid #FFD8A6;
+  border-radius: 12rpx;
+  margin: 20rpx 30rpx 0;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #5A4C3E;
+  margin-bottom: 20rpx;
+}
+
+.required {
+  color: #FF6B6B;
+  margin-left: 5rpx;
+}
+
+/* 内容输入 */
+.content-input {
+  width: 100%;
+  min-height: 400rpx;
+  font-size: 30rpx;
+  line-height: 1.6;
+  color: #5A4C3E;
+  padding: 20rpx;
+  background-color: #FFF9F0;
+  border-radius: 12rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #FFD8A6;
+}
+
+.content-input::placeholder {
+  color: #8B7355;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 24rpx;
+  color: #8B7355;
+  margin-top: 10rpx;
+}
+
+/* 隐私设置 */
+.privacy-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.privacy-label {
+  display: flex;
+  align-items: center;
+}
+
+.privacy-icon {
+  font-size: 40rpx;
+  margin-right: 15rpx;
+  color: #FF9A76;
+}
+
+.privacy-text {
+  font-size: 30rpx;
+  color: #5A4C3E;
+}
+
+.privacy-tip {
+  padding: 20rpx;
+  background-color: #FFF9F0;
+  border-radius: 12rpx;
+  margin-top: 20rpx;
+  border: 1rpx solid #FFD8A6;
+}
+
+.privacy-tip text {
+  font-size: 26rpx;
+  color: #8B7355;
+}
+
+/* 心情选择器 */
+.emotion-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.emotion-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  border: 2rpx solid #FFD8A6;
+  border-radius: 12rpx;
+  background: #FFF9F0;
+  min-width: 120rpx;
+}
+
+.emotion-option.active {
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  border-color: transparent;
+}
+
+.emotion-emoji {
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+.emotion-name {
+  font-size: 24rpx;
+  color: #8B7355;
+  font-weight: 600;
+}
+
+.emotion-option.active .emotion-name {
+  color: #ffffff;
+}
+
+/* 保存按钮 */
+.save-section {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20rpx 30rpx;
+  background-color: #fffce0;
+  border-top: 2rpx solid #FFD8A6;
+  box-shadow: 0 -4rpx 20rpx rgba(139, 115, 85, 0.1);
+}
+
+.save-btn {
+  width: 100%;
+  height: 90rpx;
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-radius: 45rpx;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 12rpx rgba(255, 154, 118, 0.3);
+}
+
+.save-btn:active {
+  opacity: 0.8;
+}

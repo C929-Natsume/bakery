@@ -1,0 +1,10 @@
+<!-- components/emotion-chart/index.wxml -->
+<view class="chart-wrapper">
+  <view class="chart-loading" wx:if="{{!chartData}}">
+    <text>加载中...</text>
+  </view>
+  <view class="chart-error" wx:elif="{{error}}">
+    <text>{{error}}</text>
+  </view>
+  <ec-canvas wx:else id="emotion-chart" class="ec-canvas" canvas-id="emotion-chart" ec="{{ec}}"></ec-canvas>
+</view>

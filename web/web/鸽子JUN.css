@@ -1,0 +1,2051 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.home {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.content {
+    perspective: 340px;
+    width: 100%;
+    position: relative;
+}
+
+/* 星星动画效果 */
+.stars {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: -447px 387px #c4c4c4, -401px 118px #fafafa, -109px 217px #d9d9d9, -680px -436px #e3e3e3, 514px 360px #cccccc, -708px 298px #e8e8e8, -696px -270px #ededed, 116px -128px #f7f7f7, 179px 35px white, -404px -90px whitesmoke, -331px -309px #c4c4c4, -363px -24px #d1d1d1, 277px 416px #fafafa, -145px -244px whitesmoke, 123px 62px #d4d4d4, -407px 418px #d9d9d9, 535px 237px #d9d9d9, -466px -78px #f7f7f7, 257px 287px #dedede, 327px -398px #e0e0e0, -602px -38px #c2c2c2, 128px 398px #e6e6e6, 274px -446px #d1d1d1, -602px -298px #c7c7c7, 526px -5px #c4c4c4, -90px -158px #fcfcfc, 5px 294px whitesmoke, -633px 229px #c4c4c4, -475px 427px #dedede, 586px -453px #f2f2f2, 180px -432px #c7c7c7, -637px -88px #cfcfcf, -453px 308px #d6d6d6, -111px 1px #d9d9d9, 573px -450px #ededed, 198px 300px #d6d6d6, -355px 166px #dedede, -715px 13px #e3e3e3, 262px -104px #d1d1d1, 147px 325px #dbdbdb, 1px 399px #dbdbdb, 286px -100px white, 43px -329px #e8e8e8, 617px 55px #d9d9d9, -168px -392px #cccccc, 84px 219px #c9c9c9, 507px -226px #d9d9d9, -327px -70px #e6e6e6, 386px -212px #c4c4c4, -717px 4px #cfcfcf, 502px -231px #e3e3e3, 302px 56px #ededed, 649px 341px #c7c7c7, 569px 350px #c9c9c9, 516px -31px #e6e6e6, 689px 447px #c2c2c2, 591px -206px #fafafa, 422px -137px #e6e6e6, -510px -324px #cccccc, -649px 287px #c2c2c2, -194px -48px #f7f7f7, -279px -329px #d1d1d1, -406px 478px #dbdbdb, -735px -87px #c9c9c9, 30px -197px #dedede, -564px 233px #e6e6e6, -486px -324px #ededed, -54px -7px #ededed, -441px -194px #e3e3e3, -133px -95px #e0e0e0, -722px -73px #d6d6d6, 595px 423px #ededed, 568px -39px #ededed, 370px 377px #d1d1d1, -419px -102px #fcfcfc, -450px 109px #c4c4c4, -57px -119px #d1d1d1, -582px 150px #e6e6e6, 206px -263px #cfcfcf, 582px -461px #c9c9c9, -268px -141px #d9d9d9, -148px 291px #c7c7c7, 254px -179px #c9c9c9, 725px 424px #f0f0f0, 391px -150px #ebebeb, 89px -299px #d4d4d4, 170px 1px #c9c9c9, 243px 209px #c7c7c7, 27px 460px #c9c9c9, -465px -380px #d4d4d4, 530px -360px whitesmoke, -626px 53px #e0e0e0, 706px 218px #d9d9d9, 40px -82px #cccccc, -5px -212px #e6e6e6, -742px 33px #ebebeb, -714px 478px #e0e0e0, -585px -125px #cccccc, -216px 348px #cfcfcf, 601px 332px #ededed, 344px -88px #c4c4c4, 659px -22px #d1d1d1, -411px 188px #d6d6d6, -423px -206px #fcfcfc, -359px -136px #cfcfcf, 612px 406px whitesmoke, 725px 96px whitesmoke, 363px -446px white, -204px 325px #c9c9c9, 740px 176px #fafafa, -489px -352px white, -638px 64px #dbdbdb, 537px -65px #dbdbdb, 151px -32px #ebebeb, 681px 212px #fcfcfc, 604px -149px #e6e6e6, -542px -398px #c4c4c4, -707px 66px whitesmoke, -381px 258px #cfcfcf, -30px 332px #d6d6d6, 512px -381px #c9c9c9, 195px 288px #cccccc, -278px 479px #c7c7c7, 27px -208px #d6d6d6, -288px 15px white, -680px 248px #dedede, 433px 31px #c9c9c9, 150px -206px #d4d4d4, -79px 247px white, -594px 115px #e0e0e0, 99px 292px #e0e0e0, 673px -269px #dedede, -257px -64px #d1d1d1, 449px 81px #f2f2f2, 18px -99px #d1d1d1, -694px 415px #f7f7f7, 240px 264px #e0e0e0, 450px -172px white, 383px 7px #e8e8e8, 338px -73px #c9c9c9, 291px -19px #ebebeb, 659px 137px #d1d1d1, 602px -6px #fcfcfc, 554px 249px #ebebeb, 625px 356px #d9d9d9, 579px -183px #d6d6d6, -20px 250px white, -401px 431px #c4c4c4, -645px -232px #cccccc, -265px -148px white, 553px 258px #d1d1d1, 166px -360px #ebebeb, 719px 51px #ededed, 612px -129px #ebebeb, -465px -104px #f2f2f2, -154px -121px #d9d9d9, -1px 330px #f2f2f2, -666px 248px #f7f7f7, -720px 264px #ededed, 148px -365px #e6e6e6, -388px -349px #c4c4c4, 128px -88px #e3e3e3, -683px -274px #fafafa, -341px 41px #c9c9c9, -59px -471px #f0f0f0, -3px -427px #c2c2c2, 418px 167px #d6d6d6, 343px 247px #c7c7c7, 623px -347px #d1d1d1, 716px -217px white, 243px -409px whitesmoke, -75px -126px #d6d6d6, -730px -91px #c9c9c9, -210px -397px #cfcfcf, -349px 180px #c9c9c9, -567px -281px #e0e0e0, -460px 381px #fcfcfc, -310px -22px #ededed, 450px -1px #dbdbdb, -405px -328px #e3e3e3, 5px 332px #d6d6d6, -294px 302px #fcfcfc, -398px 97px whitesmoke, -696px 325px #cfcfcf, -589px 110px #d6d6d6, 353px -411px #dbdbdb, -697px -318px #ebebeb, -114px -72px #f0f0f0, 259px -193px #fcfcfc, 60px 26px #e6e6e6, -63px -232px white, 205px -372px #f7f7f7, -464px -333px #f2f2f2, -374px 123px white, -377px -386px #c7c7c7, -80px 337px #cccccc, 478px -178px #dbdbdb, 222px 420px #ebebeb, -707px 99px #c4c4c4, 716px -132px #fafafa, -253px -286px #e3e3e3, 646px 178px #f0f0f0, 201px 24px #d1d1d1, 178px -58px #c7c7c7, -557px 368px #ededed, 0px 219px #d9d9d9, -266px -269px #cccccc, 242px -197px #c9c9c9, -419px 193px #c2c2c2, -47px 91px #c7c7c7, -109px 75px #c2c2c2, -146px -453px #d6d6d6, 671px -350px #f2f2f2, 421px -91px #d9d9d9, 738px 19px #ededed, -316px -155px #dedede, 419px 244px #fcfcfc, -278px -418px #d6d6d6, -581px -181px #fcfcfc, 139px 264px #d9d9d9, 691px -11px #ebebeb, -622px 402px #c2c2c2, 219px 396px #f0f0f0, -149px -423px white, -716px -78px #d9d9d9, -590px 341px #e6e6e6, -208px 79px #d6d6d6, -227px -24px #f7f7f7, 239px 262px #d1d1d1, 740px 443px #f7f7f7, 509px 134px #d6d6d6, -555px 232px #e8e8e8, -67px -427px #cfcfcf, -368px 250px #f7f7f7, 715px -415px #fafafa, 411px -301px #f0f0f0, -322px 287px #d9d9d9, -429px -90px #f2f2f2, -327px -387px #f0f0f0, -491px 183px #c2c2c2, -133px 250px #d4d4d4, 538px 139px #e3e3e3, -417px -125px #f0f0f0, 653px -351px #e6e6e6, -549px 38px #d4d4d4, 602px 110px whitesmoke, 415px 105px #e0e0e0, -733px -371px #cfcfcf, 286px 403px #d4d4d4, 11px 320px #c4c4c4, -597px 158px whitesmoke, 716px -350px whitesmoke, 321px 67px #fafafa, -237px -300px #cfcfcf, 74px 152px #c9c9c9, 587px -123px #fcfcfc, 699px -332px whitesmoke, 399px 355px #f7f7f7, -323px 314px #dbdbdb, 89px 416px #c7c7c7, 445px 38px #e3e3e3, 572px 122px #c4c4c4, -258px 372px white, 49px 306px #d9d9d9, 437px -35px #dedede, 566px 174px #f2f2f2, 732px -299px whitesmoke, -410px 394px #ededed, 131px -415px white, 19px -326px #e8e8e8, -700px -188px #d1d1d1, 96px -1px #e0e0e0, -328px -396px #f0f0f0, -117px -214px #fcfcfc, -53px 261px #ebebeb, 80px 134px #d6d6d6, -364px -216px white, -636px -125px #dbdbdb, -639px -265px #e3e3e3, 208px 98px #c7c7c7, 172px 467px #e0e0e0, 435px 309px #e3e3e3, 194px -259px #f0f0f0, 209px -186px #c9c9c9, -312px 418px #fafafa, 229px 407px #c9c9c9, -449px -357px #fafafa, 674px 121px #e8e8e8, 608px -429px #ebebeb, -431px -428px #cfcfcf, 105px 462px #e3e3e3, -179px -372px #e3e3e3, 143px -317px #d6d6d6, -449px -149px #fafafa, -544px 250px #dedede, -220px -323px whitesmoke, 658px 8px whitesmoke, -656px -244px #e8e8e8, 347px 11px whitesmoke, 694px -230px #f7f7f7, -317px 1px #c4c4c4, 28px 23px #fcfcfc, -382px 321px #dbdbdb, 632px -74px #c4c4c4, 154px -245px #c2c2c2, -553px 337px #d6d6d6, -48px -243px #d1d1d1, 92px -391px #cccccc, -71px -256px #cfcfcf, -372px 57px #d9d9d9, 369px -140px #fcfcfc, 675px 81px #c2c2c2, -663px 254px #cccccc, 703px -203px #ededed, 74px -363px #c2c2c2, 643px -458px #d1d1d1, 198px 359px #cccccc, 265px 309px #d4d4d4, -353px -368px #e8e8e8, -465px 439px whitesmoke, 693px 360px #c9c9c9, 634px -397px #d1d1d1, 467px 25px whitesmoke, -558px -272px #e6e6e6, 671px 69px #dbdbdb, 407px 357px #cfcfcf, 379px 80px white, 10px -203px #c9c9c9, 104px -292px #f0f0f0, -667px -29px #d1d1d1, 557px -155px #e6e6e6, -505px 115px #cfcfcf, -605px 164px #f2f2f2, -108px -223px #e0e0e0, 523px -156px #ebebeb, 691px 230px white, -507px -13px #d1d1d1, -349px 332px #dedede, 520px 266px whitesmoke, -66px -250px #e6e6e6, -496px -449px #ebebeb, 414px -170px #dedede, -649px 230px #ebebeb, 598px -92px #c7c7c7, -638px 113px #c2c2c2, 151px 363px #f7f7f7, -445px -241px #f0f0f0, 527px -14px #dedede, 203px -61px #cfcfcf, -716px -284px #ebebeb, -525px 134px #c2c2c2;
+    animation: fly 15s linear infinite;
+    transform-style: preserve-3d;
+    opacity: 0.6;
+}
+
+.stars:before,
+.stars:after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    box-shadow: inherit;
+}
+
+.stars:before {
+    transform: translateZ(-300px);
+    opacity: .6;
+}
+
+.stars:after {
+    transform: translateZ(-600px);
+    opacity: .4;
+}
+
+@keyframes fly {
+    from {
+        transform: translateZ(0px);
+        opacity: .6;
+    }
+    to {
+        transform: translateZ(200px);
+        opacity: .8;
+    }
+}
+
+/* 导航栏样式 - 已在下方重新定义为右侧悬浮样式 */
+
+/* 主横幅区域 */
+.hero-section {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #ffecd2 100%);
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 介绍语区域 */
+.intro-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.introduction {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: rgba(102, 51, 51, 0.8);
+    font-style: italic;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.introduction p {
+    margin: 15px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.introduction p:hover {
+    color: rgba(151, 2, 2, 1);
+    transform: translateX(5px);
+}
+
+/* 产品预览卡片区域 */
+.products-preview {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-card {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.product-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.icons_items_imgs {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .icons_items_imgs {
+    transform: scale(1.1);
+}
+
+.product-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-overlay {
+    transform: translateY(0);
+}
+
+.product-card-overlay h3 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+}
+
+/* 产品详细介绍区域 */
+.products-detail {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto 120px;
+    padding: 50px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.product-item-left {
+    flex-direction: row;
+}
+
+.product-item-right {
+    flex-direction: row-reverse;
+}
+
+.product-image {
+    flex: 0 0 400px;
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-item:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #f2baba;
+    position: relative;
+}
+
+.product-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #cf8585;
+}
+
+.product-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.product-description p {
+    margin-bottom: 20px;
+    text-indent: 2em;
+}
+
+.product-link {
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.product-link:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .product-item {
+        flex-direction: column !important;
+        gap: 40px;
+    }
+
+    .product-image {
+        flex: none;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .icons {
+        gap: 30px;
+    }
+
+    .product-card {
+        width: 240px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        margin-top: 20px;
+        padding: 20px 10px;
+    }
+
+    .intro-section {
+        padding: 40px 15px;
+    }
+
+    .introduction {
+        font-size: 16px;
+    }
+
+    .products-preview {
+        padding: 60px 15px;
+    }
+
+    .icons {
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 200px;
+        height: 280px;
+    }
+
+    .products-detail {
+        padding: 60px 15px;
+    }
+
+    .product-item {
+        padding: 30px 20px;
+        margin-bottom: 60px;
+    }
+
+    .product-title {
+        font-size: 32px;
+    }
+
+    .product-description {
+        font-size: 16px;
+    }
+
+    .product-image {
+        height: 360px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+    }
+
+    .product-title {
+        font-size: 28px;
+    }
+
+    .product-description {
+        font-size: 15px;
+    }
+}
+
+/* ========== 心情烘焙坊新增样式 ========== */
+
+/* 导航栏样式 - 固定在右侧中间，包含产品定位信息 */
+.ribbon {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    right: 25px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: auto !important;
+    min-width: 180px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(250, 240, 230, 0.85) 100%) !important;
+    padding: 15px 12px !important;
+    border-radius: 25px !important;
+    box-shadow: 0 10px 35px rgba(212, 165, 116, 0.2),
+                0 5px 15px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    gap: 8px !important;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    z-index: 999 !important;
+    margin: 0 !important;
+    left: auto !important;
+    bottom: auto !important;
+}
+
+.ribbon:hover {
+    box-shadow: 0 15px 45px rgba(212, 165, 116, 0.3),
+                0 8px 20px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 240, 230, 0.95) 100%) !important;
+    border-color: rgba(212, 165, 116, 0.6) !important;
+    transform: translateY(-50%) scale(1.02) !important;
+}
+
+/* 产品标识区域 */
+.ribbon-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    margin-bottom: 4px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 236, 210, 0.6) 0%, rgba(250, 208, 196, 0.6) 100%);
+    transition: all 0.3s ease;
+}
+
+.ribbon:hover .ribbon-brand {
+    background: linear-gradient(135deg, rgba(255, 236, 210, 0.8) 0%, rgba(250, 208, 196, 0.8) 100%);
+}
+
+.brand-icon {
+    font-size: 32px;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(212, 165, 116, 0.3));
+    animation: brandPulse 2s ease-in-out infinite;
+}
+
+@keyframes brandPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.brand-info {
+    flex: 1;
+}
+
+.brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #d4a574;
+    line-height: 1.2;
+    margin-bottom: 2px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.brand-slogan {
+    font-size: 11px;
+    color: #999;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.ribbon-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.3), transparent);
+    margin: 4px 0;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #555;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 18px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: block;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.ribbon a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateY(-50%);
+    transition: left 0.5s ease;
+}
+
+.ribbon a:hover::before {
+    left: 100%;
+}
+
+.ribbon a:hover {
+    background: linear-gradient(135deg, rgba(255, 154, 158, 0.9) 0%, rgba(250, 208, 196, 0.9) 100%);
+    transform: translateX(-8px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.ribbon a:hover span {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.ribbon span {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* 移除旧的装饰样式 */
+.ribbon:after,
+.ribbon:before {
+    display: none;
+}
+
+
+/* 主横幅内容样式 */
+.hero-content {
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    opacity: 0.95;
+    animation: fadeInDown 1.2s ease-out;
+}
+
+.hero-description {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.9;
+    animation: fadeInDown 1.4s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 区域标题样式 */
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #f2baba;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #cf8585;
+}
+
+/* 介绍区域标题样式 */
+.introduction h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.introduction p {
+    margin: 15px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: left;
+}
+
+.introduction p strong {
+    color: #cf8585;
+    font-weight: 600;
+}
+
+/* 功能卡片内容样式 */
+.product-card-content {
+    padding: 40px 20px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+}
+
+.product-card-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.product-card-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-card-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* 功能图片占位符 */
+.feature-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8e8e8 0%, #f5e0e0 100%);
+}
+
+.feature-placeholder {
+    font-size: 120px;
+    opacity: 0.6;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* 产品卡片优化 */
+.product-card {
+    border: 2px solid transparent;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.product-card:hover {
+    border-color: #f2baba;
+}
+
+.icons {
+    gap: 30px;
+    max-width: 1600px;
+}
+
+/* 价值观展示区域 */
+.values-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #fff 0%, #fff5f5 100%);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 关于产品区域 */
+.about-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #fff5f5 0%, #fff 100%);
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 2;
+    color: #555;
+    margin-bottom: 25px;
+    text-indent: 2em;
+}
+
+.about-text strong {
+    color: #cf8585;
+    font-weight: 600;
+}
+
+/* ========== 获取软件方式板块样式 ========== */
+.download-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #fff 0%, #fff5f5 100%);
+}
+
+.download-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.download-card {
+    background: #fff;
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.qrcode-container {
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.qrcode-container:hover {
+    transform: scale(1.05);
+}
+
+.qrcode-image {
+    width: 280px;
+    height: 280px;
+    display: block;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.download-info {
+    text-align: center;
+    max-width: 600px;
+}
+
+.download-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.download-desc {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.download-desc strong {
+    color: #cf8585;
+    font-weight: 600;
+}
+
+.download-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.download-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #666;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.download-feature-item:hover {
+    background: linear-gradient(135deg, #ffeef0 0%, #ffd6d9 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(242, 186, 186, 0.3);
+}
+
+.feature-icon {
+    font-size: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .download-card {
+        padding: 40px 25px;
+        gap: 30px;
+    }
+
+    .qrcode-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .download-title {
+        font-size: 26px;
+    }
+
+    .download-desc {
+        font-size: 16px;
+    }
+
+    .download-features {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .download-feature-item {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+/* ========== 联系我们板块样式 ========== */
+
+.contact-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #fff 0%, #fff5f5 100%);
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-intro-text {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+/* 表单样式 */
+.contact-form {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.required {
+    color: #ff4444;
+    margin-left: 4px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #333;
+    background: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #f2baba;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(242, 186, 186, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.form-hint {
+    display: block;
+    font-size: 13px;
+    color: #999;
+    margin-top: 8px;
+}
+
+.error-message {
+    display: block;
+    color: #ff4444;
+    font-size: 13px;
+    margin-top: 8px;
+    min-height: 20px;
+}
+
+.char-count {
+    text-align: right;
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+}
+
+.char-count span {
+    font-weight: 600;
+}
+
+/* 提交按钮 */
+.submit-btn {
+    width: 100%;
+    padding: 18px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #ffecd2 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.3);
+    position: relative;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
+}
+
+.submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.submit-btn-loading {
+    display: inline-block;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* 成功消息 */
+.form-success {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success-icon {
+    font-size: 64px;
+    color: #4caf50;
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.success-message {
+    font-size: 20px;
+    color: #2e7d32;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ========== 浮动留言按钮样式 - 优化版 ========== */
+
+/* ========== 彩蛋按钮 - 碎碎念（隐蔽设计） ========== */
+.contact-float-btn {
+    position: fixed !important; /* 强制使用fixed定位，确保不随页面滚动 */
+    right: 8px; /* 放在最隐蔽的角落 */
+    bottom: 8px; /* 放在右下角最隐蔽的位置 */
+    width: 45px; /* 缩小尺寸，更加隐蔽 */
+    height: 45px;
+    /* 确保按钮不会超出视窗边界 */
+    max-width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+    /* 确保按钮不会太小 */
+    min-width: 40px;
+    min-height: 40px;
+    background: linear-gradient(135deg, rgba(255, 154, 158, 0.25) 0%, rgba(250, 208, 196, 0.25) 100%); /* 几乎透明 */
+    backdrop-filter: blur(8px) saturate(180%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    border-radius: 50%; /* 完全圆形 */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* 几乎看不见的边框 */
+    box-shadow: 0 2px 8px rgba(255, 154, 158, 0.15), /* 微弱的阴影 */
+                0 1px 3px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: subtleGlow 4s ease-in-out infinite; /* 微妙的闪烁动画 */
+    overflow: visible;
+    transform-origin: center center;
+    opacity: 0.3; /* 默认几乎透明 */
+}
+
+/* 微妙的闪烁动画 */
+@keyframes subtleGlow {
+    0%, 100% {
+        opacity: 0.25;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.02);
+    }
+}
+
+/* Hover时显示 */
+.contact-float-btn:hover {
+    opacity: 1 !important; /* hover时完全显示 */
+    background: linear-gradient(135deg, rgba(255, 154, 158, 0.92) 0%, rgba(250, 208, 196, 0.92) 100%);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(255, 154, 158, 0.5),
+                0 4px 15px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                0 0 20px rgba(255, 154, 158, 0.4);
+    transform: scale(1.5) translateY(-5px); /* hover时放大 */
+    width: 70px;
+    height: 70px;
+    animation: none; /* hover时停止闪烁动画 */
+}
+
+/* 彩蛋提示点 - 默认显示微弱的波形 */
+.contact-float-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    background-image: 
+        /* 微弱的同心波形 */
+        radial-gradient(circle at center, rgba(255, 154, 158, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at center, rgba(255, 154, 158, 0.2) 3px, transparent 3px),
+        radial-gradient(circle at center, rgba(255, 154, 158, 0.15) 5px, transparent 5px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    opacity: 0.4;
+    z-index: 0;
+    transition: all 0.6s ease;
+    animation: subtleWave 3s ease-in-out infinite;
+}
+
+/* 微弱的波形动画 */
+@keyframes subtleWave {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+/* Hover时显示波动图标 - 使用CSS绘制波形 */
+.contact-float-btn:hover::before {
+    content: '';
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    background-image: 
+        /* 绘制三组同心波形 */
+        radial-gradient(circle at center, rgba(255, 154, 158, 0.8) 2px, transparent 2px),
+        radial-gradient(circle at center, rgba(255, 154, 158, 0.6) 4px, transparent 4px),
+        radial-gradient(circle at center, rgba(255, 154, 158, 0.4) 6px, transparent 6px),
+        radial-gradient(circle at center, rgba(255, 154, 158, 0.2) 8px, transparent 8px);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    animation: wavePulse 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))
+            drop-shadow(0 0 8px rgba(255, 154, 158, 0.5));
+}
+
+/* 波形脉冲动画 */
+@keyframes wavePulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.9;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))
+                drop-shadow(0 0 8px rgba(255, 154, 158, 0.5));
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 1;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))
+                drop-shadow(0 0 15px rgba(255, 154, 158, 0.7));
+    }
+}
+
+/* 移除心跳动画，使用更微妙的闪烁 */
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.2;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+.contact-float-btn:hover {
+    /* 限制hover时的放大，避免超出边界 */
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 15px 45px rgba(255, 154, 158, 0.5),
+                0 8px 25px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.7),
+                0 0 30px rgba(255, 154, 158, 0.4); /* 心形光晕增强 */
+    border-color: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(135deg, rgba(255, 154, 158, 0.98) 0%, rgba(250, 208, 196, 0.98) 50%, rgba(255, 236, 210, 0.98) 100%);
+    animation-play-state: paused;
+    border-radius: 50% 50% 50% 15px; /* hover时底部更明显 */
+    /* 确保hover时仍在内 */
+    max-width: calc(100vw - 30px);
+    max-height: calc(100vh - 30px);
+}
+
+.contact-float-btn:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.contact-float-btn:active {
+    transform: scale(1.05) translateY(-2px);
+    transition: all 0.1s ease;
+}
+
+.contact-float-btn.hidden {
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* 留言按钮的图标 - 隐藏，使用伪元素的心形 */
+.contact-float-btn .float-btn-icon {
+    display: none;
+}
+
+/* 旧样式保留兼容性 */
+.float-btn-icon {
+    display: none;
+}
+
+/* 彩蛋文字 - 默认隐藏 */
+.contact-float-btn .float-btn-text {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: all 0.6s ease;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0; /* 默认完全隐藏 */
+    font-size: 0; /* 默认不显示文字 */
+    pointer-events: none;
+}
+
+/* Hover时显示文字 */
+.contact-float-btn:hover .float-btn-text {
+    opacity: 1;
+    font-size: 11px;
+    color: #fff;
+    transform: translate(-50%, calc(-50% + 20px)); /* 显示在心形图标下方 */
+    pointer-events: auto;
+}
+
+@keyframes floatBounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+
+/* 优化悬浮按钮排版 - 响应式布局 */
+/* 在大屏幕上确保导航栏和按钮有足够间距 */
+@media (min-width: 1200px) {
+    .ribbon {
+        right: 30px !important;
+    }
+    
+    .letter-float-btn {
+        left: 30px;
+        top: 30px;
+    }
+    
+    .contact-float-btn {
+        right: 35px;
+        bottom: 35px;
+    }
+}
+
+/* 心形脉冲光环效果 - 使用单独的伪元素 */
+.contact-float-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 50% 10px;
+    background: rgba(255, 154, 158, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    animation: heartPulseRing 2s ease-out infinite;
+    z-index: -1;
+}
+
+@keyframes heartPulseRing {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* ========== 留言按钮（圆形，合理位置） ========== */
+.letter-float-btn {
+    position: fixed !important; /* 强制使用fixed定位，确保不随页面滚动 */
+    right: 40px; /* 右下角合理位置 */
+    bottom: 40px;
+    width: 75px;
+    height: 75px;
+    background: linear-gradient(135deg, rgba(250, 208, 196, 0.92) 0%, rgba(255, 236, 210, 0.92) 100%);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-radius: 50%; /* 完全圆形 */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(212, 165, 116, 0.35),
+                0 4px 15px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: letterFloat 4s ease-in-out infinite;
+    overflow: visible;
+    /* 确保按钮完全在视窗内 */
+    max-width: calc(100vw - 80px);
+    max-height: calc(100vh - 80px);
+    transform-origin: center center;
+}
+
+/* 留言图标显示 - 使用精美的emoji */
+.letter-float-btn::before {
+    content: '💌'; /* 情书/信封图标，更温馨 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    opacity: 0.95;
+    z-index: 0;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25)) 
+            drop-shadow(0 1px 3px rgba(255, 255, 255, 0.5))
+            brightness(1.05);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    line-height: 1;
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+/* 图标轻微浮动动画 */
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-3px);
+    }
+}
+
+.letter-float-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1.2) rotate(-3deg) translateY(-2px) !important;
+    opacity: 1;
+    filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.3)) 
+            drop-shadow(0 1px 4px rgba(255, 255, 255, 0.6))
+            brightness(1.1);
+    animation: none !important; /* hover时停止浮动 */
+}
+
+/* 圆形脉冲光环效果 */
+.letter-float-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* 圆形脉冲 */
+    background: rgba(212, 165, 116, 0.25);
+    transform: translate(-50%, -50%) scale(0);
+    animation: letterPulseRing 3s ease-out infinite;
+    z-index: -1;
+}
+
+@keyframes letterPulseRing {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* 信封悬浮动画 */
+@keyframes letterFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 悬浮时的光效 */
+.letter-float-btn:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 40px rgba(212, 165, 116, 0.5),
+                0 6px 20px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.7);
+    background: linear-gradient(135deg, rgba(250, 208, 196, 0.98) 0%, rgba(255, 236, 210, 0.98) 100%);
+    animation-play-state: paused;
+}
+
+.letter-float-btn:active {
+    transform: scale(1.05) translateY(-2px);
+    transition: all 0.1s ease;
+}
+
+/* 留言按钮的图标 - 使用伪元素显示，隐藏HTML中的图标 */
+.letter-float-btn .float-btn-icon {
+    display: none; /* 隐藏HTML中的图标，使用CSS伪元素显示 */
+}
+
+.letter-float-btn .float-btn-text {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    position: absolute; /* 使用绝对定位 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 24px; /* 在图标下方 */
+    opacity: 0; /* 默认隐藏文字 */
+    font-size: 0; /* 默认不显示 */
+    pointer-events: none;
+}
+
+/* Hover时显示文字 */
+.letter-float-btn:hover .float-btn-text {
+    opacity: 1;
+    font-size: 11px;
+    transform: translate(-50%, calc(-50% + 22px)); /* 显示在图标下方 */
+    pointer-events: auto;
+}
+
+/* 脉冲动画已在上方定义 */
+
+/* ========== 联系表单弹窗样式 ========== */
+
+.contact-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-out;
+    overflow-y: auto;
+}
+
+.contact-modal-container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease-out;
+    position: relative;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px 20px;
+    border-bottom: 2px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    border-radius: 20px 20px 0 0;
+}
+
+.contact-modal-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.contact-modal-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 50%;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-modal-close:hover {
+    background: #ff9a9e;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.contact-modal-body {
+    padding: 30px 40px 40px;
+}
+
+.contact-modal-body .contact-intro {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+    border-radius: 15px;
+}
+
+.contact-modal-body .contact-intro-text {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.contact-modal-body .contact-form {
+    padding: 0;
+    box-shadow: none;
+}
+
+.success-close-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.success-close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    /* 优化悬浮按钮排版 - 平板设备 */
+    .ribbon {
+        right: 15px !important;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 12px 6px !important;
+        gap: 6px !important;
+    }
+
+    .ribbon span {
+        font-size: 12px;
+    }
+
+    .ribbon a {
+        padding: 8px 12px;
+    }
+    
+    .letter-float-btn {
+        right: 30px;
+        bottom: 30px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .contact-float-btn {
+        right: 8px;
+        bottom: 8px;
+        width: 42px;
+        height: 42px;
+        max-width: calc(100vw - 16px);
+        max-height: calc(100vh - 16px);
+    }
+    
+    .contact-float-btn:hover {
+        width: 65px;
+        height: 65px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .introduction h2 {
+        font-size: 28px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        text-indent: 1em;
+    }
+
+    .product-card-content {
+        padding: 30px 15px;
+    }
+
+    .product-card-icon {
+        font-size: 48px;
+    }
+
+    .feature-placeholder {
+        font-size: 80px;
+    }
+
+    .contact-section {
+        padding: 60px 15px;
+    }
+
+    .contact-form {
+        padding: 40px 30px;
+    }
+
+    .contact-intro-text {
+        font-size: 16px;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+
+    .submit-btn {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .success-icon {
+        font-size: 48px;
+    }
+
+    .success-message {
+        font-size: 18px;
+    }
+
+    /* 优化悬浮按钮排版 - 平板设备 */
+    .letter-float-btn {
+        right: 25px;
+        bottom: 25px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .letter-float-btn::before {
+        font-size: 30px;
+    }
+
+    .letter-float-btn:hover .float-btn-text {
+        font-size: 10px;
+        transform: translate(-50%, calc(-50% + 20px));
+    }
+    
+    /* 导航栏响应式优化 */
+    .ribbon {
+        right: 20px !important;
+        padding: 12px 8px !important;
+        gap: 6px !important;
+        min-width: 160px;
+    }
+    
+    .ribbon-brand {
+        padding: 6px 8px;
+        gap: 8px;
+    }
+    
+    .brand-icon {
+        font-size: 28px;
+    }
+    
+    .brand-name {
+        font-size: 14px;
+    }
+    
+    .brand-slogan {
+        font-size: 10px;
+    }
+    
+    .ribbon span {
+        font-size: 13px;
+    }
+
+    .contact-float-btn {
+        /* 确保按钮完全在视窗内 - 考虑动画放大 */
+        left: 20px;
+        bottom: 20px;
+        width: 70px;
+        height: 70px;
+        max-width: calc(100vw - 40px);
+        max-height: calc(100vh - 40px);
+    }
+
+    .float-btn-icon {
+        font-size: 30px;
+        margin-bottom: 2px;
+    }
+
+    .float-btn-text {
+        font-size: 10px;
+    }
+
+    .contact-float-btn:hover {
+        transform: scale(1.1) translateY(-2px);
+        /* 确保hover时不超出 */
+        max-width: calc(100vw - 25px);
+        max-height: calc(100vh - 25px);
+    }
+
+    .contact-modal-container {
+        max-height: 95vh;
+        border-radius: 15px;
+        margin: 10px;
+    }
+
+    .contact-modal-header {
+        padding: 20px;
+    }
+
+    .contact-modal-title {
+        font-size: 24px;
+    }
+
+    .contact-modal-body {
+        padding: 20px;
+    }
+
+    .contact-modal-close {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .introduction h2 {
+        font-size: 24px;
+    }
+
+    .product-card-content h3 {
+        font-size: 20px;
+    }
+
+    .product-card-desc {
+        font-size: 13px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .form-label {
+        font-size: 15px;
+    }
+
+    .contact-intro {
+        padding: 20px;
+    }
+
+    .contact-intro-text {
+        font-size: 15px;
+    }
+
+    /* 优化悬浮按钮排版 - 手机设备 */
+    .letter-float-btn {
+        right: 20px;
+        bottom: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .letter-float-btn::before {
+        font-size: 28px;
+    }
+
+    .letter-float-btn:hover .float-btn-text {
+        font-size: 9px;
+        transform: translate(-50%, calc(-50% + 18px));
+    }
+
+    .letter-float-btn:hover {
+        transform: scale(1.1) translateY(-2px);
+    }
+    
+    /* 导航栏响应式优化 - 手机端 */
+    .ribbon {
+        right: 15px !important;
+        padding: 10px 6px !important;
+        gap: 5px !important;
+        min-width: 140px;
+    }
+    
+    .ribbon-brand {
+        padding: 5px 6px;
+        gap: 6px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .brand-icon {
+        font-size: 24px;
+    }
+    
+    .brand-name {
+        font-size: 12px;
+    }
+    
+    .brand-slogan {
+        font-size: 9px;
+    }
+    
+    .ribbon span {
+        font-size: 11px;
+    }
+    
+    .ribbon a:link,
+    .ribbon a:visited {
+        padding: 7px 10px;
+    }
+
+    .contact-float-btn {
+        right: 6px;
+        bottom: 6px;
+        width: 40px;
+        height: 40px;
+        max-width: calc(100vw - 12px);
+        max-height: calc(100vh - 12px);
+        min-width: 35px;
+        min-height: 35px;
+    }
+    
+    .contact-float-btn:hover {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .contact-float-btn:hover::before {
+        font-size: 28px;
+    }
+    
+    .letter-float-btn {
+        right: 15px;
+        bottom: 15px;
+        width: 55px;
+        height: 55px;
+    }
+    
+    .letter-float-btn::before {
+        font-size: 26px;
+    }
+    
+    .letter-float-btn:hover .float-btn-text {
+        font-size: 8px;
+        transform: translate(-50%, calc(-50% + 16px));
+    }
+
+    .float-btn-icon {
+        font-size: 26px;
+        margin-bottom: 1px;
+    }
+
+    .float-btn-text {
+        font-size: 9px;
+    }
+
+    .contact-float-btn:hover {
+        transform: scale(1.3) translateY(-3px);
+        /* 小屏幕hover时也放大显示 */
+        max-width: calc(100vw - 12px);
+        max-height: calc(100vh - 12px);
+    }
+
+    .contact-float-btn::after {
+        animation-duration: 2.5s;
+    }
+
+    .contact-modal-container {
+        border-radius: 10px;
+    }
+
+    .contact-modal-header {
+        padding: 15px;
+    }
+
+    .contact-modal-title {
+        font-size: 20px;
+    }
+
+    .contact-modal-body {
+        padding: 15px;
+    }
+}

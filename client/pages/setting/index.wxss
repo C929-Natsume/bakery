@@ -1,0 +1,102 @@
+/* pages/setting/index.wxss */
+
+.btn-list {
+  background: #FFF9F0;
+}
+
+.no-border {
+  border: none !important;
+}
+
+button {
+  width: 100% !important;
+  font-weight: 600 !important;
+  padding: 0 !important;
+  background-color: #ffffff;
+  color: #5A4C3E;
+  border-bottom: 2rpx solid #FFD8A6 !important;
+}
+
+button::after {
+  border: none !important;
+}
+
+button:last-child {
+  border-bottom: none !important;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 100rpx;
+}
+
+.popup {
+  width: 350rpx;
+  height: 350rpx;
+  background: #ffffff;
+  border: 2rpx solid #FFD8A6;
+  border-radius: 12rpx;
+}
+
+.qr_like {
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 8rpx;
+}
+
+.github-logo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 2rpx solid #FFD8A6;
+  background: #FFF9F0;
+}
+
+.github-uri {
+  font-size: 26rpx;
+  margin-top: 10rpx;
+  color: #8B7355;
+}
+
+/* 添加按钮悬停效果 */
+button.hover {
+  background-color: #FFF9F0 !important;
+}
+
+/* 设置项样式增强 */
+.setting-item {
+  padding: 30rpx;
+  background: #ffffff;
+  margin: 0 30rpx 20rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #FFD8A6;
+}
+
+.setting-title {
+  font-size: 32rpx;
+  color: #5A4C3E;
+  font-weight: 600;
+}
+
+.setting-desc {
+  font-size: 26rpx;
+  color: #8B7355;
+  margin-top: 8rpx;
+}
+
+/* 开关样式 */
+.switch-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  background: #ffffff;
+  margin: 0 30rpx 20rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #FFD8A6;
+}

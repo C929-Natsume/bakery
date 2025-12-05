@@ -1,0 +1,15 @@
+{
+  "name": "心情烘培坊",
+  "version": "2.0.1",
+  "description": "A WeChat Mini-Program for Social Platform - 心情烘培坊 一款注于当代年轻人情绪健康与自我关怀的温暖治愈型微信小程序",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "哇哈哈",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@yyjeffrey/wxutil": "1.2.0",
+    "lin-ui": "0.9.13"
+  }
+}

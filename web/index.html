@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/主页标题图.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./image/主页标题图.png" type="image/x-icon">
+    <title>心情烘焙坊 - 情绪记录与社交空间</title>
+    <link rel="stylesheet" href="./web/鸽子JUN.css">
+</head>
+
+<body>
+    <div class="home">
+        <div class="content">
+            <div class="stars"></div>
+        </div>
+
+        <!-- 导航栏 - 移到content外面，确保fixed定位正常 -->
+        <nav class='ribbon'>
+            <!-- 导航链接 -->
+            <a href='./index.html'><span>主页</span></a>
+            <a href='#features'><span>功能特色</span></a>
+            <a href='#values'><span>核心价值</span></a>
+            <a href='#about'><span>关于我们</span></a>
+            <a href='#download'><span>获取软件</span></a>
+            <a href='javascript:void(0);' onclick="toggleContactForm(); return false;"><span>联系我们</span></a>
+        </nav>
+
+        <!-- 主横幅 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">心情烘焙坊</h1>
+                <p class="hero-subtitle">温暖治愈的情绪记录与社交空间</p>
+                <p class="hero-description">为情绪找到温暖的出口，接纳我们的不完美，珍惜我们的细微感受，听见自己的声音</p>
+                <p class="hero-description">在记录与分享中获得陪伴、共鸣与成长的力量</p>
+            </div>
+        </section>
+
+        <!-- 产品定位介绍 -->
+        <section class="intro-section">
+            <div class="introduction">
+                <h2>产品定位</h2>
+                <p>一款专注于当代年轻人情绪健康与自我关怀的<strong>温暖治愈型社交小程序</strong></p>
+                <p>我们旨在提供一个<strong>安全、私密且充满善意</strong>的线上空间</p>
+                <p>让用户能够精心调理和分享自己的心情，关注心理健康</p>
+                <p>融合了<strong>情绪记录、创意表达、智能分析与轻社交</strong></p>
+                <p>通过独特的"烘焙"主题视觉与互动设计，帮助用户为情绪找到温暖的出口</p>
+            </div>
+        </section>
+
+        <!-- 产品功能预览卡片 -->
+        <section class="products-preview" id="features">
+            <h2 class="section-title">五大核心功能</h2>
+            <div class="icons">
+                <div class="icons_items01 product-card">
+                    <div class="product-card-content">
+                        <div class="product-card-icon">
+                            <img src="./image/icon-home.png" alt="情绪烘焙屋"
+                                style="width: 60px; height: 60px; object-fit: contain;">
+                        </div>
+                        <h3>情绪烘焙屋</h3>
+                        <p class="product-card-desc">帖子系统 - 支持图文分享，独特的"拥抱"和"拍拍"互动，情绪标签分类</p>
+                        <div class="product-card-overlay">
+                            <h3></h3>
+                            <p>发表帖子、暖心互动、情绪标签</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons_items02 product-card">
+                    <div class="product-card-content">
+                        <div class="product-card-icon">
+                            <img src="./image/icon-calendar.png" alt="今日订单"
+                                style="width: 60px; height: 60px; object-fit: contain;">
+                        </div>
+                        <h3>今日订单</h3>
+                        <p class="product-card-desc">日记系统 - 日历视图展示，保护用户隐私，每日情绪标记</p>
+                        <div class="product-card-overlay">
+                            <h3></h3>
+                            <p>日历视图、个人日记</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons_items03 product-card">
+                    <div class="product-card-content">
+                        <div class="product-card-icon">
+                            <img src="./image/icon-chocolate.png" alt="巧克力罐"
+                                style="width: 60px; height: 60px; object-fit: contain;">
+                        </div>
+                        <h3>巧克力罐</h3>
+                        <p class="product-card-desc">心灵鸡汤推送 - 智能匹配用户情绪，推送暖心句子和美文</p>
+                        <div class="product-card-overlay">
+                            <h3></h3>
+                            <p>情绪分析、智能推送、暖心内容</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons_items04 product-card">
+                    <div class="product-card-content">
+                        <div class="product-card-icon">
+                            <img src="./image/icon-chef.png" alt="烘焙后厨"
+                                style="width: 60px; height: 60px; object-fit: contain;">
+                        </div>
+                        <h3>烘焙后厨</h3>
+                        <p class="product-card-desc">个人空间 - 基础设置、情绪档案图表，帮助用户自我觉察</p>
+                        <div class="product-card-overlay">
+                            <h3></h3>
+                            <p>基础设置、情绪档案</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons_items05 product-card">
+                    <div class="product-card-content">
+                        <div class="product-card-icon">
+                            <img src="./image/icon-pill.png" alt="心灵配方"
+                                style="width: 60px; height: 60px; object-fit: contain;">
+                        </div>
+                        <h3>心灵配方</h3>
+                        <p class="product-card-desc">专业知识 - 心理知识科普、专业心理咨询联系方式，提供及时援助</p>
+                        <div class="product-card-overlay">
+                            <h3></h3>
+                            <p>心理知识、专业援助</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品详细介绍 -->
+        <section class="products-detail">
+            <!-- 功能一：情绪烘焙屋 -->
+            <div class="product-item product-item-left">
+                <div class="product-image feature-image">
+                    <img src="./image/home.png" alt="情绪烘焙屋"
+                        style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">情绪烘焙屋</h2>
+                    <div class="product-description">
+                        <p><strong>发表帖子：</strong>支持图文、短文字，作为公开的分享。用户可以自由表达心情，分享生活中的美好时刻或情感体验。</p>
+                        <p><strong>互动设计：</strong>评论、点赞为基础，为了突出"温暖"特质，设计独特的互动方式"拥抱"或"拍拍"功能，传递更多温暖与关怀。</p>
+                        <p><strong>情绪标签：</strong>发帖时可选择心情标签，方便内容分类和用户发现同好，找到情绪共鸣的伙伴。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能二：今日订单 -->
+            <div class="product-item product-item-right">
+                <div class="product-content">
+                    <h2 class="product-title">今日订单</h2>
+                    <div class="product-description">
+                        <p><strong>日历视图：</strong>以直观的日历形式展示日记记录，不同心情用不同图标显示，让用户一目了然地回顾自己的情绪历程。</p>
+                        <p><strong>隐私保护：</strong>日记默认私密，用户可自行选择是否公开某篇日记。我们深知情绪记录需要安全感，因此将隐私保护放在首位。</p>
+                    </div>
+                </div>
+                <div class="product-image feature-image">
+                    <img src="./image/calendar.png" alt="今日订单"
+                        style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+
+            <!-- 功能三：巧克力罐 -->
+            <div class="product-item product-item-left">
+                <div class="product-image feature-image">
+                    <img src="./image/chocolate.png" alt="巧克力罐"
+                        style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">巧克力罐</h2>
+                    <div class="product-description">
+                        <p><strong>智能推送：</strong>根据用户选择的心情标签、日记中的关键词、用户评论与收藏内容智能分析用户当前情绪，推送匹配的暖心句子、美文。在用户需要陪伴的时候，给予温暖的心灵慰藉。
+                        </p>
+                        <p><strong>共创语库：</strong>用户可添加句子，系统根据句子内容智能匹配适配的情绪，将句子加入语言库中，可被推送至其他用户。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功能四：烘焙后厨 -->
+            <div class="product-item product-item-right">
+                <div class="product-content">
+                    <h2 class="product-title">烘焙后厨</h2>
+                    <div class="product-description">
+                        <p><strong>基础设置：</strong>头像、昵称、个性签名、生日等个人信息管理，让每个用户都能在属于自己的小天地里展现独特的自我。</p>
+                        <p><strong>情绪档案：</strong>以图表形式展示用户近期的情绪波动，帮助用户回顾和自我觉察。通过可视化数据，让用户更好地了解自己的情绪模式。</p>
+                    </div>
+                </div>
+                <div class="product-image feature-image">
+                    <img src="./image/chef.png" alt="烘焙后厨"
+                        style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </div>
+
+            <!-- 功能五：心灵配方 -->
+            <div class="product-item product-item-left">
+                <div class="product-image feature-image">
+                    <img src="./image/pill.png" alt="心灵配方"
+                        style="width: 100%; max-width: 200px; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">心灵配方</h2>
+                    <div class="product-description">
+                        <p><strong>心理知识：</strong>存储专业心理知识，向用户普及专业知识。帮助用户更好地理解自己的情绪，掌握情绪管理的方法。</p>
+                        <p><strong>专业援助：</strong>提供专业心理咨询联系方式，在用户需要时一键跳转拨打电话寻求援助。确保用户在需要专业帮助时能够及时获得支持。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心价值 -->
+        <section class="values-section" id="values">
+            <h2 class="section-title">核心价值</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>情绪出口</h3>
+                    <p>获得一个安全、便捷的情绪记录和表达渠道</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>获取帮助</h3>
+                    <p>在孤独或低落时，能从社区、推送内容以及专业渠道中获得陪伴和力量</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>接纳自我</h3>
+                    <p>通过回顾日记和情绪档案，更好地了解自己的情绪模式</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"></div>
+                    <h3>同频共鸣</h3>
+                    <p>听见同频的声音，在一个充满善意的社区中互动，减少社交压力，获得正能量</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于产品 -->
+        <section class="about-section" id="about">
+            <h2 class="section-title">关于心情烘焙坊</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    心情烘焙坊是一款专注于当代年轻人情绪健康与自我关怀的温暖治愈型社交小程序。我们深知用户在使用传统社交媒体时面临的压力：需要精心修饰内容、担心他人看法、环境嘈杂负面信息多。</p>
+                <p class="about-text">
+                    因此，我们为用户提供一个<strong>安全、温暖、治愈</strong>的线上空间，希望我们能够在这里<strong>接纳细微的情绪、喜欢自己的样子、听见同频的声音</strong>。通过独特的"烘焙"主题视觉与互动设计，让每一次情绪的表达都像精心烘焙一份甜品，充满温暖与治愈的力量。
+                </p>
+                <p class="about-text"><strong>技术实现：</strong>项目采用微信小程序形式，无需下载。后端服务独立部署，确保用户数据（尤其是私密日记）的安全与稳定。</p>
+            </div>
+        </section>
+
+        <!-- 获取软件方式 -->
+        <section class="download-section" id="download">
+            <h2 class="section-title">获取心情烘焙坊</h2>
+            <div class="download-content">
+                <div class="download-card">
+                    <div class="qrcode-container">
+                        <img src="./image/qrcode.png" alt="心情烘焙坊小程序二维码" class="qrcode-image">
+                    </div>
+                    <div class="download-info">
+                        <h3 class="download-title">扫码体验</h3>
+                        <p class="download-desc">使用微信扫描上方二维码，即可进入心情烘焙坊小程序</p>
+                        <p class="download-desc"><strong>无需下载安装</strong>，打开即用，随时记录你的心情</p>
+                        <div class="download-features">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+
+    <!-- 左上角悬浮按钮 - 写给你的一封信（功能互换为留言） -->
+    <div class="letter-float-btn" id="letterFloatBtn" onclick="toggleContactForm()">
+        <div class="float-btn-icon"></div>
+        <div class="float-btn-text">留言</div>
+    </div>
+
+    <!-- 左下角悬浮按钮 - 留言（功能互换为写给你的信） -->
+    <div class="contact-float-btn" id="contactFloatBtn" onclick="showLetter()">
+
+        <div class="float-btn-text">与你同频</div>
+    </div>
+
+    <!-- 联系我们 - 表单弹窗 -->
+    <div class="contact-modal-overlay" id="contactModal" style="display: none;">
+        <div class="contact-modal-container">
+            <div class="contact-modal-header">
+                <h2 class="contact-modal-title">联系我们</h2>
+                <button class="contact-modal-close" onclick="toggleContactForm()">×</button>
+            </div>
+            <div class="contact-modal-body">
+                <div class="contact-intro">
+                    <p class="contact-intro-text">我们非常重视您的意见和反馈</p>
+                    <p class="contact-intro-text">如果您有任何问题、建议或想法，欢迎填写下方表单</p>
+                    <p class="contact-intro-text">我们会尽快回复您，感谢您的支持！</p>
+                </div>
+                <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name" class="form-label">
+                            姓名/昵称 <span class="required">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="请输入您的姓名或昵称" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact" class="form-label">
+                            联系方式 <span class="required">*</span>
+                        </label>
+                        <input type="text" id="contact" name="contact" class="form-input" placeholder="请输入您的邮箱地址或手机号码"
+                            required>
+                        <span class="error-message" id="contactError"></span>
+                        <small class="form-hint">支持邮箱地址或手机号码</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            留言内容 <span class="required">*</span>
+                        </label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6"
+                            placeholder="请输入您想要说的话，我们会认真阅读每一份留言..." required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                        <div class="char-count">
+                            <span id="charCount">0</span> / 500 字
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn" id="submitBtn" onclick="console.log('按钮被点击');">
+                            <span class="submit-btn-text">发送留言</span>
+                            <span class="submit-btn-loading" style="display: none;">发送中...</span>
+                        </button>
+                    </div>
+
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <p class="success-message">感谢您的留言！我们会尽快与您联系。</p>
+                        <button class="success-close-btn" onclick="toggleContactForm()">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // 确保handleSubmit函数在全局作用域可用
+        console.log('脚本开始加载');
+
+        // 等待DOM加载完成
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('页面加载完成，初始化表单功能');
+
+            // 测试函数是否可访问
+            if (typeof handleSubmit === 'function') {
+                console.log('handleSubmit函数已定义，可以访问');
+            } else {
+                console.error('handleSubmit函数未定义！');
+            }
+
+            // 字符计数
+            const messageTextarea = document.getElementById('message');
+            const charCount = document.getElementById('charCount');
+
+            if (messageTextarea && charCount) {
+                messageTextarea.addEventListener('input', function () {
+                    const length = this.value.length;
+                    charCount.textContent = length;
+
+                    if (length > 500) {
+                        charCount.style.color = '#ff4444';
+                    } else {
+                        charCount.style.color = '#666';
+                    }
+                });
+                console.log('字符计数功能已初始化');
+            } else {
+                console.error('找不到message或charCount元素');
+            }
+        });
+
+        // 表单验证
+        function validateForm() {
+            console.log('开始验证表单');
+            let isValid = true;
+
+            // 验证姓名
+            const nameInput = document.getElementById('name');
+            const name = nameInput ? (nameInput.value || '').trim() : '';
+            const nameError = document.getElementById('nameError');
+            console.log('验证姓名:', name, '长度:', name.length);
+            if (name.length < 2) {
+                nameError.textContent = '姓名至少需要2个字符';
+                isValid = false;
+                console.log('姓名验证失败');
+            } else {
+                nameError.textContent = '';
+            }
+
+            // 验证联系方式
+            const contactInput = document.getElementById('contact');
+            console.log('联系方式输入框元素:', contactInput);
+            console.log('联系方式输入框类型:', contactInput ? contactInput.tagName : '未找到');
+            console.log('联系方式输入框值:', contactInput ? contactInput.value : '未找到');
+            const contact = contactInput ? (contactInput.value || '').trim() : '';
+            const contactError = document.getElementById('contactError');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^1[3-9]\d{9}$/;
+
+            console.log('验证联系方式（处理后）:', contact);
+            if (!contact) {
+                contactError.textContent = '联系方式不能为空';
+                isValid = false;
+                console.log('联系方式验证失败：为空');
+            } else if (!emailPattern.test(contact) && !phonePattern.test(contact)) {
+                contactError.textContent = '请输入有效的邮箱地址或手机号码';
+                isValid = false;
+                console.log('联系方式验证失败：格式不正确');
+            } else {
+                contactError.textContent = '';
+                console.log('联系方式验证通过');
+            }
+
+            // 验证留言内容
+            const messageInput = document.getElementById('message');
+            const message = messageInput ? (messageInput.value || '').trim() : '';
+            const messageError = document.getElementById('messageError');
+            console.log('验证留言内容:', message, '长度:', message.length);
+            if (message.length < 1) {
+                messageError.textContent = '留言内容不为空';
+                isValid = false;
+                console.log('留言内容验证失败：长度不足');
+            } else if (message.length > 500) {
+                messageError.textContent = '留言内容不能超过500个字符';
+                isValid = false;
+                console.log('留言内容验证失败：长度超过限制');
+            } else {
+                messageError.textContent = '';
+            }
+
+            console.log('表单验证结果:', isValid ? '通过' : '失败');
+            return isValid;
+        }
+
+        // 表单提交处理 - 发送邮件到QQ邮箱
+        function handleSubmit(event) {
+            console.log('表单提交函数被调用');
+            event.preventDefault();
+
+            // 先进行表单验证
+            if (!validateForm()) {
+                console.log('表单验证失败');
+                return;
+            }
+
+            console.log('表单验证通过，准备发送邮件');
+
+            const submitBtn = document.getElementById('submitBtn');
+            const submitBtnText = submitBtn.querySelector('.submit-btn-text');
+            const submitBtnLoading = submitBtn.querySelector('.submit-btn-loading');
+
+            // 显示加载状态
+            submitBtn.disabled = true;
+            submitBtnText.style.display = 'none';
+            submitBtnLoading.style.display = 'inline';
+
+            console.log('按钮状态已更新为加载中');
+
+            // 获取表单数据
+            const nameInput = document.getElementById('name');
+            const contactInput = document.getElementById('contact');
+            const messageInput = document.getElementById('message');
+
+            const name = nameInput ? (nameInput.value || '').trim() : '';
+            const contact = contactInput ? (contactInput.value || '').trim() : '';
+            const message = messageInput ? (messageInput.value || '').trim() : '';
+
+            console.log('获取表单数据:', { name, contact, message });
+
+            // 构建邮件内容
+            const emailSubject = encodeURIComponent('心情烘焙坊 - 新的留言');
+            const emailBody = encodeURIComponent(
+                `姓名/昵称：${name}\n\n` +
+                `联系方式：${contact}\n\n` +
+                `留言内容：\n${message}\n\n` +
+                `---\n` +
+                `此邮件来自心情烘焙坊网站留言表单\n` +
+                `发送时间：${new Date().toLocaleString('zh-CN')}`
+            );
+
+            // 使用mailto作为主要发送方式
+            // 同时提供备选：使用Web3Forms API（免费邮件发送服务）
+            const web3formsAccessKey = '43416a7f-1945-4e90-b6fe-f194408fb59b'; // 需要在 https://web3forms.com/ 获取
+
+            // 方案1：使用mailto链接（简单但需要用户有邮件客户端）
+            const mailtoLink = `mailto:1945613643@qq.com?subject=${emailSubject}&body=${emailBody}`;
+
+            // 方案2：使用Web3Forms API（推荐，无需后端）
+            if (web3formsAccessKey && web3formsAccessKey !== 'YOUR_WEB3FORMS_KEY') {
+                console.log('使用Web3Forms发送邮件，Access Key:', web3formsAccessKey.substring(0, 10) + '...');
+                // 使用Web3Forms发送邮件
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        access_key: web3formsAccessKey,
+                        subject: '心情烘焙坊 - 新的留言',
+                        from_name: name,
+                        from_email: contact || 'noreply@web3forms.com',
+                        message: `姓名/昵称：${name}\n联系方式：${contact}\n\n留言内容：\n${message}`,
+                        to_email: '1945613643@qq.com'
+                    })
+                })
+                    .then(response => {
+                        console.log('收到响应，状态码:', response.status);
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Web3Forms 响应数据:', data);
+                        if (data.success) {
+                            console.log('邮件发送成功');
+                            // 隐藏表单，显示成功消息
+                            document.getElementById('contactForm').style.display = 'none';
+                            document.getElementById('formSuccess').style.display = 'block';
+                        } else {
+                            // 显示错误详情
+                            console.error('发送失败:', data);
+                            alert('发送失败：' + (data.message || '未知错误，请检查控制台'));
+                            // 恢复按钮状态
+                            submitBtn.disabled = false;
+                            submitBtnText.style.display = 'inline';
+                            submitBtnLoading.style.display = 'none';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('发送失败:', error);
+                        console.error('错误详情:', error.message, error.stack);
+                        // 显示错误消息
+                        alert('网络错误：' + error.message + '\n\n请稍后重试或直接发送邮件至 1945613643@qq.com');
+                        // 恢复按钮状态
+                        submitBtn.disabled = false;
+                        submitBtnText.style.display = 'inline';
+                        submitBtnLoading.style.display = 'none';
+                    });
+            } else {
+                console.log('未配置Web3Forms，使用mailto链接');
+                // 如果没有配置Web3Forms，直接使用mailto
+                window.location.href = mailtoLink;
+                // 延迟显示成功消息（因为mailto会打开邮件客户端）
+                setTimeout(function () {
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                }, 1000);
+            }
+        }
+
+        // 实时验证 - 每个字段独立验证
+        // 等待DOM加载完成后再绑定事件
+        document.addEventListener('DOMContentLoaded', function () {
+            const nameInput = document.getElementById('name');
+            const contactInput = document.getElementById('contact');
+            const messageInput = document.getElementById('message');
+
+            if (nameInput) {
+                nameInput.addEventListener('blur', function () {
+                    const name = this.value.trim();
+                    const nameError = document.getElementById('nameError');
+                    if (name.length < 2) {
+                        nameError.textContent = '姓名至少需要2个字符';
+                    } else {
+                        nameError.textContent = '';
+                    }
+                });
+            }
+
+            if (contactInput) {
+                contactInput.addEventListener('blur', function () {
+                    const contact = this.value.trim();
+                    const contactError = document.getElementById('contactError');
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    const phonePattern = /^1[3-9]\d{9}$/;
+
+                    if (!emailPattern.test(contact) && !phonePattern.test(contact)) {
+                        contactError.textContent = '请输入有效的邮箱地址或手机号码';
+                    } else {
+                        contactError.textContent = '';
+                    }
+                });
+            }
+
+            if (messageInput) {
+                messageInput.addEventListener('blur', function () {
+                    const message = this.value.trim();
+                    const messageError = document.getElementById('messageError');
+                    if (message.length < 1) {
+                        messageError.textContent = '留言内容不为空';
+                    } else if (message.length > 500) {
+                        messageError.textContent = '留言内容不能超过500个字符';
+                    } else {
+                        messageError.textContent = '';
+                    }
+                });
+            }
+
+            console.log('实时验证功能已初始化');
+        });
+
+        // 切换联系表单显示/隐藏
+        function toggleContactForm() {
+            const modal = document.getElementById('contactModal');
+            const floatBtn = document.getElementById('contactFloatBtn');
+
+            if (modal.style.display === 'none' || modal.style.display === '') {
+                // 显示表单
+                modal.style.display = 'flex';
+                floatBtn.classList.add('hidden');
+                document.body.style.overflow = 'hidden'; // 禁止背景滚动
+            } else {
+                // 隐藏表单
+                modal.style.display = 'none';
+                floatBtn.classList.remove('hidden');
+                document.body.style.overflow = ''; // 恢复背景滚动
+                // 重置表单（如果提交成功，已经隐藏了表单）
+                const form = document.getElementById('contactForm');
+                const success = document.getElementById('formSuccess');
+                if (form.style.display === 'none') {
+                    form.style.display = 'block';
+                    success.style.display = 'none';
+                    form.reset(); // 重置表单
+                }
+            }
+        }
+
+        // 点击遮罩层关闭表单
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('contactModal');
+            modal.addEventListener('click', function (e) {
+                // 如果点击的是遮罩层本身（不是容器内部），则关闭
+                if (e.target === modal) {
+                    toggleContactForm();
+                }
+            });
+        });
+
+        // 显示"写给你的一封信"弹窗
+        function showLetter() {
+            // 可以打开一个新的页面或显示弹窗
+            // 这里我们创建一个简单的弹窗来显示信件内容
+            const letterContent = `
+                <div style="padding: 30px; max-width: 600px; margin: 0 auto;">
+                    <h2 style="text-align: center; color: #d4a574; margin-bottom: 20px;"></h2>
+                    <div style="line-height: 2; color: #333; font-size: 16px;">
+                        <p style="margin-bottom: 10px;">你也曾经和我一样吗 —— 一样恐惧，一样透明</p>
+                        <p style="margin-bottom: 10px;">我 奇形怪状，我 瑟瑟发抖</p>
+                        <p style="margin-bottom: 10px;">我害怕 —— 害怕被注视，害怕被议论，害怕他们发现我是一个小怪物</p>
+                        <p style="margin-bottom: 15px;">我讨厌我的不一样</p>
+                        <p style="margin-bottom: 10px;">那你呢，你也曾试图融入人群吗</p>
+                        <p style="margin-bottom: 15px;">我们 不要孤独了好不好</p>
+                        <p style="margin-bottom: 10px;">我爱你独一无二的形状</p>
+                        <p style="margin-bottom: 10px;">我喜欢你哼着歌走路的样子，我喜欢你大口吃饭的样子</p>
+                        <p style="margin-bottom: 15px;">我喜欢你眼睛里的星星</p>
+                        <p style="margin-bottom: 10px;">我喜欢你的皱纹，你的莽撞，你的慢热</p>
+                        <p style="margin-bottom: 10px;">我喜欢你不完美，我喜欢你就是你的样子</p>
+                        <p style="margin-bottom: 10px;">或许，我们曾经都一样孤独，一样不自信</p>
+                        <p style="margin-bottom: 15px;">但请答应我</p>
+                        <p style="margin-bottom: 10px;">从今天开始，从两颗星球产生碰撞的此刻开始</p>
+                        <p style="margin-bottom: 10px;">我们都要好好地照顾好自己</p>
+                        <p style="margin-bottom: 10px;">深深地 爱着自己</p>
+                        <p style="margin-bottom: 10px;">深深地 相信自己</p>
+                        <p style="margin-bottom: 10px; text-align: right; color: #d4a574;">--Charlie</p>
+                    </div>
+                </div>
+            `;
+
+            // 创建一个模态框来显示信件
+            const modal = document.createElement('div');
+            modal.className = 'letter-modal-overlay';
+            modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 10000;';
+            modal.onclick = function (e) {
+                if (e.target === modal) {
+                    document.body.removeChild(modal);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            const container = document.createElement('div');
+            container.style.cssText = 'background: white; border-radius: 15px; max-width: 90%; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);';
+
+            const closeBtn = document.createElement('button');
+            closeBtn.innerHTML = '×';
+            closeBtn.style.cssText = 'position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 30px; color: #999; cursor: pointer; width: 40px; height: 40px; line-height: 1;';
+            closeBtn.onclick = function () {
+                document.body.removeChild(modal);
+                document.body.style.overflow = '';
+            };
+
+            const content = document.createElement('div');
+            content.innerHTML = letterContent;
+
+            container.appendChild(closeBtn);
+            container.appendChild(content);
+            modal.appendChild(container);
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+2025-12-05 10:15:51,984 WARNING mp.py:51 Redis连接失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:15:54,834 WARNING mp.py:77 Redis缓存失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:15:57,512 WARNING mp.py:51 Redis连接失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:16:00,177 WARNING mp.py:77 Redis缓存失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:16:00,883 ERROR mp.py:136 微信订阅消息发布失败: {'errcode': 43101, 'errmsg': 'user refuse to accept the msg rid: 69324061-1bf3f39e-09ac4a1c'}
+2025-12-05 10:16:35,311 WARNING mp.py:51 Redis连接失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:16:38,050 WARNING mp.py:77 Redis缓存失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:16:41,240 WARNING mp.py:51 Redis连接失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:16:43,851 WARNING mp.py:77 Redis缓存失败，跳过缓存: Error 10061 connecting to 127.0.0.1:6379. 由于目标计算机积极拒绝，无法连接。.
+2025-12-05 10:16:44,511 ERROR mp.py:136 微信订阅消息发布失败: {'errcode': 43101, 'errmsg': 'user refuse to accept the msg rid: 6932408d-1422a49c-1c4f250c'}

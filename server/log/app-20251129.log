@@ -1,0 +1,24 @@
+2025-11-29 20:14:45,437 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-29 20:14:45,536 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-29 20:15:00,153 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-29 20:15:00,227 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-29 20:15:16,922 ERROR mind.py:366 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:15:16,987 WARNING mind.py:199 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:15:28,246 WARNING mind.py:232 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:16:06,908 WARNING mind.py:232 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:16:15,522 WARNING mind.py:232 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:16:22,028 WARNING mind.py:232 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:27:32,482 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/label', 'args': {}, 'data': None}
+2025-11-29 20:27:32,596 ERROR __init__.py:251 {'error': OperationalError('(cymysql.err.OperationalError) (1045, "Access denied for user \'root\'@\'localhost\' (using password: YES)")'), 'path': '/v2/topic', 'args': {'page': '1', 'size': '16'}, 'data': None}
+2025-11-29 20:29:22,733 ERROR mind.py:366 mind meta error: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:29:22,814 WARNING mind.py:199 mind list fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2025-11-29 20:29:25,239 WARNING mind.py:232 mind detail fallback: (cymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: http://sqlalche.me/e/13/e3q8)

@@ -1,0 +1,161 @@
+<!--components/topic-item/index.wxml-->
+
+<!-- 话题单项 -->
+<view class="topic-item-class topic-item" wx:if="{{topic && topic.user}}">
+  <!-- 话题头部 -->
+  <view class="header">
+    <view class="header-left">
+      <!-- 头像 -->
+      <avatar 
+        src="{{topic.user.avatar || ''}}" 
+        user-id="{{topic.user.id || ''}}" 
+        size="80" 
+      />
+      <view class="header-info">
+        <view class="info-top">
+          <!-- 昵称 -->
+          <nickname 
+            nickname="{{topic.user.nickname || ''}}" 
+            user-id="{{topic.user.id || ''}}" 
+          />
+          <!-- 管理员标签 -->
+          <l-tag 
+            wx:if="{{topic.user.is_admin}}" 
+            l-class="admin-tag" 
+            size="mini" 
+            type="reading"
+          >
+            管理员
+          </l-tag>
+          <!-- 情绪标签 -->
+          <view wx:if="{{topic.emotion_label}}" class="emotion-tag" >
+            <text class="emotion-icon">{{topic.emotion_label.icon || '😊'}}</text>
+            <!-- <text class="emotion-name" style="color: {{topic.emotion_label.color}};">
+              {{topic.emotion_label.name}}
+            </text> -->
+          </view>
+        </view>
+        <!-- 时间和IP归属地 -->
+        <text class="time">
+          {{topic.push_time || ''}} {{topic.ip_belong || ''}}
+        </text>
+      </view>
+    </view>
+    <!-- 更多操作图标 -->
+    <l-icon 
+      l-class="icon-more" 
+      name="ellipsis" 
+      bindtap="onMoreIconTap" 
+    />
+  </view>
+
+  <!-- 话题内容 -->
+  <view class="topic-content" bindtap="gotoTopicDetail">
+    <view 
+      class="{{!showDetail && topic.content && topic.content.length > maxContentLen && !expand ? 'content-text-expand' : 'content-text'}}"
+    >
+      {{topic.content || ''}}
+    </view>
+    <!-- 展开/收起按钮 -->
+    <text 
+      wx:if="{{!showDetail && topic.content && topic.content.length > maxContentLen}}" 
+      class="text-expand" 
+      catchtap="onExpandTap"
+    >
+      {{!expand ? '展开' : '收起'}}
+    </text>
+  </view>
+
+  <!-- 图片视频区域 -->
+  <view 
+    class="media" 
+    wx:if="{{(topic.images && topic.images.length > 0) || topic.video}}" 
+    bindtap="gotoTopicDetail"
+  >
+    <!-- 图片展示 -->
+    <view class="posters" wx:if="{{topic.images && topic.images.length > 0}}">
+      <!-- 单张图片 -->
+      <block wx:if="{{topic.images.length === 1}}">
+        <image 
+          class="image column-one" 
+          wx:for="{{topic.images}}" 
+          wx:key="index" 
+          src="{{item}}" 
+          mode="widthFix" 
+          data-src="{{item}}" 
+          catchtap="previewImage" 
+        />
+      </block>
+      <!-- 2张或4张图片 -->
+      <block wx:elif="{{topic.images.length === 2 || topic.images.length === 4}}">
+        <image 
+          class="image column-two" 
+          wx:for="{{topic.images}}" 
+          wx:key="index" 
+          src="{{item}}" 
+          mode="aspectFill" 
+          data-src="{{item}}" 
+          catchtap="previewImage" 
+        />
+      </block>
+      <!-- 其他数量图片 -->
+      <block wx:else>
+        <image 
+          class="image" 
+          wx:for="{{topic.images}}" 
+          wx:key="index" 
+          src="{{item}}" 
+          mode="aspectFill" 
+          data-src="{{item}}" 
+          catchtap="previewImage" 
+        />
+      </block>
+    </view>
+
+    <!-- 视频展示 -->
+    <video 
+      wx:if="{{topic.video}}" 
+      class="video" 
+      src="{{topic.video.src}}" 
+      poster="{{topic.video.cover}}" 
+      direction="0" 
+      play-btn-position="center" 
+      style="max-height: 580rpx;{{topic.video.height > topic.video.width ? 'height: 580rpx; width: ' + 580 * topic.video.width / topic.video.height + 'rpx' : 'width: 580rpx; height: ' + 580 * topic.video.height / topic.video.width + 'rpx;'}}" 
+      autoplay="{{autoplay}}" 
+      muted="{{muted}}" 
+      bindplay="onVideoEvent"
+      bindpause="onVideoEvent"
+      bindended="onVideoEvent"
+      binderror="onVideoEvent"
+      catchtap="doNothing" 
+    />
+  </view>
+
+  <!-- 话题标签 -->
+  <view class="tags-list" wx:if="{{showTags && labels && labels.length > 0}}">
+    <l-tag 
+      wx:for="{{labels}}" 
+      wx:key="index" 
+      l-class="tag" 
+      plain 
+      shape="circle" 
+      bg-color="#337559" 
+      font-color="#337559" 
+      data-label-id="{{item.id}}" 
+      bindtap="onTagTap"
+    >
+      #{{item.name}}
+    </l-tag>
+  </view>
+
+  <!-- 话题底部交互栏 -->
+  <favor-bar 
+    topic-id="{{topic.id}}"
+    comment-count="{{topic.comment_count || 0}}" 
+    view-count="{{topic.click_count || 0}}" 
+    has-comment="{{topic.commented || false}}" 
+    bind:commentIconTap="onCommentIconTap"
+    bind:viewIconTap="onViewIconTap"
+    bind:interactionChange="onInteractionChange"
+  />
+</view>

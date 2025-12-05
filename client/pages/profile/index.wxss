@@ -1,0 +1,491 @@
+/* pages/profile/index.wxss */
+
+.msg-capsule {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 228rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  margin: 30rpx auto 20rpx auto;
+}
+
+.msg-tip {
+  margin-left: 10rpx;
+  font-size: 26rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+.tabs {
+  margin-top: 10rpx;
+  background: #ffffff;
+  border-bottom: 2rpx solid #FFD8A6;
+}
+
+.tabs-line {
+  width: 30% !important;
+  background: #FF9A76 !important;
+  height: 4rpx !important;
+}
+
+.tab-content {
+  height: 100%;
+  background: #fffce0;
+}
+
+.tabs-fixed {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 80rpx;
+  z-index: 99;
+  background: #ffffff;
+  border-bottom: 2rpx solid #FFD8A6;
+}
+
+.nothing {
+  margin-top: 335rpx;
+  color: #8B7355;
+  text-align: center;
+}
+
+.nothing-message {
+  margin-top: 415rpx;
+  color: #8B7355;
+  text-align: center;
+}
+
+
+
+/* 情绪列表样式 */
+.emotion-list {
+  padding: 0 20rpx;
+}
+
+.emotion-item {
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(139, 115, 85, 0.1);
+  border: 1rpx solid #FFD8A6;
+}
+
+.emotion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.emotion-label {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.emotion-date {
+  font-size: 24rpx;
+  color: #8B7355;
+}
+
+.emotion-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.emotion-source, .emotion-count {
+  font-size: 26rpx;
+  color: #8B7355;
+}
+
+.emotion-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20rpx;
+}
+
+.action-btn {
+  padding: 12rpx 24rpx;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #ddd;
+  font-weight: 600;
+}
+
+.action-btn.detail {
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  color: white;
+  border: none;
+}
+
+.action-btn.delete {
+  background: #ffffff;
+  color: #FF6B6B;
+  border: 1rpx solid #FF6B6B;
+}
+
+/* 情绪颜色类 */
+.emotion-color-0 { color: #FF9A76; }
+.emotion-color-1 { color: #FFD47F; }
+.emotion-color-2 { color: #A8E6CF; }
+.emotion-color-3 { color: #78C2FF; }
+.emotion-color-4 { color: #B19CFF; }
+.emotion-color-5 { color: #FFB7D5; }
+.emotion-color-primary { color: #FF9A76; }
+
+/* 图表弹窗样式 */
+.chart-popup {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 20rpx;
+  border: 2rpx solid #FFD8A6;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #FFD8A6;
+  background: #FFF9F0;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.chart-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #5A4C3E;
+}
+
+.close-btn {
+  font-size: 40rpx;
+  color: #8B7355;
+  padding: 10rpx;
+}
+
+.chart-controls {
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #FFD8A6;
+  background: #FFF9F0;
+}
+
+.chart-tabs {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.chart-tab {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx;
+  border: 1rpx solid #FFD8A6;
+  border-radius: 8rpx;
+  margin: 0 10rpx;
+  font-size: 26rpx;
+  color: #8B7355;
+  background: #ffffff;
+}
+
+.chart-tab.active {
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  color: white;
+  border-color: transparent;
+}
+
+.time-range {
+  display: flex;
+  justify-content: center;
+}
+
+.range-btn {
+  padding: 15rpx 25rpx;
+  margin: 0 10rpx;
+  border: 1rpx solid #FFD8A6;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+  color: #8B7355;
+  background: #ffffff;
+}
+
+.range-btn.active {
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  color: white;
+  border-color: transparent;
+}
+
+.chart-container {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF9F0;
+}
+
+.chart-loading, .chart-empty {
+  text-align: center;
+  color: #8B7355;
+  font-size: 28rpx;
+}
+
+/* ========== 巧克力罐样式 ========== */
+.chocolate-jar-btn {
+  position: fixed;
+  right: 30rpx;
+  bottom: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  box-shadow: 0 4rpx 20rpx rgba(139, 115, 85, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform 0.2s;
+}
+
+.chocolate-jar-btn:active {
+  transform: scale(0.95);
+}
+
+.chocolate-jar-icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 心灵鸡汤弹窗遮罩 */
+.soul-popup-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(139, 115, 85, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 心灵鸡汤弹窗内容 */
+.soul-popup {
+  position: relative;
+  width: 600rpx;
+  min-height: 300rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  box-shadow: 0 8rpx 40rpx rgba(139, 115, 85, 0.2);
+  border: 2rpx solid #FFD8A6;
+}
+
+.soul-close {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 40rpx;
+  color: #8B7355;
+  text-align: center;
+  line-height: 50rpx;
+}
+
+.soul-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #5A4C3E;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+/* 情绪标签信息 */
+.soul-emotion-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+  padding: 30rpx 20rpx;
+  background: linear-gradient(135deg, #FFF9F0 0%, #FFEEDD 100%);
+  border-radius: 20rpx;
+  border: 2rpx dashed #FFD8A6;
+  box-shadow: 0 4rpx 12rpx rgba(139, 115, 85, 0.1);
+}
+
+.soul-emotion-header {
+  margin-bottom: 16rpx;
+}
+
+.soul-emotion-label-text {
+  font-size: 24rpx;
+  color: #8B7355;
+  font-weight: 600;
+}
+
+/* 情绪标签徽章 */
+.soul-emotion-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12rpx 24rpx;
+  border-radius: 30rpx;
+  border: 2rpx solid #FFD8A6;
+  margin-bottom: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(139, 115, 85, 0.1);
+  background: #FFF9F0;
+}
+
+.soul-emotion-icon {
+  font-size: 36rpx;
+  line-height: 1;
+  margin-right: 8rpx;
+}
+
+.soul-emotion-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  line-height: 1;
+  color: #5A4C3E;
+}
+
+/* 置信度信息 */
+.soul-confidence-info {
+  display: flex;
+  align-items: center;
+  padding: 8rpx 16rpx;
+  background: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 0 2rpx 4rpx rgba(139, 115, 85, 0.1);
+  border: 1rpx solid #FFD8A6;
+}
+
+.soul-confidence-label {
+  font-size: 22rpx;
+  color: #8B7355;
+  margin-right: 8rpx;
+}
+
+.soul-confidence-value {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #5A4C3E;
+}
+
+.soul-content {
+  font-size: 28rpx;
+  line-height: 1.8;
+  color: #5A4C3E;
+  text-align: center;
+  margin-bottom: 40rpx;
+  min-height: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soul-loading {
+  text-align: center;
+  color: #8B7355;
+  font-size: 24rpx;
+  padding: 40rpx 0;
+}
+
+.soul-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20rpx;
+}
+
+.soul-btn-collect,
+.soul-btn-save {
+  background: linear-gradient(135deg, #FFD47F, #FFB74D);
+  color: #fff;
+  border-radius: 40rpx;
+  padding: 0 40rpx;
+  font-weight: 600;
+  border: none;
+}
+
+.soul-btn-random,
+.soul-btn-view-all,
+.soul-btn-cancel {
+  background: #ffffff;
+  color: #FF9A76;
+  border: 2rpx solid #FF9A76;
+  border-radius: 40rpx;
+  padding: 0 40rpx;
+  font-weight: 600;
+}
+
+/* 巧克力罐Tab切换 */
+.soul-tabs {
+  display: flex;
+  border-bottom: 2rpx solid #FFD8A6;
+  margin-bottom: 30rpx;
+}
+
+.soul-tab {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  color: #8B7355;
+  border-bottom: 4rpx solid transparent;
+  font-weight: 600;
+}
+
+.soul-tab.active {
+  color: #FF9A76;
+  border-bottom-color: #FF9A76;
+  font-weight: bold;
+}
+
+/* 查看模式 */
+.soul-view {
+  min-height: 300rpx;
+}
+
+/* 添加模式 */
+.soul-add {
+  min-height: 300rpx;
+}
+
+.soul-input {
+  width: 100%;
+  min-height: 200rpx;
+  padding: 20rpx;
+  border: 2rpx solid #FFD8A6;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+  margin-bottom: 20rpx;
+  background: #FFF9F0;
+  color: #5A4C3E;
+}
+
+.soul-input::placeholder {
+  color: #8B7355;
+}
+
+.soul-input-tip {
+  text-align: right;
+  font-size: 24rpx;
+  color: #8B7355;
+  margin-bottom: 30rpx;
+}
+
+/* 覆盖 Lin UI tabs 激活颜色 */
+.tabs .l-tabs-header-item.l-tabs-header-item-active {
+  color: #FF9A76 !important;
+}
+
+.tabs-line {
+  background: #FF9A76 !important;
+}

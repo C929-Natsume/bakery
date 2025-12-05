@@ -1,0 +1,7 @@
+<!--components/nothing/index.wxml-->
+
+<!-- 无数据提示 -->
+<view class="nothing nothing-class">
+  <image class="bg" src="{{pic}}" />
+  <text class="bg-tip">{{tip}}</text>
+</view>
