@@ -263,13 +263,11 @@ python starter.py
 |          | 专业援助       | 提供专业的心理咨询联系方式，在用户授权且急需时可一键跳转寻求援助 |
 
 ## 🎨产品展示
-
-<img width="213" height="472" alt="image-20251205105233956" src="https://github.com/user-attachments/assets/550611db-7a73-422b-b915-0c6083dc457e" />
-<img width="205" height="436" alt="image-20251205105220845" src="https://github.com/user-attachments/assets/6d18a717-fb70-4044-af77-4cb449ed6cfc" />
-<img width="224" height="477" alt="image-20251205105211840" src="https://github.com/user-attachments/assets/14ddfe26-df2c-4048-8bea-1dffdae91c1a" />
-<img width="209" height="463" alt="image-20251205105203873" src="https://github.com/user-attachments/assets/7b7e125d-cf10-4c45-8ceb-210694d38006" />
 <img width="222" height="468" alt="image-20251205105157799" src="https://github.com/user-attachments/assets/035c67a9-7ed3-4604-ad88-62531cc8607e" />
-
+<img width="209" height="463" alt="image-20251205105203873" src="https://github.com/user-attachments/assets/7b7e125d-cf10-4c45-8ceb-210694d38006" />
+<img width="224" height="477" alt="image-20251205105211840" src="https://github.com/user-attachments/assets/14ddfe26-df2c-4048-8bea-1dffdae91c1a" />
+<img width="205" height="436" alt="image-20251205105220845" src="https://github.com/user-attachments/assets/6d18a717-fb70-4044-af77-4cb449ed6cfc" />
+<img width="213" height="472" alt="image-20251205105233956" src="https://github.com/user-attachments/assets/550611db-7a73-422b-b915-0c6083dc457e" />
 
 ## 🏆 项目成果
 
