@@ -284,5 +284,7 @@ python starter.py
 1. 由于微信平台限制，线上版本需申请体验权限。
 2. 考虑到二维码时效性与域名合法性问题，若在体验过程中界面数据未正常显示，请在小程序界面右上角点击 **“...”**，选择 **“调试”**，即可查看完整数据并体验所有功能。
 
-<img width="118" height="118" alt="wps1" src="https://github.com/user-attachments/assets/f6631399-6f7c-4863-811b-4234ba5a6f42" />
+<p align="center">
+  <img width="118" height="118" alt="wps1" src="https://github.com/user-attachments/assets/f6631399-6f7c-4863-811b-4234ba5a6f42" />
+</p>
 
