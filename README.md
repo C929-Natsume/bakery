@@ -264,16 +264,11 @@ python starter.py
 
 ## 🎨产品展示
 
-![image-20251205105157799](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251205105157799.png)
-
-![image-20251205105203873](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251205105203873.png)
-
-![image-20251205105211840](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251205105211840.png)
-
-![image-20251205105220845](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251205105220845.png)
-
-![image-20251205105233956](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20251205105233956.png)
-
+<img width="213" height="472" alt="image-20251205105233956" src="https://github.com/user-attachments/assets/550611db-7a73-422b-b915-0c6083dc457e" />
+<img width="205" height="436" alt="image-20251205105220845" src="https://github.com/user-attachments/assets/6d18a717-fb70-4044-af77-4cb449ed6cfc" />
+<img width="224" height="477" alt="image-20251205105211840" src="https://github.com/user-attachments/assets/14ddfe26-df2c-4048-8bea-1dffdae91c1a" />
+<img width="209" height="463" alt="image-20251205105203873" src="https://github.com/user-attachments/assets/7b7e125d-cf10-4c45-8ceb-210694d38006" />
+<img width="222" height="468" alt="image-20251205105157799" src="https://github.com/user-attachments/assets/035c67a9-7ed3-4604-ad88-62531cc8607e" />
 
 
 ## 🏆 项目成果
@@ -291,4 +286,5 @@ python starter.py
 1. 由于微信平台限制，线上版本需申请体验权限。
 2. 考虑到二维码时效性与域名合法性问题，若在体验过程中界面数据未正常显示，请在小程序界面右上角点击 **“...”**，选择 **“调试”**，即可查看完整数据并体验所有功能。
 
-![img](file:///C:\Users\lenovo\AppData\Local\Temp\ksohtml55908\wps1.png)
+<img width="118" height="118" alt="wps1" src="https://github.com/user-attachments/assets/f6631399-6f7c-4863-811b-4234ba5a6f42" />
+
